@@ -18,3 +18,5 @@ dist/
 
 __marimo__/
 audit_runs/
+/runs/
+/my_run/
