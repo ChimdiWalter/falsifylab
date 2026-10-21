@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "jsonschema": "4.26.0",
+    "matplotlib": "3.10.8",
+    "numpy": "2.4.3",
+    "pytest": "9.0.3",
+    "scipy": "1.16.3"
+  },
+  "git_sha": "63c686c3d3ba67794da1cc566fef7986cfef72f4",
+  "git_worktree_dirty": true,
+  "python": "3.12.3",
+  "source_sha256": {
+    "falsifylab/__init__.py": "502f5e199048d4f6d288c913b8cf781206bce7321b5ba3a0e18a60260a525c9e",
+    "falsifylab/__main__.py": "005617d35548ee70857ff7aa840e4eb9e4782684edf95ec40e6a4027d2f90c10",
+    "falsifylab/artifacts.py": "a099b5e46d2d7268d882098429dbbca0c0072db8581e9e9bea31cc7bd2f96282",
+    "falsifylab/benchmark.py": "c587e0383f951f6e76113cc747633fc36fd27a17b45ff935636b6658f7d40a6e",
+    "falsifylab/certificates.py": "220cfbb3a707b54f2d9629caa85f4e5177ebb220fa6d52099d91a6fe84dd411b",
+    "falsifylab/decisions.py": "82f573edb75768de770b26a9282d0ede049a9445cfaca530926198c39cbd51f6",
+    "falsifylab/experiments.py": "696768d3874bfabf40ccb3c31f052969e1c8a077a2e00980742acbca5ee584e5",
+    "falsifylab/hypothesis.py": "8d02c6cb0c61ab4d8c768ca971ddcc8fef60dc3f421560a9532c6ffd9dd004b5",
+    "falsifylab/make_report.py": "173ac398f764bfa24fd9c5ab3b506dc22fe73464fb1737c84a221c623c171354",
+    "falsifylab/materials.py": "461c6a3724b239d90670dc4d0ae582435e82659d79a053d9d2941844c4dd2fa8",
+    "falsifylab/physics.py": "74ff0e7bb07436ff79d49d29bad68cbbcd6e5fbd860af790d8348ec890e24541",
+    "falsifylab/run_demo.py": "79400e60f209a124e7af7d0dd8376af1b19d7cf86b6eb1ab6cf335c28b72f14b",
+    "falsifylab/run_materials.py": "f2c75f3194c4c17c57a483a381b7ebc6d39c71394b90c0837a611fc5552f9c78",
+    "falsifylab/verify.py": "cbe2b15f1cf0d72bfc2886ae4d55c4854ff6b50a9b355743470df291b55a7e5a"
+  }
+}

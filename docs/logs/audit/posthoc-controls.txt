@@ -1,0 +1,9 @@
+harmonic {'noise_sd': 0.001, 'horizon_factor': 0.5, 'n': 30, 'refuted': 0, 'inconclusive': 0, 'not_refuted': 30, 'refuted_seeds': []}
+harmonic {'noise_sd': 0.001, 'horizon_factor': 1.0, 'n': 30, 'refuted': 0, 'inconclusive': 0, 'not_refuted': 30, 'refuted_seeds': []}
+harmonic {'noise_sd': 0.001, 'horizon_factor': 2.0, 'n': 30, 'refuted': 0, 'inconclusive': 1, 'not_refuted': 29, 'refuted_seeds': []}
+harmonic {'noise_sd': 0.01, 'horizon_factor': 0.5, 'n': 30, 'refuted': 4, 'inconclusive': 26, 'not_refuted': 0, 'refuted_seeds': [2038, 2048, 2051, 2053]}
+harmonic {'noise_sd': 0.01, 'horizon_factor': 1.0, 'n': 30, 'refuted': 4, 'inconclusive': 26, 'not_refuted': 0, 'refuted_seeds': [2044, 2050, 2051, 2053]}
+harmonic {'noise_sd': 0.01, 'horizon_factor': 2.0, 'n': 30, 'refuted': 2, 'inconclusive': 28, 'not_refuted': 0, 'refuted_seeds': [2050, 2053]}
+dip {'runs': 30, 'audit_not_refuted': 30, 'audit_mae_range_mpa': [0.6628397379802116, 0.8139257021081918], 'max_local_error_range_mpa': [24.54096474256147, 25.530932460844724]}
+miss decomposition {'runs': 450, 'runs_above_nominal_noise': 360, 'evaluable_brackets': 426, 'missed': 38, 'missed_reported_resolved': 0, 'all_misses_in_cells_with_full_abstention': True, 'active_2mpa_abstained_while_covering': 26}
+wrote audit/posthoc_controls.json

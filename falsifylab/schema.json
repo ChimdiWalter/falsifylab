@@ -1,0 +1,235 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://falsifylab.local/evidence-v1.schema.json",
+  "title": "FalsifyLab evidence trace (not formal proof)",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "schema_version",
+    "created_at_utc",
+    "seed",
+    "software",
+    "physical_system",
+    "candidate",
+    "validity_domain",
+    "partition_manifest",
+    "experiment_queue",
+    "resource_costs",
+    "selection_policy",
+    "counterexamples",
+    "revision",
+    "final_holdout",
+    "metrics",
+    "status",
+    "numerical_sensitivity",
+    "artifacts",
+    "limitations",
+    "reproduce",
+    "record_type"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{24}$"
+    },
+    "schema_version": {
+      "type": "string",
+      "const": "1.0.0"
+    },
+    "created_at_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "software": {
+      "type": "object",
+      "required": [
+        "git_sha",
+        "source_sha256",
+        "python",
+        "dependencies"
+      ]
+    },
+    "physical_system": {
+      "type": "object"
+    },
+    "candidate": {
+      "type": "object",
+      "required": [
+        "expression",
+        "coefficients",
+        "variable_units"
+      ]
+    },
+    "validity_domain": {
+      "type": "object"
+    },
+    "partition_manifest": {
+      "type": "object",
+      "required": [
+        "partitions",
+        "model_freeze",
+        "holdout_policy"
+      ]
+    },
+    "experiment_queue": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "partition",
+          "knobs",
+          "kind",
+          "status",
+          "simulator_calls",
+          "measurements",
+          "observation_points",
+          "rhs_evaluations",
+          "simulated_duration_s",
+          "raw_keys"
+        ],
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "partition": {
+            "type": "string"
+          },
+          "knobs": {
+            "type": "object"
+          },
+          "kind": {
+            "enum": [
+              "oscillator",
+              "materials"
+            ]
+          },
+          "status": {
+            "enum": [
+              "REQUESTED",
+              "COMPLETED",
+              "FAILED"
+            ]
+          },
+          "simulator_calls": {
+            "type": "number",
+            "minimum": 0
+          },
+          "measurements": {
+            "type": "number",
+            "minimum": 0
+          },
+          "observation_points": {
+            "type": "number",
+            "minimum": 0
+          },
+          "rhs_evaluations": {
+            "type": "number",
+            "minimum": 0
+          },
+          "simulated_duration_s": {
+            "type": "number",
+            "minimum": 0
+          },
+          "raw_keys": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "resource_costs": {
+      "type": "object"
+    },
+    "selection_policy": {
+      "type": "object"
+    },
+    "counterexamples": {
+      "type": "array"
+    },
+    "revision": {
+      "type": "object",
+      "required": [
+        "family",
+        "heldout_status",
+        "frozen_before_holdout",
+        "fit_inputs"
+      ],
+      "properties": {
+        "heldout_status": {
+          "enum": [
+            "REFUTED",
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+            "INCONCLUSIVE"
+          ]
+        },
+        "frozen_before_holdout": {
+          "const": true
+        }
+      }
+    },
+    "final_holdout": {
+      "type": "object"
+    },
+    "metrics": {
+      "type": "object"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "REFUTED",
+        "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "INCONCLUSIVE"
+      ]
+    },
+    "numerical_sensitivity": {
+      "type": "object"
+    },
+    "artifacts": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "sha256",
+          "bytes",
+          "kind"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "kind": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "limitations": {
+      "type": "array"
+    },
+    "reproduce": {
+      "type": "string"
+    },
+    "record_type": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+PASS notebook renders materials and oscillator results
+PASS no cell error output
+PASS material dropdown reruns engine; dip shows silent miss
+PASS system dropdown reruns oscillator; harmonic control not revised
+PASS no page errors
+marimo UI QA: 5/5 checks pass

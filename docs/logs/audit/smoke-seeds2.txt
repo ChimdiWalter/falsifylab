@@ -1,0 +1,11 @@
+harmonic_undamped_control: initial=NOT_REFUTED_UNDER_TESTED_CONDITIONS; heldout drift=0.000000%; revised=NOT_ATTEMPTED
+duffing_nonlinearity: initial=REFUTED; heldout drift=22.142525%; revised=NOT_REFUTED_UNDER_TESTED_CONDITIONS
+weakly_damped_negative_control: initial=REFUTED; heldout drift=7.702142%; revised=REFUTED
+Synthetic material: 2 noise seeds; each policy 10 probes / 40 readings
+  active: median bracket=5.0781250000000045e-05; reference coverage=1.0; inconclusive boundary=0.0
+  uniform: median bracket=0.0014444444444444444; reference coverage=1.0; inconclusive boundary=0.0
+  random: median bracket=0.001954200104312553; reference coverage=1.0; inconclusive boundary=0.0
+  Independent median MAE (MPa): linear=1064.314327; revised=0.4445994640600689
+VERIFIED 4 certificates, all saved holdout metrics, raw-data checksums and frozen models
+Offline report: /tmp/falsifylab-smoke/demo.html
+VERIFIED 4 certificates, all saved holdout metrics, raw-data checksums and frozen models

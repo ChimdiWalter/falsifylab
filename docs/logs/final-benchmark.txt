@@ -1,0 +1,39 @@
+Synthetic material: 30 noise seeds; each policy 10 probes / 40 readings
+  active: median bracket=5.0781250000000045e-05; reference coverage=1.0; inconclusive boundary=0.0
+  uniform: median bracket=0.0014444444444444444; reference coverage=1.0; inconclusive boundary=0.0
+  random: median bracket=0.0015608898681845143; reference coverage=1.0; inconclusive boundary=0.0
+  Independent median MAE (MPa): linear=1064.793168; revised=0.40118620179648207
+Oscillator controls: 1/30 seeds
+Oscillator controls: 2/30 seeds
+Oscillator controls: 3/30 seeds
+Oscillator controls: 4/30 seeds
+Oscillator controls: 5/30 seeds
+Oscillator controls: 6/30 seeds
+Oscillator controls: 7/30 seeds
+Oscillator controls: 8/30 seeds
+Oscillator controls: 9/30 seeds
+Oscillator controls: 10/30 seeds
+Oscillator controls: 11/30 seeds
+Oscillator controls: 12/30 seeds
+Oscillator controls: 13/30 seeds
+Oscillator controls: 14/30 seeds
+Oscillator controls: 15/30 seeds
+Oscillator controls: 16/30 seeds
+Oscillator controls: 17/30 seeds
+Oscillator controls: 18/30 seeds
+Oscillator controls: 19/30 seeds
+Oscillator controls: 20/30 seeds
+Oscillator controls: 21/30 seeds
+Oscillator controls: 22/30 seeds
+Oscillator controls: 23/30 seeds
+Oscillator controls: 24/30 seeds
+Oscillator controls: 25/30 seeds
+Oscillator controls: 26/30 seeds
+Oscillator controls: 27/30 seeds
+Oscillator controls: 28/30 seeds
+Oscillator controls: 29/30 seeds
+Oscillator controls: 30/30 seeds
+Noise/horizon checks: 1/3 seeds
+Noise/horizon checks: 2/3 seeds
+Noise/horizon checks: 3/3 seeds
+Saved outputs/benchmark/metrics.json and metrics.csv; 90 primary oscillator trials

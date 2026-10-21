@@ -1,0 +1,58 @@
+{
+  "project": "FalsifyLab",
+  "prototype_scope": "synthetic physics, physics-informed polynomial candidate family, fixed stress-test catalog",
+  "threshold_warning": "2% relative drift is heuristic and is not a calibrated statistical significance test",
+  "cases": [
+    {
+      "system": "harmonic_undamped_control",
+      "initial_hypothesis": "Q = v^2 + 4.000000 x^2",
+      "initial_training_relative_drift": 1.2550844815665679e-10,
+      "stress_search": {
+        "max_probe_drift": 1.280324735130879e-10,
+        "amplitude": 0.5,
+        "horizon": 12.0,
+        "probes": 15
+      },
+      "heldout_initial_relative_drift": 1.287310210214886e-10,
+      "initial_hypothesis_stress_verdict": "NOT_REFUTED",
+      "heldout_independent_of_search": true,
+      "audit_threshold": 0.02
+    },
+    {
+      "system": "duffing_nonlinearity",
+      "initial_hypothesis": "Q = v^2 + 4.031008 x^2",
+      "initial_training_relative_drift": 0.005922706734546034,
+      "stress_search": {
+        "max_probe_drift": 0.28646232549247586,
+        "amplitude": 1.7,
+        "horizon": 12.0,
+        "probes": 15
+      },
+      "heldout_initial_relative_drift": 0.2024542114902237,
+      "initial_hypothesis_stress_verdict": "REFUTED",
+      "heldout_independent_of_search": true,
+      "audit_threshold": 0.02,
+      "revised_hypothesis": "Q = v^2 + 4.000000 x^2 + 0.500000 x^4",
+      "revised_heldout_relative_drift": 6.148006246836211e-11,
+      "revised_verdict": "NOT_REFUTED"
+    },
+    {
+      "system": "weakly_damped_negative_control",
+      "initial_hypothesis": "Q = v^2 + 3.978267 x^2",
+      "initial_training_relative_drift": 0.0034005290908395397,
+      "stress_search": {
+        "max_probe_drift": 0.0946991438406147,
+        "amplitude": 0.9,
+        "horizon": 12.0,
+        "probes": 15
+      },
+      "heldout_initial_relative_drift": 0.08673158144029139,
+      "initial_hypothesis_stress_verdict": "REFUTED",
+      "heldout_independent_of_search": true,
+      "audit_threshold": 0.02,
+      "revised_hypothesis": "Q = v^2 + 4.036365 x^2 + -0.081205 x^4",
+      "revised_heldout_relative_drift": 0.10055655903765603,
+      "revised_verdict": "REFUTED"
+    }
+  ]
+}

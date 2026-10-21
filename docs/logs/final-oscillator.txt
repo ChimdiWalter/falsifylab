@@ -1,0 +1,4 @@
+harmonic_undamped_control: initial=NOT_REFUTED_UNDER_TESTED_CONDITIONS; heldout drift=0.000000%; revised=NOT_ATTEMPTED
+duffing_nonlinearity: initial=REFUTED; heldout drift=22.142525%; revised=NOT_REFUTED_UNDER_TESTED_CONDITIONS
+weakly_damped_negative_control: initial=REFUTED; heldout drift=7.702142%; revised=REFUTED
+Saved results to outputs/results.json

@@ -1,0 +1,118 @@
+{
+  "schema_version": "0.1.0",
+  "project": "FalsifyLab",
+  "generated_at_utc": "2026-10-21T17:43:19.888612+00:00",
+  "record_type": "reproducible_experiment_provenance_NOT_formal_proof",
+  "source_result_files": {
+    "oscillator_results_json": {
+      "path": "outputs/results.json",
+      "sha256": "b365ae1e9b5aeac0e94101d21b0a8fdc8076dc4a10b1cf2427ad5d305d38e626"
+    },
+    "materials_results_json": {
+      "path": "outputs/materials/results.json",
+      "sha256": "408684514ab383e98bbe1d216c5ee0f535aeb828a92d3cee45f4a70ea455ca94"
+    }
+  },
+  "software_scope": "synthetic_numerical_benchmarks",
+  "scientific_caveat": "Survival does not prove a law. Experimental coverage is finite and verdict thresholds may not be statistically calibrated.",
+  "domain": "synthetic_materials_stress_strain",
+  "question": "At what strain does a low-strain linear constitutive law violate an operational stress tolerance?",
+  "material_model": "predefined continuous bilinear law (synthetic)",
+  "tolerance_mpa": 10.0,
+  "measurement_noise_sd_mpa": 0.8,
+  "discovery_training_measurements_per_seed": 40,
+  "seeds": 30,
+  "methods": {
+    "active": {
+      "median_bracket_width_strain": 5.0781250000000045e-05,
+      "median_bracket_width_percent_strain": 0.0050781250000000045,
+      "min_width": 5.0781250000000045e-05,
+      "max_width": 5.0781250000000045e-05,
+      "nonmonotone_replicates": 0,
+      "probes_per_seed": 10,
+      "measurements_per_seed": 40
+    },
+    "uniform": {
+      "median_bracket_width_strain": 0.0014444444444444444,
+      "median_bracket_width_percent_strain": 0.14444444444444443,
+      "min_width": 0.0014444444444444444,
+      "max_width": 0.0014444444444444444,
+      "nonmonotone_replicates": 0,
+      "probes_per_seed": 10,
+      "measurements_per_seed": 40
+    },
+    "random": {
+      "median_bracket_width_strain": 0.0021389841672008678,
+      "median_bracket_width_percent_strain": 0.21389841672008678,
+      "min_width": 0.0004731578748647042,
+      "max_width": 0.0073604283213223876,
+      "nonmonotone_replicates": 0,
+      "probes_per_seed": 10,
+      "measurements_per_seed": 40
+    }
+  },
+  "holdout_mae_mpa": {
+    "initial_linear": 1068.980788408208,
+    "revised_bilinear": 0.40051471229828994
+  },
+  "example_seed_observed_trace": [
+    {
+      "strain": 0.001,
+      "mean_stress_mpa": 209.78700886248706,
+      "rejected": false
+    },
+    {
+      "strain": 0.014,
+      "mean_stress_mpa": 437.9227988867754,
+      "rejected": true
+    },
+    {
+      "strain": 0.0075,
+      "mean_stress_mpa": 427.6862794100712,
+      "rejected": true
+    },
+    {
+      "strain": 0.00425,
+      "mean_stress_mpa": 423.3280599198547,
+      "rejected": true
+    },
+    {
+      "strain": 0.002625,
+      "mean_stress_mpa": 421.27146605495136,
+      "rejected": true
+    },
+    {
+      "strain": 0.0018125,
+      "mean_stress_mpa": 381.06970897478146,
+      "rejected": false
+    },
+    {
+      "strain": 0.0022187500000000002,
+      "mean_stress_mpa": 419.82205102980754,
+      "rejected": true
+    },
+    {
+      "strain": 0.002015625,
+      "mean_stress_mpa": 419.4957244703253,
+      "rejected": false
+    },
+    {
+      "strain": 0.0021171875,
+      "mean_stress_mpa": 420.01571734665987,
+      "rejected": true
+    },
+    {
+      "strain": 0.00206640625,
+      "mean_stress_mpa": 420.6593808896463,
+      "rejected": true
+    }
+  ],
+  "verdict": "APPROXIMATION_BREAKDOWN_BOUNDARY_FOUND_UNDER_TESTED_CONDITIONS",
+  "limitations": [
+    "Synthetic noisy material; known monotone deviation makes bisection effective",
+    "Bracket is not confidence interval or direct physical yield estimate",
+    "Model family and 10-MPa tolerance were pre-specified",
+    "Random/uniform baselines have no adaptive bracket-refinement rule"
+  ],
+  "reproduce": "python -m falsifylab.run_materials --seeds 30 --out outputs/materials"
+}

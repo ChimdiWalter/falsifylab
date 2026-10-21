@@ -1,0 +1,6308 @@
+{
+  "task": "Locate an operational deviation boundary for Hooke law in a bilinear synthetic material",
+  "scientific_limits": "Synthetic response, hand-specified bilinear repair, assumed known instrument noise. A small boundary bracket is not proof of yield-point accuracy.",
+  "seed_count": 30,
+  "methods": {
+    "active": {
+      "median_bracket_width_strain": 5.0781250000000045e-05,
+      "median_bracket_width_percent_strain": 0.0050781250000000045,
+      "min_width": 5.0781250000000045e-05,
+      "max_width": 5.0781250000000045e-05,
+      "nonmonotone_replicates": 0,
+      "probes_per_seed": 10,
+      "measurements_per_seed": 40
+    },
+    "uniform": {
+      "median_bracket_width_strain": 0.0014444444444444444,
+      "median_bracket_width_percent_strain": 0.14444444444444443,
+      "min_width": 0.0014444444444444444,
+      "max_width": 0.0014444444444444444,
+      "nonmonotone_replicates": 0,
+      "probes_per_seed": 10,
+      "measurements_per_seed": 40
+    },
+    "random": {
+      "median_bracket_width_strain": 0.0021389841672008678,
+      "median_bracket_width_percent_strain": 0.21389841672008678,
+      "min_width": 0.0004731578748647042,
+      "max_width": 0.0073604283213223876,
+      "nonmonotone_replicates": 0,
+      "probes_per_seed": 10,
+      "measurements_per_seed": 40
+    }
+  },
+  "median_holdout_linear_mae_mpa": 1068.980788408208,
+  "median_holdout_revised_mae_mpa": 0.40051471229828994,
+  "records": [
+    {
+      "seed": 2026,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210533.87123215813,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.78700886248706,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.9227988867754,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 427.6862794100712,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.3280599198547,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 421.27146605495136,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 381.06970897478146,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 419.82205102980754,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.4957244703253,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.01571734665987,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.6593808896463,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.63596635053514,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.0511347655768,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.29177201029415,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.77964366362414,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.57732675368743,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.2315245490553,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 428.6376424489142,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.237414665682,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.62318207237684,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.41339878471814,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001926813940009944,
+            0.0035495131830396817
+          ],
+          "bracket_width": 0.0016226992430297378,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.53912959622792,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.9007345328609,
+              "rejected": true
+            },
+            {
+              "strain": 0.0035495131830396817,
+              "mean_stress_mpa": 423.2000100811185,
+              "rejected": true
+            },
+            {
+              "strain": 0.011428995734144506,
+              "mean_stress_mpa": 434.4371368590494,
+              "rejected": true
+            },
+            {
+              "strain": 0.011375230392885235,
+              "mean_stress_mpa": 433.44952853048204,
+              "rejected": true
+            },
+            {
+              "strain": 0.00875104925711863,
+              "mean_stress_mpa": 430.0682115014218,
+              "rejected": true
+            },
+            {
+              "strain": 0.012511132355551527,
+              "mean_stress_mpa": 436.13931609670806,
+              "rejected": true
+            },
+            {
+              "strain": 0.001926813940009944,
+              "mean_stress_mpa": 404.8808769717344,
+              "rejected": false
+            },
+            {
+              "strain": 0.013298564220647891,
+              "mean_stress_mpa": 436.3546742385207,
+              "rejected": true
+            },
+            {
+              "strain": 0.003820737986844402,
+              "mean_stress_mpa": 422.7784755298673,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.001994445558851816,
+      "fitted_hardening_modulus_mpa": 1488.4158246240615,
+      "heldout_linear_mae_mpa": 1072.4493394150115,
+      "heldout_revised_mae_mpa": 0.45694537910074196
+    },
+    {
+      "seed": 2027,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 209435.21752708717,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.8650430108866,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.7584537866247,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 427.9296416229207,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 424.0278372669545,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 421.2428641780949,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.61211461025846,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.5480593919247,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 420.0027657364457,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.1075489383952,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.629877202401,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.00828805156294,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.35912407486944,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 419.66841921981376,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.90460086983785,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.65187895547274,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 426.90197676032363,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 428.97564795547504,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.51261019090305,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 434.2452634349904,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.7225208391439,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.003696969228225632
+          ],
+          "bracket_width": 0.002696969228225632,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.0728580736799,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.3516169999091,
+              "rejected": true
+            },
+            {
+              "strain": 0.004567344278328554,
+              "mean_stress_mpa": 423.3985094242754,
+              "rejected": true
+            },
+            {
+              "strain": 0.012727791792379133,
+              "mean_stress_mpa": 436.05765168163964,
+              "rejected": true
+            },
+            {
+              "strain": 0.004716737695745243,
+              "mean_stress_mpa": 424.3544454343285,
+              "rejected": true
+            },
+            {
+              "strain": 0.011137003757906588,
+              "mean_stress_mpa": 433.87935630894674,
+              "rejected": true
+            },
+            {
+              "strain": 0.003696969228225632,
+              "mean_stress_mpa": 422.2389305087855,
+              "rejected": true
+            },
+            {
+              "strain": 0.007070456169377828,
+              "mean_stress_mpa": 427.1381659874781,
+              "rejected": true
+            },
+            {
+              "strain": 0.009403621997415079,
+              "mean_stress_mpa": 430.5397293075076,
+              "rejected": true
+            },
+            {
+              "strain": 0.013598241154644825,
+              "mean_stress_mpa": 437.65537556551516,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.00200663079409497,
+      "fitted_hardening_modulus_mpa": 1454.8652923178006,
+      "heldout_linear_mae_mpa": 1064.8602646707675,
+      "heldout_revised_mae_mpa": 0.38189960057181327
+    },
+    {
+      "seed": 2028,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210053.98678616693,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.08334169329797,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.774601106605,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 427.91641826121406,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.76149375183354,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 421.5054411922298,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 381.2679362972965,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.82738073710266,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.8598549398688,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.69696398555504,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.8934093202406,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.3732900899843,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.3337909908971,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.417096040202,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.8625300432887,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.86903823890685,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 426.6619735787646,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.7795852390103,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.83662466668005,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 434.1408863568108,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.595657317412,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.00572086028637139
+          ],
+          "bracket_width": 0.00472086028637139,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.89073348520085,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.9579800206615,
+              "rejected": true
+            },
+            {
+              "strain": 0.009276249803419633,
+              "mean_stress_mpa": 430.95764675414114,
+              "rejected": true
+            },
+            {
+              "strain": 0.01218774462901883,
+              "mean_stress_mpa": 434.99297192679256,
+              "rejected": true
+            },
+            {
+              "strain": 0.008411977419376576,
+              "mean_stress_mpa": 429.7768344120883,
+              "rejected": true
+            },
+            {
+              "strain": 0.00572086028637139,
+              "mean_stress_mpa": 426.2263069301305,
+              "rejected": true
+            },
+            {
+              "strain": 0.013940348284617286,
+              "mean_stress_mpa": 437.7907711036803,
+              "rejected": true
+            },
+            {
+              "strain": 0.01147681479499742,
+              "mean_stress_mpa": 434.1150692139886,
+              "rejected": true
+            },
+            {
+              "strain": 0.007113425871890655,
+              "mean_stress_mpa": 427.33467917546477,
+              "rejected": true
+            },
+            {
+              "strain": 0.010369698969404182,
+              "mean_stress_mpa": 432.2359119187668,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0020006919612400686,
+      "fitted_hardening_modulus_mpa": 1453.2328686874416,
+      "heldout_linear_mae_mpa": 1069.0650654989395,
+      "heldout_revised_mae_mpa": 0.4042516121142329
+    },
+    {
+      "seed": 2029,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 209887.28309488343,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.58900047010036,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.8904466979129,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.82792130340806,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.4391773802311,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 421.5674074971581,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.5214283413448,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 419.0832522759813,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 420.334138902455,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 421.18647896661736,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.7770588092532,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.4376779893643,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.863399019227,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.66902980471,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 423.0684649293005,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.2763788241716,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.2810085903395,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.1491815833614,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.06606102793296,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.56074396417466,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.1413303560207,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001379086382856584,
+            0.0021286049703325366
+          ],
+          "bracket_width": 0.0007495185874759527,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.82134417213467,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.3587547957613,
+              "rejected": true
+            },
+            {
+              "strain": 0.001379086382856584,
+              "mean_stress_mpa": 289.6960348612687,
+              "rejected": false
+            },
+            {
+              "strain": 0.010846806284016318,
+              "mean_stress_mpa": 433.3335914418501,
+              "rejected": true
+            },
+            {
+              "strain": 0.01088642940899726,
+              "mean_stress_mpa": 433.23202859029357,
+              "rejected": true
+            },
+            {
+              "strain": 0.010544994822994237,
+              "mean_stress_mpa": 432.7924545720186,
+              "rejected": true
+            },
+            {
+              "strain": 0.008846063493125524,
+              "mean_stress_mpa": 430.67565610834686,
+              "rejected": true
+            },
+            {
+              "strain": 0.006170477520354608,
+              "mean_stress_mpa": 426.0053857331367,
+              "rejected": true
+            },
+            {
+              "strain": 0.0021286049703325366,
+              "mean_stress_mpa": 420.60464173591754,
+              "rejected": true
+            },
+            {
+              "strain": 0.002775812366978799,
+              "mean_stress_mpa": 420.60987769727325,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.002001646420813917,
+      "fitted_hardening_modulus_mpa": 1498.8043149986881,
+      "heldout_linear_mae_mpa": 1067.9281660530185,
+      "heldout_revised_mae_mpa": 0.4373516372453471
+    },
+    {
+      "seed": 2030,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210328.3000290177,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.57711494371236,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.6330387314655,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.56297166374264,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.69202600205904,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.7522797951199,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.63280385735163,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.80493271260536,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.9532900227768,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.32455563850897,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.30773376165575,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.98859371529124,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.54376017496713,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.3091995123601,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.60938645029364,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.4958290078013,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 426.9702157208204,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.5474756989718,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.8450640611652,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.74336679839513,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.9433762283811,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.0011289251301090284,
+            0.0023405208480436514
+          ],
+          "bracket_width": 0.001211595717934623,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.87975785592678,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.85685102681225,
+              "rejected": true
+            },
+            {
+              "strain": 0.009382936250049573,
+              "mean_stress_mpa": 431.43418943934165,
+              "rejected": true
+            },
+            {
+              "strain": 0.0011289251301090284,
+              "mean_stress_mpa": 236.7887551000088,
+              "rejected": false
+            },
+            {
+              "strain": 0.0023405208480436514,
+              "mean_stress_mpa": 420.640935074458,
+              "rejected": true
+            },
+            {
+              "strain": 0.006725240772441053,
+              "mean_stress_mpa": 427.2483612508362,
+              "rejected": true
+            },
+            {
+              "strain": 0.011018440476826395,
+              "mean_stress_mpa": 433.96008640685653,
+              "rejected": true
+            },
+            {
+              "strain": 0.00733603696981002,
+              "mean_stress_mpa": 428.2083440298481,
+              "rejected": true
+            },
+            {
+              "strain": 0.006910622647162148,
+              "mean_stress_mpa": 428.0120879246574,
+              "rejected": true
+            },
+            {
+              "strain": 0.011248184967022928,
+              "mean_stress_mpa": 433.7944338749643,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.001997769313385144,
+      "fitted_hardening_modulus_mpa": 1467.0949293990516,
+      "heldout_linear_mae_mpa": 1070.9884173113953,
+      "heldout_revised_mae_mpa": 0.3993900719079668
+    },
+    {
+      "seed": 2031,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210192.33596802177,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.56409042671942,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.7238046659307,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 427.2841645296243,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.8122869616199,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.53454847023033,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.2026863063963,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 421.26064559977783,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.9892366167562,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 419.94910459402473,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.2796434568278,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.6675573405029,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.7006855567233,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.90029468021964,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 423.6977236239736,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.38681862010316,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 426.98279795553395,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.6617927047784,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 432.15504224982357,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.3493914923703,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.04951888025533,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001944670045362472,
+            0.007017179295772322
+          ],
+          "bracket_width": 0.00507250925040985,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.42161370801952,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.52042849403875,
+              "rejected": true
+            },
+            {
+              "strain": 0.001788849042014423,
+              "mean_stress_mpa": 375.71851360894453,
+              "rejected": false
+            },
+            {
+              "strain": 0.012396485368804434,
+              "mean_stress_mpa": 435.7123670775703,
+              "rejected": true
+            },
+            {
+              "strain": 0.012870973693200345,
+              "mean_stress_mpa": 436.3134772758974,
+              "rejected": true
+            },
+            {
+              "strain": 0.0016018856453779858,
+              "mean_stress_mpa": 336.123670444412,
+              "rejected": false
+            },
+            {
+              "strain": 0.001944670045362472,
+              "mean_stress_mpa": 408.050840376937,
+              "rejected": false
+            },
+            {
+              "strain": 0.007858555345489387,
+              "mean_stress_mpa": 428.7384996588329,
+              "rejected": true
+            },
+            {
+              "strain": 0.007017179295772322,
+              "mean_stress_mpa": 428.2520801488665,
+              "rejected": true
+            },
+            {
+              "strain": 0.009940774276103684,
+              "mean_stress_mpa": 432.2649887263835,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0019986155078525556,
+      "fitted_hardening_modulus_mpa": 1446.0715196302776,
+      "heldout_linear_mae_mpa": 1070.114568360749,
+      "heldout_revised_mae_mpa": 0.3854431615551318
+    },
+    {
+      "seed": 2032,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 209570.3674246406,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.92617273739774,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.79905539650315,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.4234657670787,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.5477804220098,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 419.98888585591953,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.99799051503425,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.5332419138068,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 420.24926742145055,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.66449291693766,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.7454367828067,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.12470388983212,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.753416279299,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.4735550620718,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.5122496392008,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.0125665298922,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.5942923570966,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 428.9921543770493,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.0446417236574,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.42110018253175,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 436.48248304494496,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.0011070690365218225,
+            0.004852399740131252
+          ],
+          "bracket_width": 0.0037453307036094292,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.28505148830303,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.73901640408815,
+              "rejected": true
+            },
+            {
+              "strain": 0.0064844353060463395,
+              "mean_stress_mpa": 427.20392049631806,
+              "rejected": true
+            },
+            {
+              "strain": 0.004852399740131252,
+              "mean_stress_mpa": 424.1020801325563,
+              "rejected": true
+            },
+            {
+              "strain": 0.007925516415660213,
+              "mean_stress_mpa": 429.1631335176688,
+              "rejected": true
+            },
+            {
+              "strain": 0.012161895451157353,
+              "mean_stress_mpa": 435.3763557192032,
+              "rejected": true
+            },
+            {
+              "strain": 0.005347069114330145,
+              "mean_stress_mpa": 425.2801427433926,
+              "rejected": true
+            },
+            {
+              "strain": 0.008040754161136202,
+              "mean_stress_mpa": 429.8049770722823,
+              "rejected": true
+            },
+            {
+              "strain": 0.007679265020337187,
+              "mean_stress_mpa": 429.0398325152976,
+              "rejected": true
+            },
+            {
+              "strain": 0.0011070690365218225,
+              "mean_stress_mpa": 232.29817073450084,
+              "rejected": false
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0020040821506274215,
+      "fitted_hardening_modulus_mpa": 1492.355505367257,
+      "heldout_linear_mae_mpa": 1065.7989795619999,
+      "heldout_revised_mae_mpa": 0.36717206453851964
+    },
+    {
+      "seed": 2033,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210269.89660023234,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.88750219157453,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.20317575345024,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 427.9333295476502,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.72172999415596,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.78537417352396,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.14290603467117,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.50064445118613,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.1856145304107,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.03142169865447,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.1602347995492,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.82539720098794,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.9082548336611,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 421.6409523192608,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.7552036430764,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.3975566188837,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 426.6265166280792,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.1799796307503,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.39745488614864,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.68895614554583,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.9326420478337,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.002235518599486476
+          ],
+          "bracket_width": 0.0012355185994864758,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.58710853129998,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.07274631135544,
+              "rejected": true
+            },
+            {
+              "strain": 0.002235518599486476,
+              "mean_stress_mpa": 419.8090709463851,
+              "rejected": true
+            },
+            {
+              "strain": 0.004698895973207353,
+              "mean_stress_mpa": 423.57309381292305,
+              "rejected": true
+            },
+            {
+              "strain": 0.01204352487064653,
+              "mean_stress_mpa": 435.7649764725512,
+              "rejected": true
+            },
+            {
+              "strain": 0.007678106669024301,
+              "mean_stress_mpa": 428.5947003286986,
+              "rejected": true
+            },
+            {
+              "strain": 0.008704720697169394,
+              "mean_stress_mpa": 430.63836394711024,
+              "rejected": true
+            },
+            {
+              "strain": 0.013305422184877874,
+              "mean_stress_mpa": 436.64690179766717,
+              "rejected": true
+            },
+            {
+              "strain": 0.010526568239537376,
+              "mean_stress_mpa": 432.9889864688164,
+              "rejected": true
+            },
+            {
+              "strain": 0.010387508914057007,
+              "mean_stress_mpa": 433.47458567234065,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0019970374848452647,
+      "fitted_hardening_modulus_mpa": 1450.116806569152,
+      "heldout_linear_mae_mpa": 1070.556101507759,
+      "heldout_revised_mae_mpa": 0.5313011774185311
+    },
+    {
+      "seed": 2034,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 209636.0030045083,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.81128283811458,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.29833798651225,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.2016465698731,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.6736954692552,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.6547494182171,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.7062088818165,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 419.4292688527749,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 420.0270278674026,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 419.6782176226665,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.89746017777054,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.95884101645095,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.33090777182065,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.6195629759382,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 423.2923755588014,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.298525423388,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.0815904344865,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.3878552962051,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.60900094360056,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 434.95278372873344,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.95911587087613,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.0015574644352642415,
+            0.00394649309690311
+          ],
+          "bracket_width": 0.0023890286616388688,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.46978595182088,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.1711203057599,
+              "rejected": true
+            },
+            {
+              "strain": 0.01144743724620459,
+              "mean_stress_mpa": 434.8694636891216,
+              "rejected": true
+            },
+            {
+              "strain": 0.00394649309690311,
+              "mean_stress_mpa": 423.1112036718827,
+              "rejected": true
+            },
+            {
+              "strain": 0.010893954969643262,
+              "mean_stress_mpa": 432.8450882996147,
+              "rejected": true
+            },
+            {
+              "strain": 0.00996758615965769,
+              "mean_stress_mpa": 431.51863794283054,
+              "rejected": true
+            },
+            {
+              "strain": 0.010378416347589382,
+              "mean_stress_mpa": 432.98759696522797,
+              "rejected": true
+            },
+            {
+              "strain": 0.012026201479958462,
+              "mean_stress_mpa": 435.614270516632,
+              "rejected": true
+            },
+            {
+              "strain": 0.004794733425157998,
+              "mean_stress_mpa": 424.4504933881572,
+              "rejected": true
+            },
+            {
+              "strain": 0.0015574644352642415,
+              "mean_stress_mpa": 326.8562644052371,
+              "rejected": false
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0020020052114757356,
+      "fitted_hardening_modulus_mpa": 1555.6410074599023,
+      "heldout_linear_mae_mpa": 1066.4045509511311,
+      "heldout_revised_mae_mpa": 0.4550872824768389
+    },
+    {
+      "seed": 2035,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 209909.2955635033,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.66744040486196,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.2968992407365,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 427.94593369684117,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.55672357714457,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.8823238096989,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.8294007158941,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.6883862257809,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 420.3180463602572,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.5767813284439,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.94218619043363,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.60910310722025,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.7070586819143,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.0681278059792,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.95679611937516,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.91231856609403,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.0441714978937,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.58756053068737,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.7400502329191,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.65889620077576,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 436.04177226556567,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0036139732881889856
+          ],
+          "bracket_width": 0.0026139732881889856,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.33682765523932,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.47581104473556,
+              "rejected": true
+            },
+            {
+              "strain": 0.005044831699683697,
+              "mean_stress_mpa": 424.13135249842173,
+              "rejected": true
+            },
+            {
+              "strain": 0.007901676887304409,
+              "mean_stress_mpa": 429.7833009089095,
+              "rejected": true
+            },
+            {
+              "strain": 0.005057678818048811,
+              "mean_stress_mpa": 424.8208210941681,
+              "rejected": true
+            },
+            {
+              "strain": 0.009835395646488332,
+              "mean_stress_mpa": 432.3936446678472,
+              "rejected": true
+            },
+            {
+              "strain": 0.010823642755496035,
+              "mean_stress_mpa": 432.135503987804,
+              "rejected": true
+            },
+            {
+              "strain": 0.0040257692890230115,
+              "mean_stress_mpa": 422.9387701969129,
+              "rejected": true
+            },
+            {
+              "strain": 0.0036139732881889856,
+              "mean_stress_mpa": 422.8501759180023,
+              "rejected": true
+            },
+            {
+              "strain": 0.012266782144800426,
+              "mean_stress_mpa": 435.61672426428555,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0020015067627124766,
+      "fitted_hardening_modulus_mpa": 1497.9265322843482,
+      "heldout_linear_mae_mpa": 1068.1218404179074,
+      "heldout_revised_mae_mpa": 0.3835944382332209
+    },
+    {
+      "seed": 2036,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 209683.35585260746,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.42633029659774,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 436.92785043425226,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.59621442529476,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.21684972554874,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.79501455288596,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.61765610560235,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.4663417735852,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 420.08378744054914,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 419.4463345275191,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.730279431909,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.8851364015309,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.4507929791224,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.08755818281406,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.82158145070474,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.755977890491,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.1297608583378,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.37987845620455,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.08526647982046,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.04345942054704,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 436.5102316424427,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.0020147189383943895,
+            0.0024878768132590937
+          ],
+          "bracket_width": 0.0004731578748647042,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.03479384613286,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.6068720210051,
+              "rejected": true
+            },
+            {
+              "strain": 0.005973659476467783,
+              "mean_stress_mpa": 426.2021440794939,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024878768132590937,
+              "mean_stress_mpa": 420.6534730078905,
+              "rejected": true
+            },
+            {
+              "strain": 0.0020147189383943895,
+              "mean_stress_mpa": 419.72163460205525,
+              "rejected": false
+            },
+            {
+              "strain": 0.007353150631909213,
+              "mean_stress_mpa": 428.3571576551398,
+              "rejected": true
+            },
+            {
+              "strain": 0.012677598370680606,
+              "mean_stress_mpa": 436.12399725415963,
+              "rejected": true
+            },
+            {
+              "strain": 0.01179596797556736,
+              "mean_stress_mpa": 435.058168130321,
+              "rejected": true
+            },
+            {
+              "strain": 0.008797107894024152,
+              "mean_stress_mpa": 430.7734743654565,
+              "rejected": true
+            },
+            {
+              "strain": 0.0050570405940641525,
+              "mean_stress_mpa": 424.39550483048254,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0020025276623517993,
+      "fitted_hardening_modulus_mpa": 1448.4799829885656,
+      "heldout_linear_mae_mpa": 1066.5033428119295,
+      "heldout_revised_mae_mpa": 0.6339532408813136
+    },
+    {
+      "seed": 2037,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210087.49059114774,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.7599812464436,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.7988612018014,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.3508181389968,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.17837263967687,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.975163555612,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.99749124194625,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.2876866899867,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 420.4625311286737,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.005121631818,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.24282626706565,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.87748586189474,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.33041561851195,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.32415296885756,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 423.1538597095095,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.184745375843,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.2318659183369,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.5308315092792,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.1282181450456,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.8790302211855,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.61059948643106,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.0014755419612853587,
+            0.0033151903353166507
+          ],
+          "bracket_width": 0.001839648374031292,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.03721885548592,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.5715587143012,
+              "rejected": true
+            },
+            {
+              "strain": 0.007219976981738002,
+              "mean_stress_mpa": 428.70975695469485,
+              "rejected": true
+            },
+            {
+              "strain": 0.0033151903353166507,
+              "mean_stress_mpa": 421.4747433158994,
+              "rejected": true
+            },
+            {
+              "strain": 0.006416709554643229,
+              "mean_stress_mpa": 425.81744398036824,
+              "rejected": true
+            },
+            {
+              "strain": 0.011497289375485695,
+              "mean_stress_mpa": 434.15369674959715,
+              "rejected": true
+            },
+            {
+              "strain": 0.006615402643323686,
+              "mean_stress_mpa": 426.2656116438998,
+              "rejected": true
+            },
+            {
+              "strain": 0.0014755419612853587,
+              "mean_stress_mpa": 309.3653824239035,
+              "rejected": false
+            },
+            {
+              "strain": 0.013276014730227732,
+              "mean_stress_mpa": 436.35021922206823,
+              "rejected": true
+            },
+            {
+              "strain": 0.011373540018938044,
+              "mean_stress_mpa": 433.2059926952201,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0019991513673532084,
+      "fitted_hardening_modulus_mpa": 1554.2406269511446,
+      "heldout_linear_mae_mpa": 1069.312591575474,
+      "heldout_revised_mae_mpa": 0.4026644259179302
+    },
+    {
+      "seed": 2038,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210073.3288677996,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.39609449993947,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.0865814437074,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 427.8481238651901,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.0495334219503,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.50468685839303,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.48349756754175,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.3392113478782,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.5296141237001,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.401551124503,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.6106426355234,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.27393306080478,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.6245608534279,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.55731348471,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.4700086809832,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.64065088347303,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 426.4846902394389,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.8465792937135,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.4275261346877,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.9767678504163,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.3718103706834,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.0013403000309805781,
+            0.008700728352302966
+          ],
+          "bracket_width": 0.0073604283213223876,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.34600575019908,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.8437683540032,
+              "rejected": true
+            },
+            {
+              "strain": 0.009306807941494688,
+              "mean_stress_mpa": 431.3263178089332,
+              "rejected": true
+            },
+            {
+              "strain": 0.008700728352302966,
+              "mean_stress_mpa": 430.54468228655605,
+              "rejected": true
+            },
+            {
+              "strain": 0.013780266359288845,
+              "mean_stress_mpa": 437.933122672102,
+              "rejected": true
+            },
+            {
+              "strain": 0.012597196012669103,
+              "mean_stress_mpa": 435.9532995562928,
+              "rejected": true
+            },
+            {
+              "strain": 0.013384909323100665,
+              "mean_stress_mpa": 436.1841019346617,
+              "rejected": true
+            },
+            {
+              "strain": 0.009046878387556929,
+              "mean_stress_mpa": 430.0481056635133,
+              "rejected": true
+            },
+            {
+              "strain": 0.0013403000309805781,
+              "mean_stress_mpa": 281.00085268846203,
+              "rejected": false
+            },
+            {
+              "strain": 0.013628626970429665,
+              "mean_stress_mpa": 437.69663816742616,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.001998804627472782,
+      "fitted_hardening_modulus_mpa": 1500.0871254030878,
+      "heldout_linear_mae_mpa": 1069.270423333221,
+      "heldout_revised_mae_mpa": 0.34862971266456344
+    },
+    {
+      "seed": 2039,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210143.83983051477,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.44207743284798,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.5149518519131,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.5568280400183,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 424.16269019875307,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.80458836786954,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.7781914362876,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 421.21620421567866,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 420.5944165329425,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.8825834698422,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.47600038917017,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.1594733135732,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.125691340357,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.64516670487177,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.6212852314909,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.7346798503336,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 428.0391138168236,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.01362136853845,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.22440026222034,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.40939439054563,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 436.4376399125787,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.002159108067207159
+          ],
+          "bracket_width": 0.001159108067207159,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.3783629102858,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.2495102375387,
+              "rejected": true
+            },
+            {
+              "strain": 0.007810997317006556,
+              "mean_stress_mpa": 429.0747290818599,
+              "rejected": true
+            },
+            {
+              "strain": 0.002159108067207159,
+              "mean_stress_mpa": 420.61989337145803,
+              "rejected": true
+            },
+            {
+              "strain": 0.011066804720206009,
+              "mean_stress_mpa": 434.0204810798437,
+              "rejected": true
+            },
+            {
+              "strain": 0.0022484705069573535,
+              "mean_stress_mpa": 421.2110934480158,
+              "rejected": true
+            },
+            {
+              "strain": 0.004158234274102973,
+              "mean_stress_mpa": 422.4530526378759,
+              "rejected": true
+            },
+            {
+              "strain": 0.006815416386697396,
+              "mean_stress_mpa": 428.06027325864136,
+              "rejected": true
+            },
+            {
+              "strain": 0.00796570765858758,
+              "mean_stress_mpa": 429.1967637625229,
+              "rejected": true
+            },
+            {
+              "strain": 0.008494631849473534,
+              "mean_stress_mpa": 429.6848636638996,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0020010861509293792,
+      "fitted_hardening_modulus_mpa": 1495.4014787384954,
+      "heldout_linear_mae_mpa": 1069.7314856782652,
+      "heldout_revised_mae_mpa": 0.5091130326994692
+    },
+    {
+      "seed": 2040,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 209875.3973211914,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.81665448007035,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.5127925617811,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.1156338082229,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.1134963128038,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.2657889569422,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.80099474628224,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.13781742310476,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.62906070468546,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.768767152633,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.63387329285,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.6576662686753,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.8599725550738,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.7435168092543,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.75895373147534,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.60164066410584,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.1501511392032,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.3520629837757,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 432.1748027341085,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.1390743469792,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.60730543478667,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.004659697546720952
+          ],
+          "bracket_width": 0.0036596975467209523,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.9071398904558,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.50213859508887,
+              "rejected": true
+            },
+            {
+              "strain": 0.004890390797694591,
+              "mean_stress_mpa": 423.65733111139804,
+              "rejected": true
+            },
+            {
+              "strain": 0.008053184509281146,
+              "mean_stress_mpa": 429.2357023178746,
+              "rejected": true
+            },
+            {
+              "strain": 0.007375440103158133,
+              "mean_stress_mpa": 428.3476196577126,
+              "rejected": true
+            },
+            {
+              "strain": 0.011413984335193948,
+              "mean_stress_mpa": 433.6552366675737,
+              "rejected": true
+            },
+            {
+              "strain": 0.012826353931176565,
+              "mean_stress_mpa": 435.7997102591119,
+              "rejected": true
+            },
+            {
+              "strain": 0.01378705948170324,
+              "mean_stress_mpa": 437.99195577302174,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075517816676980674,
+              "mean_stress_mpa": 428.13371960409637,
+              "rejected": true
+            },
+            {
+              "strain": 0.004659697546720952,
+              "mean_stress_mpa": 424.4940074302021,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.002000224251598943,
+      "fitted_hardening_modulus_mpa": 1481.1262145660178,
+      "heldout_linear_mae_mpa": 1067.9466015856972,
+      "heldout_revised_mae_mpa": 0.42270412685359476
+    },
+    {
+      "seed": 2041,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 209633.37769058876,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.0710439802939,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.0292287175889,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 427.8391422289649,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.2359895956138,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.617046314185,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.445521094496,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.3705979539939,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.58403714483677,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.4581108912316,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.0185162996515,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.9893136972682,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.7437608329712,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.0598661388407,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 423.6053200492736,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.13659639108084,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.66071107798365,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.3874687023428,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.7985615175793,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.28421277113426,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 436.42080540095765,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.004195893512858092
+          ],
+          "bracket_width": 0.003195893512858092,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.6504946168153,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.794999416896,
+              "rejected": true
+            },
+            {
+              "strain": 0.004195893512858092,
+              "mean_stress_mpa": 423.0606467253456,
+              "rejected": true
+            },
+            {
+              "strain": 0.00916433521001533,
+              "mean_stress_mpa": 431.02127252049706,
+              "rejected": true
+            },
+            {
+              "strain": 0.005862542865955183,
+              "mean_stress_mpa": 426.23385962915347,
+              "rejected": true
+            },
+            {
+              "strain": 0.010936698464085081,
+              "mean_stress_mpa": 433.0342655256503,
+              "rejected": true
+            },
+            {
+              "strain": 0.008281427918877766,
+              "mean_stress_mpa": 430.04365924097,
+              "rejected": true
+            },
+            {
+              "strain": 0.009094307875487373,
+              "mean_stress_mpa": 430.28650958877824,
+              "rejected": true
+            },
+            {
+              "strain": 0.0066806756140357386,
+              "mean_stress_mpa": 426.8624017285515,
+              "rejected": true
+            },
+            {
+              "strain": 0.0058044820403456016,
+              "mean_stress_mpa": 424.9544554513768,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.002002870242688037,
+      "fitted_hardening_modulus_mpa": 1502.4085946859352,
+      "heldout_linear_mae_mpa": 1066.3173320695364,
+      "heldout_revised_mae_mpa": 0.3848401156554664
+    },
+    {
+      "seed": 2042,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210287.8540433664,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.1308185369951,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.9177540340868,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.1016164984402,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.18991903038693,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.4986248589498,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 381.04736022105266,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.65314304353114,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.91887431152685,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.21073370091483,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.2761652835144,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.35196252912988,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.50308890059875,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 419.95563096352873,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 423.0420422117405,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.63401051895175,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 426.9176003812537,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.492141782804,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.72073654726137,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.4128041206631,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 436.41812048961424,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0049230539092914374
+          ],
+          "bracket_width": 0.003923053909291437,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.07886892602502,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.0152693771502,
+              "rejected": true
+            },
+            {
+              "strain": 0.006090833392188549,
+              "mean_stress_mpa": 425.69215045889524,
+              "rejected": true
+            },
+            {
+              "strain": 0.010688054855030805,
+              "mean_stress_mpa": 432.2305083818096,
+              "rejected": true
+            },
+            {
+              "strain": 0.009486246446587451,
+              "mean_stress_mpa": 431.41626581365165,
+              "rejected": true
+            },
+            {
+              "strain": 0.012972072941218795,
+              "mean_stress_mpa": 436.96463370113275,
+              "rejected": true
+            },
+            {
+              "strain": 0.011383576640825382,
+              "mean_stress_mpa": 433.18196043109657,
+              "rejected": true
+            },
+            {
+              "strain": 0.007190934372355637,
+              "mean_stress_mpa": 427.2828776454852,
+              "rejected": true
+            },
+            {
+              "strain": 0.013950948561356265,
+              "mean_stress_mpa": 438.29622774381244,
+              "rejected": true
+            },
+            {
+              "strain": 0.0049230539092914374,
+              "mean_stress_mpa": 424.26976103064436,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.001997119453493685,
+      "fitted_hardening_modulus_mpa": 1489.580037828803,
+      "heldout_linear_mae_mpa": 1070.7148335656682,
+      "heldout_revised_mae_mpa": 0.39230971766344175
+    },
+    {
+      "seed": 2043,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 209986.74496248085,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.81973669634596,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.96632461215324,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 427.982962497621,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.63927976906956,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 419.7796498101397,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.82375362884255,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.4273509756516,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 421.0588471221889,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.31667152220734,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.7628083919822,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.3254549335594,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.51531023010483,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.7231932192306,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.38733999508975,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.5506203379732,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.57466289303255,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.2401418667512,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.6007235009527,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 432.9597118290593,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.6403740655944,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0028343245587219533
+          ],
+          "bracket_width": 0.0018343245587219533,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.91314740878343,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.98180436407074,
+              "rejected": true
+            },
+            {
+              "strain": 0.011460508430036716,
+              "mean_stress_mpa": 434.7369836949552,
+              "rejected": true
+            },
+            {
+              "strain": 0.0028343245587219533,
+              "mean_stress_mpa": 420.7692992117814,
+              "rejected": true
+            },
+            {
+              "strain": 0.004124029651243357,
+              "mean_stress_mpa": 423.8860072695245,
+              "rejected": true
+            },
+            {
+              "strain": 0.00983607235766935,
+              "mean_stress_mpa": 431.3915585511084,
+              "rejected": true
+            },
+            {
+              "strain": 0.006975748641942068,
+              "mean_stress_mpa": 427.3148127706784,
+              "rejected": true
+            },
+            {
+              "strain": 0.013424261202331526,
+              "mean_stress_mpa": 437.26549274818257,
+              "rejected": true
+            },
+            {
+              "strain": 0.007768948034836685,
+              "mean_stress_mpa": 428.8679374505617,
+              "rejected": true
+            },
+            {
+              "strain": 0.004182224752540013,
+              "mean_stress_mpa": 423.08529738743607,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0020001033848452477,
+      "fitted_hardening_modulus_mpa": 1489.6156545094102,
+      "heldout_linear_mae_mpa": 1068.699500781189,
+      "heldout_revised_mae_mpa": 0.4045383956564569
+    },
+    {
+      "seed": 2044,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 209794.95720766735,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.94765078851492,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.48300064480844,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.8591670590596,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.46187858622244,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 421.0309790290745,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.63458321320763,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 419.87129121730527,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 420.15105960074897,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.220233183494,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.1987654647596,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.03561738742428,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.0447833835968,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.5269054072832,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.8370497665974,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.37064562293835,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.2927668403703,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 430.10407141339056,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.72509833459435,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 434.23649933206957,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 436.1369572298226,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0026645243820435515
+          ],
+          "bracket_width": 0.0016645243820435514,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.4511800399328,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.70491645533974,
+              "rejected": true
+            },
+            {
+              "strain": 0.003375099853210248,
+              "mean_stress_mpa": 421.8643928726534,
+              "rejected": true
+            },
+            {
+              "strain": 0.008224059231145496,
+              "mean_stress_mpa": 429.3310641648319,
+              "rejected": true
+            },
+            {
+              "strain": 0.0139872613980748,
+              "mean_stress_mpa": 438.2700539983143,
+              "rejected": true
+            },
+            {
+              "strain": 0.0105833053958473,
+              "mean_stress_mpa": 432.47792346220274,
+              "rejected": true
+            },
+            {
+              "strain": 0.0026645243820435515,
+              "mean_stress_mpa": 421.0986969182284,
+              "rejected": true
+            },
+            {
+              "strain": 0.004878975177717868,
+              "mean_stress_mpa": 424.48034806820834,
+              "rejected": true
+            },
+            {
+              "strain": 0.005459396286411074,
+              "mean_stress_mpa": 425.22822504560867,
+              "rejected": true
+            },
+            {
+              "strain": 0.012318967613964778,
+              "mean_stress_mpa": 436.3592683494139,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.002001977500473858,
+      "fitted_hardening_modulus_mpa": 1551.6134017406252,
+      "heldout_linear_mae_mpa": 1067.3555791922574,
+      "heldout_revised_mae_mpa": 0.43476633394783376
+    },
+    {
+      "seed": 2045,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 209935.94869493207,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.38966553500495,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.8318584319342,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.33383095028466,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.8825126926056,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.5740075870292,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 379.76224463740465,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 419.5257930033415,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 420.43437579935676,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.52419564106043,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.55816947532554,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.7588325106282,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.1996872662684,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 421.1966433646869,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.7664111695153,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.07208899847615,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 426.371389584004,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.0977780530952,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.64270459307363,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.8428110086572,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.25219623389575,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024267749434477622
+          ],
+          "bracket_width": 0.0014267749434477622,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.93611058148915,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.80374372019685,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024267749434477622,
+              "mean_stress_mpa": 420.6423431777389,
+              "rejected": true
+            },
+            {
+              "strain": 0.0077401250478477,
+              "mean_stress_mpa": 429.1420336108133,
+              "rejected": true
+            },
+            {
+              "strain": 0.00552242840241362,
+              "mean_stress_mpa": 425.1843587735263,
+              "rejected": true
+            },
+            {
+              "strain": 0.0027188930668625793,
+              "mean_stress_mpa": 420.87716509791613,
+              "rejected": true
+            },
+            {
+              "strain": 0.010675016734529252,
+              "mean_stress_mpa": 432.9748131202696,
+              "rejected": true
+            },
+            {
+              "strain": 0.010329648420076758,
+              "mean_stress_mpa": 432.1943351001781,
+              "rejected": true
+            },
+            {
+              "strain": 0.005787786364075751,
+              "mean_stress_mpa": 425.2994291034447,
+              "rejected": true
+            },
+            {
+              "strain": 0.006934336400816529,
+              "mean_stress_mpa": 427.0919509963308,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.002001095429195235,
+      "fitted_hardening_modulus_mpa": 1484.2907993683834,
+      "heldout_linear_mae_mpa": 1068.417336573773,
+      "heldout_revised_mae_mpa": 0.3955602127735647
+    },
+    {
+      "seed": 2046,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210071.14399548364,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.73278530236487,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.6522297311905,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 427.9946118495104,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.2110639911681,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 421.03824311173116,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.85950725162536,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.9172218477884,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.9290595099642,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 419.8317577774046,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.439282218578,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.41352227362148,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.36747689795044,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.59900341239927,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.79626232074656,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.2127220584245,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 426.9947293632187,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.30303998514586,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.92896699139845,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.6166901005919,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.41099858651245,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.0014519661515075546,
+            0.003340905824270422
+          ],
+          "bracket_width": 0.0018889396727628672,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.1166852179518,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.96560525684265,
+              "rejected": true
+            },
+            {
+              "strain": 0.012154459407181926,
+              "mean_stress_mpa": 435.4581969026832,
+              "rejected": true
+            },
+            {
+              "strain": 0.009396107225624586,
+              "mean_stress_mpa": 431.17770330337294,
+              "rejected": true
+            },
+            {
+              "strain": 0.003340905824270422,
+              "mean_stress_mpa": 422.16502126994203,
+              "rejected": true
+            },
+            {
+              "strain": 0.009115494868319456,
+              "mean_stress_mpa": 430.56152157131567,
+              "rejected": true
+            },
+            {
+              "strain": 0.012497515604627741,
+              "mean_stress_mpa": 435.8295112142952,
+              "rejected": true
+            },
+            {
+              "strain": 0.005245155289153167,
+              "mean_stress_mpa": 424.9348759539323,
+              "rejected": true
+            },
+            {
+              "strain": 0.0014519661515075546,
+              "mean_stress_mpa": 304.8561079160998,
+              "rejected": false
+            },
+            {
+              "strain": 0.013914891679329588,
+              "mean_stress_mpa": 437.96298062984454,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0019997393579855045,
+      "fitted_hardening_modulus_mpa": 1457.7116849471352,
+      "heldout_linear_mae_mpa": 1069.2170684231726,
+      "heldout_revised_mae_mpa": 0.3794206021127477
+    },
+    {
+      "seed": 2047,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210281.48650607333,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.69224049562357,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.64526894342356,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.9228723636528,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.10625115168256,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.97256097394734,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.73294993376163,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 419.58222327433873,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.8283095742858,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.31647145413655,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.63810998912345,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.78014802342864,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.38723932036123,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.1859120891072,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 423.2421311870124,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.38843410998163,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.25553148400377,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 428.6584066506981,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.78233181533113,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.4663628058082,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.8490926799998,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.004867935018813802
+          ],
+          "bracket_width": 0.0038679350188138024,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.31709678560424,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.8101782932598,
+              "rejected": true
+            },
+            {
+              "strain": 0.011428924559958007,
+              "mean_stress_mpa": 434.0361868711983,
+              "rejected": true
+            },
+            {
+              "strain": 0.013373250630980275,
+              "mean_stress_mpa": 436.6584345032597,
+              "rejected": true
+            },
+            {
+              "strain": 0.007259116390132933,
+              "mean_stress_mpa": 427.7920357219333,
+              "rejected": true
+            },
+            {
+              "strain": 0.004867935018813802,
+              "mean_stress_mpa": 423.77516913824695,
+              "rejected": true
+            },
+            {
+              "strain": 0.008341508900619861,
+              "mean_stress_mpa": 429.3105868976712,
+              "rejected": true
+            },
+            {
+              "strain": 0.011102991721820363,
+              "mean_stress_mpa": 433.4367777399462,
+              "rejected": true
+            },
+            {
+              "strain": 0.011947578533482262,
+              "mean_stress_mpa": 435.17862883048133,
+              "rejected": true
+            },
+            {
+              "strain": 0.01333270661696398,
+              "mean_stress_mpa": 437.14907721063094,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0019964259849740897,
+      "fitted_hardening_modulus_mpa": 1513.84794653216,
+      "heldout_linear_mae_mpa": 1070.7355310597836,
+      "heldout_revised_mae_mpa": 0.40163935268861306
+    },
+    {
+      "seed": 2048,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210023.33228634068,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.2691472337423,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.96292741331376,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.4035701366074,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.64548148803965,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 421.52734813928805,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.9275933101575,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 419.9756839662776,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.59085753916077,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 419.6793136859245,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.0062819608115,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.67399163553972,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 439.1460176683111,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 419.96668236016376,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.6492425286074,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.5727406010099,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 426.70173814946486,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.52736906647726,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 430.560547834112,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.6418964298832,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 436.0866251862346,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.0013316977158221303,
+            0.003869573047865843
+          ],
+          "bracket_width": 0.002537875332043713,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.4093786904027,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.17076144647064,
+              "rejected": true
+            },
+            {
+              "strain": 0.012653241141808401,
+              "mean_stress_mpa": 436.48133344430653,
+              "rejected": true
+            },
+            {
+              "strain": 0.005494528412175028,
+              "mean_stress_mpa": 424.3263310138069,
+              "rejected": true
+            },
+            {
+              "strain": 0.0038918496310140246,
+              "mean_stress_mpa": 422.80246278136497,
+              "rejected": true
+            },
+            {
+              "strain": 0.008967510508467093,
+              "mean_stress_mpa": 430.8551389879838,
+              "rejected": true
+            },
+            {
+              "strain": 0.007585704482869146,
+              "mean_stress_mpa": 428.82804916603203,
+              "rejected": true
+            },
+            {
+              "strain": 0.010507345868293508,
+              "mean_stress_mpa": 433.1685623450463,
+              "rejected": true
+            },
+            {
+              "strain": 0.003869573047865843,
+              "mean_stress_mpa": 422.54904550814615,
+              "rejected": true
+            },
+            {
+              "strain": 0.0013316977158221303,
+              "mean_stress_mpa": 279.54955353746556,
+              "rejected": false
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0019993132073035515,
+      "fitted_hardening_modulus_mpa": 1518.0009956606257,
+      "heldout_linear_mae_mpa": 1068.8965113174763,
+      "heldout_revised_mae_mpa": 0.39510298075385036
+    },
+    {
+      "seed": 2049,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210007.80059777942,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.77144872994114,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.6617525442581,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 427.9309715669269,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.29675173323784,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.99871334221865,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 381.1295205531685,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.28078297924344,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.8032606883653,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.4962850806753,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.64881809995785,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.20313811342297,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.1595834213541,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.6018673719586,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.7878549989049,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.7266292305255,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.1397538269124,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.86600857725546,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.3647822214848,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.7597401459169,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.8400980249776,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.00701237473301855
+          ],
+          "bracket_width": 0.00601237473301855,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.59122873391533,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.6432852328856,
+              "rejected": true
+            },
+            {
+              "strain": 0.007744262002767751,
+              "mean_stress_mpa": 427.93901982694416,
+              "rejected": true
+            },
+            {
+              "strain": 0.01254249799890262,
+              "mean_stress_mpa": 435.95883327861304,
+              "rejected": true
+            },
+            {
+              "strain": 0.009275959828831146,
+              "mean_stress_mpa": 430.9611429023635,
+              "rejected": true
+            },
+            {
+              "strain": 0.012920275793763938,
+              "mean_stress_mpa": 436.41284258285856,
+              "rejected": true
+            },
+            {
+              "strain": 0.00701237473301855,
+              "mean_stress_mpa": 427.11027753929915,
+              "rejected": true
+            },
+            {
+              "strain": 0.012572212456271995,
+              "mean_stress_mpa": 435.7050383239275,
+              "rejected": true
+            },
+            {
+              "strain": 0.011743300091791965,
+              "mean_stress_mpa": 435.1724824124317,
+              "rejected": true
+            },
+            {
+              "strain": 0.008057500687457683,
+              "mean_stress_mpa": 429.4344621358621,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.001999264098119184,
+      "fitted_hardening_modulus_mpa": 1549.5509756946713,
+      "heldout_linear_mae_mpa": 1068.8129424553715,
+      "heldout_revised_mae_mpa": 0.3732705312112446
+    },
+    {
+      "seed": 2050,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210066.25841661292,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.3696745602968,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.532380063661,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.0152264692591,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.0978774294519,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 421.39643641770306,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.35543735111344,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.15554475804515,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.47789415018474,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 419.75566426128495,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.75179784168483,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.12750550338896,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.4511669624724,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.57393347165925,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 423.6223509899572,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.9047872515205,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.7392060826098,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.3783690998509,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.3817317211392,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 434.17489798115355,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.6899435357591,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.0020315263089704283,
+            0.006866766245596671
+          ],
+          "bracket_width": 0.0048352399366262434,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.44998642370223,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.5073771264939,
+              "rejected": true
+            },
+            {
+              "strain": 0.007829395030751484,
+              "mean_stress_mpa": 428.8791518460748,
+              "rejected": true
+            },
+            {
+              "strain": 0.006866766245596671,
+              "mean_stress_mpa": 427.3090300967185,
+              "rejected": true
+            },
+            {
+              "strain": 0.0016355186449900738,
+              "mean_stress_mpa": 342.60470063253604,
+              "rejected": false
+            },
+            {
+              "strain": 0.012562071878260916,
+              "mean_stress_mpa": 436.36129892833617,
+              "rejected": true
+            },
+            {
+              "strain": 0.007397323708717418,
+              "mean_stress_mpa": 428.55932662372027,
+              "rejected": true
+            },
+            {
+              "strain": 0.010525580453579004,
+              "mean_stress_mpa": 432.9678089926199,
+              "rejected": true
+            },
+            {
+              "strain": 0.0074848822046372195,
+              "mean_stress_mpa": 428.0537400216156,
+              "rejected": true
+            },
+            {
+              "strain": 0.0020315263089704283,
+              "mean_stress_mpa": 419.947926422218,
+              "rejected": false
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0019983744918244625,
+      "fitted_hardening_modulus_mpa": 1482.9588773816627,
+      "heldout_linear_mae_mpa": 1069.202099734557,
+      "heldout_revised_mae_mpa": 0.47415326983339173
+    },
+    {
+      "seed": 2051,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 209497.26581838515,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.40809136924142,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.94692716083273,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.28914834615136,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.3023571475565,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 421.65377035183803,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.75885856198363,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.00985218188396,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.29777125013055,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.3978957375157,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.72608855632006,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.2554850334246,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.0631665346857,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 421.03234952008324,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.2195908572626,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.9195042979966,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.2828463392423,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.24356200272064,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.78396939005313,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.64052888493177,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 436.13574789524114,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024602799867352544
+          ],
+          "bracket_width": 0.0014602799867352544,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.39768550389223,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.19275178608973,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024602799867352544,
+              "mean_stress_mpa": 420.10728859692534,
+              "rejected": true
+            },
+            {
+              "strain": 0.006136558581428624,
+              "mean_stress_mpa": 426.3216743923181,
+              "rejected": true
+            },
+            {
+              "strain": 0.008172902131865192,
+              "mean_stress_mpa": 428.43662695833353,
+              "rejected": true
+            },
+            {
+              "strain": 0.009833316768173516,
+              "mean_stress_mpa": 431.2213000492753,
+              "rejected": true
+            },
+            {
+              "strain": 0.010071648603057325,
+              "mean_stress_mpa": 431.5055457849679,
+              "rejected": true
+            },
+            {
+              "strain": 0.008841865762537909,
+              "mean_stress_mpa": 430.8518085930698,
+              "rejected": true
+            },
+            {
+              "strain": 0.012440892772966155,
+              "mean_stress_mpa": 435.57360946407067,
+              "rejected": true
+            },
+            {
+              "strain": 0.007446616136742302,
+              "mean_stress_mpa": 428.0393331492446,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0020043697755405044,
+      "fitted_hardening_modulus_mpa": 1509.9669279621696,
+      "heldout_linear_mae_mpa": 1065.409967433771,
+      "heldout_revised_mae_mpa": 0.3845007771929082
+    },
+    {
+      "seed": 2052,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210035.45151342597,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.8101516591221,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.09975186648103,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.3905548084889,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.69012207894053,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.9257671016381,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.4299282156731,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 419.9107667170557,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.8409358333114,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 419.91692483800875,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.12585579922023,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.03728160305138,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.2288280833169,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.94501235355546,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.4676992818903,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.8818995435653,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.68770927371526,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.4961959023689,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.31474661953513,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 433.4791997682642,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.4381984189419,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.005758645110869933
+          ],
+          "bracket_width": 0.004758645110869933,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.80205054650298,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.6339209210105,
+              "rejected": true
+            },
+            {
+              "strain": 0.011230298470267228,
+              "mean_stress_mpa": 433.95494699914855,
+              "rejected": true
+            },
+            {
+              "strain": 0.01111537172525194,
+              "mean_stress_mpa": 433.34294137654945,
+              "rejected": true
+            },
+            {
+              "strain": 0.008530539803023986,
+              "mean_stress_mpa": 430.0250969954734,
+              "rejected": true
+            },
+            {
+              "strain": 0.011687724278845166,
+              "mean_stress_mpa": 434.4565415120761,
+              "rejected": true
+            },
+            {
+              "strain": 0.007361304675210855,
+              "mean_stress_mpa": 428.18682625920314,
+              "rejected": true
+            },
+            {
+              "strain": 0.00926871978467644,
+              "mean_stress_mpa": 430.35477933611025,
+              "rejected": true
+            },
+            {
+              "strain": 0.005758645110869933,
+              "mean_stress_mpa": 424.9387480563053,
+              "rejected": true
+            },
+            {
+              "strain": 0.00788788165833311,
+              "mean_stress_mpa": 428.8798542202721,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0019991596927268164,
+      "fitted_hardening_modulus_mpa": 1526.2442636485644,
+      "heldout_linear_mae_mpa": 1068.8804123548518,
+      "heldout_revised_mae_mpa": 0.33573546879716964
+    },
+    {
+      "seed": 2053,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210220.53866123903,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.20899134705073,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.10657074534856,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.1513109651476,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.32796091493634,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 421.4201412945165,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.8565613511158,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.4514508800013,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.64743254811657,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.6594593934011,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 420.4327569333278,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.18104995905168,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.07439147254547,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.82699582918906,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 423.3778006945985,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.93275988403076,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.01433166858186,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.1262281598988,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.8466199532256,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 434.2384389881033,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.7720650629956,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0028343745270051927
+          ],
+          "bracket_width": 0.0018343745270051927,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.0894384467739,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.16512139256486,
+              "rejected": true
+            },
+            {
+              "strain": 0.013090434599099747,
+              "mean_stress_mpa": 436.9438201954788,
+              "rejected": true
+            },
+            {
+              "strain": 0.013873568410893013,
+              "mean_stress_mpa": 437.99008817999055,
+              "rejected": true
+            },
+            {
+              "strain": 0.0028343745270051927,
+              "mean_stress_mpa": 420.79058337504455,
+              "rejected": true
+            },
+            {
+              "strain": 0.0038396183913769026,
+              "mean_stress_mpa": 422.53633857813105,
+              "rejected": true
+            },
+            {
+              "strain": 0.010102152262684069,
+              "mean_stress_mpa": 432.31123413852833,
+              "rejected": true
+            },
+            {
+              "strain": 0.01190140436908704,
+              "mean_stress_mpa": 434.70917071622426,
+              "rejected": true
+            },
+            {
+              "strain": 0.009468880729852656,
+              "mean_stress_mpa": 431.3350013277593,
+              "rejected": true
+            },
+            {
+              "strain": 0.004490646902907733,
+              "mean_stress_mpa": 424.3496913102109,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0019986474982447234,
+      "fitted_hardening_modulus_mpa": 1487.3759114844668,
+      "heldout_linear_mae_mpa": 1070.2251459687968,
+      "heldout_revised_mae_mpa": 0.3410899072986855
+    },
+    {
+      "seed": 2054,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210063.34340665463,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.7129379371657,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.6811806170462,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 427.713150110152,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.121320635079,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 421.4003367875595,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.6749332658194,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 420.33648541514077,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.7907397225554,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.30489600932526,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.878921784241,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.8665923338878,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 437.8455733512575,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.9601187940366,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.867405521436,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 424.7775685800508,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 427.2489012942802,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.0087175294233,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 431.8949751687126,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 434.11819803789695,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 435.81088713012724,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0022846294912646607
+          ],
+          "bracket_width": 0.0012846294912646607,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.91605214947748,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.2134860763141,
+              "rejected": true
+            },
+            {
+              "strain": 0.004683151626827298,
+              "mean_stress_mpa": 424.33130850791576,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024944803776668434,
+              "mean_stress_mpa": 420.3569304563958,
+              "rejected": true
+            },
+            {
+              "strain": 0.004997336076524146,
+              "mean_stress_mpa": 424.1481380642481,
+              "rejected": true
+            },
+            {
+              "strain": 0.011555588858791828,
+              "mean_stress_mpa": 434.50819972860654,
+              "rejected": true
+            },
+            {
+              "strain": 0.0022846294912646607,
+              "mean_stress_mpa": 421.6047572896481,
+              "rejected": true
+            },
+            {
+              "strain": 0.011829816688708847,
+              "mean_stress_mpa": 435.66692512588753,
+              "rejected": true
+            },
+            {
+              "strain": 0.012148519913074942,
+              "mean_stress_mpa": 435.6445004945181,
+              "rejected": true
+            },
+            {
+              "strain": 0.003481836755284261,
+              "mean_stress_mpa": 422.55527156652704,
+              "rejected": true
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0019992678639346472,
+      "fitted_hardening_modulus_mpa": 1463.7314821911903,
+      "heldout_linear_mae_mpa": 1069.153094673015,
+      "heldout_revised_mae_mpa": 0.449322496698171
+    },
+    {
+      "seed": 2055,
+      "dataset_type": "synthetic_noisy_bilinear_elastoplastic_surrogate",
+      "units": {
+        "strain": "dimensionless",
+        "stress": "MPa"
+      },
+      "noise_sd_mpa": 0.8,
+      "tolerance_mpa": 10.0,
+      "training_measurements": 40,
+      "fitted_elastic_modulus_mpa": 210270.44654451674,
+      "strategies": {
+        "active": {
+          "strategy": "active",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.002015625,
+            0.00206640625
+          ],
+          "bracket_width": 5.0781250000000045e-05,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.16340953603395,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.0835585642765,
+              "rejected": true
+            },
+            {
+              "strain": 0.0075,
+              "mean_stress_mpa": 428.2006720284551,
+              "rejected": true
+            },
+            {
+              "strain": 0.00425,
+              "mean_stress_mpa": 423.4693190070318,
+              "rejected": true
+            },
+            {
+              "strain": 0.002625,
+              "mean_stress_mpa": 420.47649504574076,
+              "rejected": true
+            },
+            {
+              "strain": 0.0018125,
+              "mean_stress_mpa": 380.49246595753607,
+              "rejected": false
+            },
+            {
+              "strain": 0.0022187500000000002,
+              "mean_stress_mpa": 419.7827554258172,
+              "rejected": true
+            },
+            {
+              "strain": 0.002015625,
+              "mean_stress_mpa": 419.31547833437327,
+              "rejected": false
+            },
+            {
+              "strain": 0.0021171875,
+              "mean_stress_mpa": 420.6532932003014,
+              "rejected": true
+            },
+            {
+              "strain": 0.00206640625,
+              "mean_stress_mpa": 419.750277864344,
+              "rejected": true
+            }
+          ]
+        },
+        "uniform": {
+          "strategy": "uniform",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.001,
+            0.0024444444444444444
+          ],
+          "bracket_width": 0.0014444444444444444,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 210.37888990972306,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.0635230865954,
+              "rejected": true
+            },
+            {
+              "strain": 0.0024444444444444444,
+              "mean_stress_mpa": 420.14535742083837,
+              "rejected": true
+            },
+            {
+              "strain": 0.003888888888888889,
+              "mean_stress_mpa": 422.9940008190979,
+              "rejected": true
+            },
+            {
+              "strain": 0.005333333333333334,
+              "mean_stress_mpa": 425.02641256164867,
+              "rejected": true
+            },
+            {
+              "strain": 0.006777777777777778,
+              "mean_stress_mpa": 426.9864069773888,
+              "rejected": true
+            },
+            {
+              "strain": 0.008222222222222223,
+              "mean_stress_mpa": 429.958478880042,
+              "rejected": true
+            },
+            {
+              "strain": 0.009666666666666667,
+              "mean_stress_mpa": 432.198597277021,
+              "rejected": true
+            },
+            {
+              "strain": 0.011111111111111113,
+              "mean_stress_mpa": 434.06412251246974,
+              "rejected": true
+            },
+            {
+              "strain": 0.012555555555555556,
+              "mean_stress_mpa": 436.14816567149126,
+              "rejected": true
+            }
+          ]
+        },
+        "random": {
+          "strategy": "random",
+          "probes": 10,
+          "measurements": 40,
+          "boundary_interval": [
+            0.0011868315261339187,
+            0.0022039049360035347
+          ],
+          "bracket_width": 0.001017073409869616,
+          "nonmonotone_observations": false,
+          "observations": [
+            {
+              "strain": 0.001,
+              "mean_stress_mpa": 209.6591503673875,
+              "rejected": false
+            },
+            {
+              "strain": 0.014,
+              "mean_stress_mpa": 438.30319115139474,
+              "rejected": true
+            },
+            {
+              "strain": 0.011786629659273361,
+              "mean_stress_mpa": 434.956487258624,
+              "rejected": true
+            },
+            {
+              "strain": 0.010904562349400328,
+              "mean_stress_mpa": 433.2301018967299,
+              "rejected": true
+            },
+            {
+              "strain": 0.012251115229033833,
+              "mean_stress_mpa": 434.6550106829592,
+              "rejected": true
+            },
+            {
+              "strain": 0.012035047798558726,
+              "mean_stress_mpa": 435.3947935196552,
+              "rejected": true
+            },
+            {
+              "strain": 0.013345270863326958,
+              "mean_stress_mpa": 437.1844427269845,
+              "rejected": true
+            },
+            {
+              "strain": 0.0022039049360035347,
+              "mean_stress_mpa": 420.658764227659,
+              "rejected": true
+            },
+            {
+              "strain": 0.008982750691720089,
+              "mean_stress_mpa": 429.87773400922157,
+              "rejected": true
+            },
+            {
+              "strain": 0.0011868315261339187,
+              "mean_stress_mpa": 249.3204919612805,
+              "rejected": false
+            }
+          ]
+        }
+      },
+      "true_yield_strain_benchmark_only": 0.002,
+      "reference_operational_onset_benchmark_only": 0.002047961630695444,
+      "fitted_yield_strain": 0.0019961053854247804,
+      "fitted_hardening_modulus_mpa": 1534.5702401400217,
+      "heldout_linear_mae_mpa": 1070.6092433294814,
+      "heldout_revised_mae_mpa": 0.4623141143849984
+    }
+  ]
+}

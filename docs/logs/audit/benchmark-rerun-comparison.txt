@@ -1,0 +1,7 @@
+Rerun of python -m falsifylab.benchmark --seeds 30 (fresh output dir) vs committed outputs/benchmark
+files compared: 187; byte-identical: 184; differing: 3
+differing files: ['checksums.json', 'environment.json', 'materials/results.json']
+materials/results.json differing top-level keys: ['software']
+environment.json differing keys: ['git_sha', 'git_worktree_dirty', 'source_sha256']
+raw .npz files identical: True (174 files)
+SUMMARY: 184 of 187 files byte-identical; 3 differ only in provenance fields; all 174 raw arrays identical

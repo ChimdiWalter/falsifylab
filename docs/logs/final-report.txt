@@ -1,0 +1,9 @@
+{
+  "html": "outputs/demo.html",
+  "certificate_paths": [
+    "outputs/certificates/harmonic_undamped_control.json",
+    "outputs/certificates/oscillator.json",
+    "outputs/certificates/weakly_damped_negative_control.json",
+    "outputs/certificates/materials.json"
+  ]
+}

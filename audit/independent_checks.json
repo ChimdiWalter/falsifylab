@@ -1,0 +1,1119 @@
+{
+  "benchmark_dir": "outputs/benchmark",
+  "checks": [
+    {
+      "name": "A symbolic dQ/dt = -2 gamma v^2",
+      "pass": true,
+      "dQdt": "-2*gamma*Derivative(x(t), t)**2"
+    },
+    {
+      "name": "B damped energy balance Q(T)-Q(0) = -2 gamma int v^2 (Radau)",
+      "pass": true,
+      "delta_Q": -0.6289232257495136,
+      "minus_dissipated": -0.62892335734853
+    },
+    {
+      "name": "D harmonic_undamped_control: frozen models identical across seeds (noise-free primary runs)",
+      "pass": true,
+      "distinct_frozen_models": 1,
+      "seeds": 30,
+      "note": "seeds only jitter final audit amplitudes; discovery/search/revision are deterministic"
+    },
+    {
+      "name": "D duffing_nonlinearity: frozen models identical across seeds (noise-free primary runs)",
+      "pass": true,
+      "distinct_frozen_models": 1,
+      "seeds": 30,
+      "note": "seeds only jitter final audit amplitudes; discovery/search/revision are deterministic"
+    },
+    {
+      "name": "D weakly_damped_negative_control: frozen models identical across seeds (noise-free primary runs)",
+      "pass": true,
+      "distinct_frozen_models": 1,
+      "seeds": 30,
+      "note": "seeds only jitter final audit amplitudes; discovery/search/revision are deterministic"
+    },
+    {
+      "name": "C Duffing quartic revision recovers physical coefficients (omega^2=4, alpha/2=0.5)",
+      "pass": true,
+      "revised": {
+        "quadratic": 4.000000000023097,
+        "quartic": 0.49999999999973976
+      },
+      "initial": {
+        "quadratic": 4.031008449037536,
+        "quartic": 0.0
+      },
+      "no_search": {
+        "quadratic": 4.000000000045417,
+        "quartic": 0.49999999943836115
+      }
+    },
+    {
+      "name": "C frozen oscillator models re-derived from saved discovery/revision raw data (all seeds)",
+      "pass": true,
+      "max_abs_coefficient_difference": 0.0,
+      "records": 90
+    },
+    {
+      "name": "E Duffing audit drift reproduced with Radau (independent of DOP853)",
+      "pass": true,
+      "radau": [
+        {
+          "amplitude": 1.4581762557207927,
+          "initial": 0.22142525130492902,
+          "revised": 4.9951799678515255e-12
+        },
+        {
+          "amplitude": 1.603670065644078,
+          "initial": 0.25972204074851946,
+          "revised": 4.793346243204955e-12
+        },
+        {
+          "amplitude": 1.228516054115155,
+          "initial": 0.16319156610948665,
+          "revised": 5.413471117538481e-12
+        }
+      ],
+      "saved_initial": [
+        0.22142525131342197,
+        0.25972204074821953,
+        0.16319156610670313
+      ]
+    },
+    {
+      "name": "O under instrument noise the discovery-only quartic fails where the search-informed quartic does not",
+      "pass": true,
+      "search_informed_quartic": {
+        "REFUTED": 0,
+        "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 3,
+        "INCONCLUSIVE": 9
+      },
+      "discovery_only_quartic": {
+        "REFUTED": 10,
+        "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 0,
+        "INCONCLUSIVE": 2
+      },
+      "harmonic_initial": {
+        "REFUTED": 0,
+        "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 6,
+        "INCONCLUSIVE": 6
+      },
+      "n_runs": 12,
+      "source": "frozen-protocol robustness subset (3 seeds x 2 noise x 2 horizon)"
+    },
+    {
+      "name": "F Hooke slopes re-derived from raw discovery readings (30 seeds)",
+      "pass": true,
+      "max_abs_diff_mpa": 0.0
+    },
+    {
+      "name": "F bilinear revisions re-derived from raw probe readings (30 seeds x 3 policies)",
+      "pass": true,
+      "max_rel_diff": 0.0
+    },
+    {
+      "name": "G evaluator onset equals closed form (10 + (E-H) eps_y)/(Ehat - H)",
+      "pass": true,
+      "max_abs_diff_strain": 4.336808689942018e-19
+    },
+    {
+      "name": "K equal search budget: 10 probes / 40 readings per policy per seed",
+      "pass": true
+    },
+    {
+      "name": "J holdout acquired only after model freeze; nothing after holdout",
+      "pass": true
+    },
+    {
+      "name": "J holdout strains disjoint from probe strains",
+      "pass": true
+    },
+    {
+      "name": "H active bracket width equals design constant (MAX-MIN)/2^8 in every seed",
+      "pass": true,
+      "design_width": 5.0781250000000004e-05,
+      "uniform_design": 0.0014444444444444446,
+      "uniform_widths": [
+        0.001444444444
+      ]
+    },
+    {
+      "name": "I revised audit MAE sits at the measurement noise floor for every policy",
+      "pass": true,
+      "expected_mae_of_true_model_mpa": 0.3685270927694246,
+      "true_model_mae_median_mpa": 0.3708089105607376,
+      "revised_mae_median_mpa": {
+        "active": 0.40118620179648207,
+        "uniform": 0.40262087876811725,
+        "random": 0.39732915143191494
+      },
+      "revised_minus_floor_median_mpa": {
+        "active": 0.017785094183392053,
+        "uniform": 0.02676139796974522,
+        "random": 0.019575980859907527
+      }
+    },
+    {
+      "name": "S audit lies inside probed strain domain (interpolation, not extrapolation)",
+      "pass": true,
+      "holdout_strain_range": [
+        0.000161,
+        0.013781
+      ],
+      "probe_domain": [
+        0.001,
+        0.014
+      ],
+      "holdout_points_before_onset": 12,
+      "holdout_points_after_onset": 71,
+      "note": "audit interpolates inside the probed domain; it is not an extrapolation test"
+    },
+    {
+      "name": "N leakage probe: active search relocates to a different hidden material (30 seeds)",
+      "pass": true,
+      "material": "E=70 GPa, eps_y=.0045, H=3 GPa, noise .8 MPa (hypothetical, post-hoc)",
+      "active": {
+        "covered": 27,
+        "boundary_inconclusive": 30,
+        "silent_misses": 0,
+        "revised_audit_survives": 30
+      },
+      "uniform": {
+        "covered": 30,
+        "boundary_inconclusive": 0,
+        "silent_misses": 0,
+        "revised_audit_survives": 30
+      },
+      "random": {
+        "covered": 29,
+        "boundary_inconclusive": 3,
+        "silent_misses": 0,
+        "revised_audit_survives": 30
+      },
+      "n": 30,
+      "active_median_midpoint_offset_strain": 1.3441702850305187e-05
+    },
+    {
+      "name": "M hidden-nonmonotonicity failure case reproduced (documented limitation)",
+      "pass": true,
+      "seeds": 10,
+      "miss_counts": {
+        "active": 10,
+        "uniform": 0,
+        "random": 2
+      },
+      "silent_miss_counts": {
+        "active": 10,
+        "uniform": 0,
+        "random": 2
+      },
+      "nonmonotone_flag_counts": {
+        "active": 0,
+        "uniform": 0,
+        "random": 1
+      },
+      "note": "localized pre-yield softening dip; bisection reports a bracket above the true first 10 MPa exceedance"
+    },
+    {
+      "name": "P evidence records carry SHA-256 of the 8 scientific modules that match the published files",
+      "pass": true,
+      "mismatch": {
+        "outputs/results.json": [],
+        "outputs/materials/results.json": [],
+        "outputs/benchmark/materials/results.json": []
+      },
+      "post_freeze_changed_non_science_files": [
+        "falsifylab/certificates.py",
+        "falsifylab/verify.py"
+      ]
+    },
+    {
+      "name": "L no silent misses: every uncovered bracket in the noise sweep is flagged INCONCLUSIVE",
+      "pass": true,
+      "silent": {
+        "0.8": {
+          "active": 0,
+          "uniform": 0,
+          "random": 0
+        },
+        "2.0": {
+          "active": 0,
+          "uniform": 0,
+          "random": 0
+        },
+        "4.0": {
+          "active": 0,
+          "uniform": 0,
+          "random": 0
+        },
+        "8.0": {
+          "active": 0,
+          "uniform": 0,
+          "random": 0
+        },
+        "16.0": {
+          "active": 0,
+          "uniform": 0,
+          "random": 0
+        }
+      }
+    }
+  ],
+  "oscillator_seed_structure": {
+    "harmonic_undamped_control": {
+      "distinct_frozen_models": 1,
+      "n": 30
+    },
+    "duffing_nonlinearity": {
+      "distinct_frozen_models": 1,
+      "n": 30
+    },
+    "weakly_damped_negative_control": {
+      "distinct_frozen_models": 1,
+      "n": 30
+    }
+  },
+  "oscillator_noise_ablation": [
+    {
+      "noise_sd": 0.001,
+      "horizon_factor": 0.5,
+      "n": 3,
+      "duffing_initial": [
+        "REFUTED",
+        "REFUTED",
+        "REFUTED"
+      ],
+      "duffing_revised": [
+        "INCONCLUSIVE",
+        "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "NOT_REFUTED_UNDER_TESTED_CONDITIONS"
+      ],
+      "duffing_no_search_quartic": [
+        "REFUTED",
+        "REFUTED",
+        "INCONCLUSIVE"
+      ],
+      "no_search_quartic_coeffs": [
+        {
+          "quadratic": 4.032035326068065,
+          "quartic": -0.10230409574053674
+        },
+        {
+          "quadratic": 4.002828478957336,
+          "quartic": 0.3735838114655621
+        },
+        {
+          "quadratic": 3.997501884343104,
+          "quartic": 0.5318177282445307
+        }
+      ],
+      "revised_coeffs": [
+        {
+          "quadratic": 4.000316485155694,
+          "quartic": 0.49968328735284495
+        },
+        {
+          "quadratic": 4.001832658059813,
+          "quartic": 0.49945900802964377
+        },
+        {
+          "quadratic": 3.999398742370352,
+          "quartic": 0.4999009763670629
+        }
+      ],
+      "harmonic_initial": [
+        "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "NOT_REFUTED_UNDER_TESTED_CONDITIONS"
+      ]
+    },
+    {
+      "noise_sd": 0.001,
+      "horizon_factor": 2.0,
+      "n": 3,
+      "duffing_initial": [
+        "REFUTED",
+        "REFUTED",
+        "REFUTED"
+      ],
+      "duffing_revised": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "NOT_REFUTED_UNDER_TESTED_CONDITIONS"
+      ],
+      "duffing_no_search_quartic": [
+        "REFUTED",
+        "REFUTED",
+        "INCONCLUSIVE"
+      ],
+      "no_search_quartic_coeffs": [
+        {
+          "quadratic": 4.032035326068065,
+          "quartic": -0.10230409574053674
+        },
+        {
+          "quadratic": 4.002828478957336,
+          "quartic": 0.3735838114655621
+        },
+        {
+          "quadratic": 3.997501884343104,
+          "quartic": 0.5318177282445307
+        }
+      ],
+      "revised_coeffs": [
+        {
+          "quadratic": 4.000276291767321,
+          "quartic": 0.5000798761762296
+        },
+        {
+          "quadratic": 3.99754509801593,
+          "quartic": 0.5014788788983214
+        },
+        {
+          "quadratic": 4.000860129308207,
+          "quartic": 0.4997581805392925
+        }
+      ],
+      "harmonic_initial": [
+        "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "NOT_REFUTED_UNDER_TESTED_CONDITIONS"
+      ]
+    },
+    {
+      "noise_sd": 0.01,
+      "horizon_factor": 0.5,
+      "n": 3,
+      "duffing_initial": [
+        "REFUTED",
+        "REFUTED",
+        "REFUTED"
+      ],
+      "duffing_revised": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "INCONCLUSIVE"
+      ],
+      "duffing_no_search_quartic": [
+        "REFUTED",
+        "REFUTED",
+        "REFUTED"
+      ],
+      "no_search_quartic_coeffs": [
+        {
+          "quadratic": 4.381733908744751,
+          "quartic": -7.771619514347277
+        },
+        {
+          "quadratic": 4.117838809001786,
+          "quartic": -3.5357974715035723
+        },
+        {
+          "quadratic": 4.199372454504751,
+          "quartic": -4.30421873464392
+        }
+      ],
+      "revised_coeffs": [
+        {
+          "quadratic": 4.026143833586751,
+          "quartic": 0.4877584473945523
+        },
+        {
+          "quadratic": 3.9854033103747795,
+          "quartic": 0.5014905398241449
+        },
+        {
+          "quadratic": 3.9847358996046442,
+          "quartic": 0.5049180052943234
+        }
+      ],
+      "harmonic_initial": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "INCONCLUSIVE"
+      ]
+    },
+    {
+      "noise_sd": 0.01,
+      "horizon_factor": 2.0,
+      "n": 3,
+      "duffing_initial": [
+        "REFUTED",
+        "REFUTED",
+        "REFUTED"
+      ],
+      "duffing_revised": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "INCONCLUSIVE"
+      ],
+      "duffing_no_search_quartic": [
+        "REFUTED",
+        "REFUTED",
+        "REFUTED"
+      ],
+      "no_search_quartic_coeffs": [
+        {
+          "quadratic": 4.381733908744751,
+          "quartic": -7.771619514347277
+        },
+        {
+          "quadratic": 4.117838809001786,
+          "quartic": -3.5357974715035723
+        },
+        {
+          "quadratic": 4.199372454504751,
+          "quartic": -4.30421873464392
+        }
+      ],
+      "revised_coeffs": [
+        {
+          "quadratic": 4.0433111424501975,
+          "quartic": 0.48150261029591823
+        },
+        {
+          "quadratic": 4.004815175606001,
+          "quartic": 0.5033239751346503
+        },
+        {
+          "quadratic": 4.0374919914931,
+          "quartic": 0.48332068902769476
+        }
+      ],
+      "harmonic_initial": [
+        "INCONCLUSIVE",
+        "INCONCLUSIVE",
+        "INCONCLUSIVE"
+      ]
+    }
+  ],
+  "oscillator_noise_ablation_tally": {
+    "search_informed_quartic": {
+      "REFUTED": 0,
+      "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 3,
+      "INCONCLUSIVE": 9
+    },
+    "discovery_only_quartic": {
+      "REFUTED": 10,
+      "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 0,
+      "INCONCLUSIVE": 2
+    },
+    "harmonic_initial": {
+      "REFUTED": 0,
+      "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 6,
+      "INCONCLUSIVE": 6
+    },
+    "n_runs": 12,
+    "source": "frozen-protocol robustness subset (3 seeds x 2 noise x 2 horizon)"
+  },
+  "materials_noise_floor": {
+    "expected_mae_of_true_model_mpa": 0.3685270927694246,
+    "true_model_mae_median_mpa": 0.3708089105607376,
+    "revised_mae_median_mpa": {
+      "active": 0.40118620179648207,
+      "uniform": 0.40262087876811725,
+      "random": 0.39732915143191494
+    },
+    "revised_minus_floor_median_mpa": {
+      "active": 0.017785094183392053,
+      "uniform": 0.02676139796974522,
+      "random": 0.019575980859907527
+    }
+  },
+  "materials_audit_domain": {
+    "holdout_strain_range": [
+      0.000161,
+      0.013781
+    ],
+    "probe_domain": [
+      0.001,
+      0.014
+    ],
+    "holdout_points_before_onset": 12,
+    "holdout_points_after_onset": 71,
+    "note": "audit interpolates inside the probed domain; it is not an extrapolation test"
+  },
+  "alternate_material": {
+    "material": "E=70 GPa, eps_y=.0045, H=3 GPa, noise .8 MPa (hypothetical, post-hoc)",
+    "active": {
+      "covered": 27,
+      "boundary_inconclusive": 30,
+      "silent_misses": 0,
+      "revised_audit_survives": 30
+    },
+    "uniform": {
+      "covered": 30,
+      "boundary_inconclusive": 0,
+      "silent_misses": 0,
+      "revised_audit_survives": 30
+    },
+    "random": {
+      "covered": 29,
+      "boundary_inconclusive": 3,
+      "silent_misses": 0,
+      "revised_audit_survives": 30
+    },
+    "n": 30,
+    "active_median_midpoint_offset_strain": 1.3441702850305187e-05
+  },
+  "hidden_nonmonotonicity": [
+    {
+      "seed": 2026,
+      "true_first_onset": 0.00128044,
+      "active": {
+        "interval": [
+          0.002015625,
+          0.00206640625
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": true
+      },
+      "uniform": {
+        "interval": [
+          0.001,
+          0.0024444444444444444
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      },
+      "random": {
+        "interval": [
+          0.001,
+          0.0012829512620526533
+        ],
+        "status": "INCONCLUSIVE",
+        "silent": false,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      }
+    },
+    {
+      "seed": 2027,
+      "true_first_onset": 0.0012798800000000002,
+      "active": {
+        "interval": [
+          0.002015625,
+          0.00206640625
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": true
+      },
+      "uniform": {
+        "interval": [
+          0.001,
+          0.0024444444444444444
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      },
+      "random": {
+        "interval": [
+          0.001177975592195331,
+          0.003732243398843395
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      }
+    },
+    {
+      "seed": 2028,
+      "true_first_onset": 0.00127617,
+      "active": {
+        "interval": [
+          0.002015625,
+          0.00206640625
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": true
+      },
+      "uniform": {
+        "interval": [
+          0.001,
+          0.0024444444444444444
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      },
+      "random": {
+        "interval": [
+          0.001,
+          0.002273506927139998
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      }
+    },
+    {
+      "seed": 2029,
+      "true_first_onset": 0.0012763800000000001,
+      "active": {
+        "interval": [
+          0.002015625,
+          0.00206640625
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": true
+      },
+      "uniform": {
+        "interval": [
+          0.001,
+          0.0024444444444444444
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      },
+      "random": {
+        "interval": [
+          0.0010590129386230203,
+          0.0024271688195394645
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      }
+    },
+    {
+      "seed": 2030,
+      "true_first_onset": 0.0012798800000000002,
+      "active": {
+        "interval": [
+          0.002015625,
+          0.00206640625
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": true
+      },
+      "uniform": {
+        "interval": [
+          0.001,
+          0.0024444444444444444
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      },
+      "random": {
+        "interval": [
+          0.001718360950113198,
+          0.0028937675541288984
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": true
+      }
+    },
+    {
+      "seed": 2031,
+      "true_first_onset": 0.00127953,
+      "active": {
+        "interval": [
+          0.002015625,
+          0.00206640625
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": true
+      },
+      "uniform": {
+        "interval": [
+          0.001,
+          0.0024444444444444444
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      },
+      "random": {
+        "interval": [
+          0.001,
+          0.005925935428043719
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      }
+    },
+    {
+      "seed": 2032,
+      "true_first_onset": 0.00128212,
+      "active": {
+        "interval": [
+          0.002015625,
+          0.00206640625
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": true
+      },
+      "uniform": {
+        "interval": [
+          0.001,
+          0.0024444444444444444
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      },
+      "random": {
+        "interval": [
+          0.001,
+          0.0012852221144882803
+        ],
+        "status": "INCONCLUSIVE",
+        "silent": false,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      }
+    },
+    {
+      "seed": 2033,
+      "true_first_onset": 0.00127778,
+      "active": {
+        "interval": [
+          0.002015625,
+          0.00206640625
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": true
+      },
+      "uniform": {
+        "interval": [
+          0.001,
+          0.0024444444444444444
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      },
+      "random": {
+        "interval": [
+          0.001166050969707547,
+          0.0033511966297017286
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      }
+    },
+    {
+      "seed": 2034,
+      "true_first_onset": 0.00128338,
+      "active": {
+        "interval": [
+          0.002015625,
+          0.00206640625
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": true
+      },
+      "uniform": {
+        "interval": [
+          0.001,
+          0.0024444444444444444
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      },
+      "random": {
+        "interval": null,
+        "status": "INCONCLUSIVE",
+        "silent": false,
+        "nonmonotone_flag": true,
+        "misses_first_onset": false
+      }
+    },
+    {
+      "seed": 2035,
+      "true_first_onset": 0.00127876,
+      "active": {
+        "interval": [
+          0.002015625,
+          0.00206640625
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": true
+      },
+      "uniform": {
+        "interval": [
+          0.001,
+          0.0024444444444444444
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": false
+      },
+      "random": {
+        "interval": [
+          0.001612279345656638,
+          0.0037333999045649972
+        ],
+        "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "silent": true,
+        "nonmonotone_flag": false,
+        "misses_first_onset": true
+      }
+    }
+  ],
+  "posthoc_noise_sweep": {
+    "label": "EXPLORATORY POST-HOC AUDIT, seeds 2026-2055, not part of frozen protocol v3",
+    "rows": [
+      {
+        "noise_sd_mpa": 0.8,
+        "n": 30,
+        "active": {
+          "evaluable_brackets": 30,
+          "covered": 30,
+          "boundary_inconclusive": 0,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 30,
+            "INCONCLUSIVE": 0
+          },
+          "median_width": 5.0781250000000045e-05,
+          "median_revised_mae": 0.40118620179648207
+        },
+        "uniform": {
+          "evaluable_brackets": 30,
+          "covered": 30,
+          "boundary_inconclusive": 0,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 30,
+            "INCONCLUSIVE": 0
+          },
+          "median_width": 0.0014444444444444444,
+          "median_revised_mae": 0.40262087876811725
+        },
+        "random": {
+          "evaluable_brackets": 30,
+          "covered": 30,
+          "boundary_inconclusive": 0,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 30,
+            "INCONCLUSIVE": 0
+          },
+          "median_width": 0.0015608898681845143,
+          "median_revised_mae": 0.39732915143191494
+        }
+      },
+      {
+        "noise_sd_mpa": 2.0,
+        "n": 30,
+        "active": {
+          "evaluable_brackets": 30,
+          "covered": 30,
+          "boundary_inconclusive": 26,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 30,
+            "INCONCLUSIVE": 0
+          },
+          "median_width": 5.0781250000000045e-05,
+          "median_revised_mae": 1.0029655201307655
+        },
+        "uniform": {
+          "evaluable_brackets": 30,
+          "covered": 30,
+          "boundary_inconclusive": 0,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 30,
+            "INCONCLUSIVE": 0
+          },
+          "median_width": 0.0014444444444444444,
+          "median_revised_mae": 1.0065521929414745
+        },
+        "random": {
+          "evaluable_brackets": 30,
+          "covered": 30,
+          "boundary_inconclusive": 0,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 30,
+            "INCONCLUSIVE": 0
+          },
+          "median_width": 0.0015608898681845143,
+          "median_revised_mae": 0.9933228784379631
+        }
+      },
+      {
+        "noise_sd_mpa": 4.0,
+        "n": 30,
+        "active": {
+          "evaluable_brackets": 30,
+          "covered": 28,
+          "boundary_inconclusive": 30,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 30,
+            "INCONCLUSIVE": 0
+          },
+          "median_width": 5.0781250000000045e-05,
+          "median_revised_mae": 2.0059310729761854
+        },
+        "uniform": {
+          "evaluable_brackets": 30,
+          "covered": 30,
+          "boundary_inconclusive": 10,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 30,
+            "INCONCLUSIVE": 0
+          },
+          "median_width": 0.0014444444444444444,
+          "median_revised_mae": 2.013104388230511
+        },
+        "random": {
+          "evaluable_brackets": 30,
+          "covered": 30,
+          "boundary_inconclusive": 16,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 30,
+            "INCONCLUSIVE": 0
+          },
+          "median_width": 0.0015608898681845143,
+          "median_revised_mae": 1.9833723018941254
+        }
+      },
+      {
+        "noise_sd_mpa": 8.0,
+        "n": 30,
+        "active": {
+          "evaluable_brackets": 29,
+          "covered": 17,
+          "boundary_inconclusive": 30,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 0,
+            "INCONCLUSIVE": 30
+          },
+          "median_width": 5.0781250000000045e-05,
+          "median_revised_mae": 4.023487143254249
+        },
+        "uniform": {
+          "evaluable_brackets": 29,
+          "covered": 29,
+          "boundary_inconclusive": 30,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 0,
+            "INCONCLUSIVE": 30
+          },
+          "median_width": 0.0014444444444444444,
+          "median_revised_mae": 4.0222738982115755
+        },
+        "random": {
+          "evaluable_brackets": 29,
+          "covered": 29,
+          "boundary_inconclusive": 30,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 0,
+            "INCONCLUSIVE": 30
+          },
+          "median_width": 0.001540166548089388,
+          "median_revised_mae": 3.9648085379969924
+        }
+      },
+      {
+        "noise_sd_mpa": 16.0,
+        "n": 30,
+        "active": {
+          "evaluable_brackets": 23,
+          "covered": 2,
+          "boundary_inconclusive": 30,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 0,
+            "INCONCLUSIVE": 30
+          },
+          "median_width": 5.0781250000000045e-05,
+          "median_revised_mae": 7.953869073140502
+        },
+        "uniform": {
+          "evaluable_brackets": 24,
+          "covered": 24,
+          "boundary_inconclusive": 30,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 0,
+            "INCONCLUSIVE": 30
+          },
+          "median_width": 0.0014444444444444444,
+          "median_revised_mae": 8.02956743401673
+        },
+        "random": {
+          "evaluable_brackets": 22,
+          "covered": 19,
+          "boundary_inconclusive": 30,
+          "silent_misses": 0,
+          "revised_audit": {
+            "REFUTED": 0,
+            "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 0,
+            "INCONCLUSIVE": 30
+          },
+          "median_width": 0.001408658764647657,
+          "median_revised_mae": 7.944597428206029
+        }
+      }
+    ]
+  }
+}

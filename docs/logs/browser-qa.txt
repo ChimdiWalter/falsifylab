@@ -1,0 +1,2 @@
+PASS: report desktop/mobile layout, all 3 figures loaded, no horizontal overflow
+PASS: real marimo UI button executed experiment cell and displayed generated figure and results, no JS errors

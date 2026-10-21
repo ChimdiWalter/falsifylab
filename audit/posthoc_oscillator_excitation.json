@@ -1,0 +1,2703 @@
+{
+  "label": "EXPLORATORY POST-HOC AUDIT; not part of frozen protocol v3; true quartic coefficient alpha/2 = 0.5",
+  "summary": [
+    {
+      "noise_sd": 0.001,
+      "n": 30,
+      "none": {
+        "REFUTED": 25,
+        "NOT_REFUTED": 0,
+        "INCONCLUSIVE": 5,
+        "quartic_coeff_median": 0.4620417971456241,
+        "quartic_coeff_iqr": [
+          0.33394645506312126,
+          0.6039375478680025
+        ]
+      },
+      "search": {
+        "REFUTED": 0,
+        "NOT_REFUTED": 4,
+        "INCONCLUSIVE": 26,
+        "quartic_coeff_median": 0.49974269309655417,
+        "quartic_coeff_iqr": [
+          0.4992789019693586,
+          0.5009355816836075
+        ]
+      },
+      "random": {
+        "REFUTED": 8,
+        "NOT_REFUTED": 2,
+        "INCONCLUSIVE": 20,
+        "quartic_coeff_median": 0.49842295920972884,
+        "quartic_coeff_iqr": [
+          0.4871524275967051,
+          0.5031320089512759
+        ]
+      },
+      "largest": {
+        "REFUTED": 0,
+        "NOT_REFUTED": 5,
+        "INCONCLUSIVE": 25,
+        "quartic_coeff_median": 0.4998988532595945,
+        "quartic_coeff_iqr": [
+          0.4992726941174708,
+          0.500801759369171
+        ]
+      },
+      "search_selected_conditions": [
+        [
+          1.7,
+          2.0
+        ],
+        [
+          1.7,
+          6.0
+        ],
+        [
+          1.7,
+          12.0
+        ]
+      ]
+    },
+    {
+      "noise_sd": 0.01,
+      "n": 30,
+      "none": {
+        "REFUTED": 30,
+        "NOT_REFUTED": 0,
+        "INCONCLUSIVE": 0,
+        "quartic_coeff_median": -3.6909941293270108,
+        "quartic_coeff_iqr": [
+          -4.854396477997325,
+          -2.802764753016913
+        ]
+      },
+      "search": {
+        "REFUTED": 0,
+        "NOT_REFUTED": 0,
+        "INCONCLUSIVE": 30,
+        "quartic_coeff_median": 0.4936877366283482,
+        "quartic_coeff_iqr": [
+          0.4851081517375362,
+          0.5013782441796434
+        ]
+      },
+      "random": {
+        "REFUTED": 14,
+        "NOT_REFUTED": 0,
+        "INCONCLUSIVE": 16,
+        "quartic_coeff_median": 0.3615084293073006,
+        "quartic_coeff_iqr": [
+          -0.4298840330166703,
+          0.4536641840251211
+        ]
+      },
+      "largest": {
+        "REFUTED": 0,
+        "NOT_REFUTED": 0,
+        "INCONCLUSIVE": 30,
+        "quartic_coeff_median": 0.49102323951911636,
+        "quartic_coeff_iqr": [
+          0.4841273028831639,
+          0.4991400657599561
+        ]
+      },
+      "search_selected_conditions": [
+        [
+          1.7,
+          2.0
+        ],
+        [
+          1.7,
+          6.0
+        ],
+        [
+          1.7,
+          12.0
+        ]
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "seed": 2026,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          2.0
+        ],
+        "random": [
+          1.7,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.032035326068065,
+          -0.10230409574053674
+        ],
+        "search": [
+          3.9968368610835334,
+          0.5009702579014452
+        ],
+        "random": [
+          4.004015275824984,
+          0.49818381867177075
+        ],
+        "largest": [
+          4.001168475158575,
+          0.49921951982419316
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2027,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          1.7,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.002828478957336,
+          0.3735838114655621
+        ],
+        "search": [
+          4.003540807404282,
+          0.4990931453398638
+        ],
+        "random": [
+          3.9991532467788784,
+          0.5005307377701101
+        ],
+        "largest": [
+          4.003085928453114,
+          0.4987273299471407
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2028,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.9,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.997501884343104,
+          0.5318177282445307
+        ],
+        "search": [
+          3.9975351494941003,
+          0.5009785855490955
+        ],
+        "random": [
+          3.99866885316116,
+          0.5035187978239346
+        ],
+        "largest": [
+          4.0027226994241225,
+          0.4993086499304639
+        ]
+      },
+      "verdict": {
+        "none": "INCONCLUSIVE",
+        "search": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "random": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "largest": "NOT_REFUTED_UNDER_TESTED_CONDITIONS"
+      }
+    },
+    {
+      "seed": 2029,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.2,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.0024245479279195,
+          0.4085562886869084
+        ],
+        "search": [
+          3.996836028264664,
+          0.5011640419946194
+        ],
+        "random": [
+          3.9982929361365214,
+          0.44948277019083516
+        ],
+        "largest": [
+          4.003464591793323,
+          0.49849865671096527
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2030,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.2,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.9945129667326205,
+          0.6843411494835896
+        ],
+        "search": [
+          4.007430118583366,
+          0.49737964942088064
+        ],
+        "random": [
+          3.990877995569809,
+          0.7160577775139702
+        ],
+        "largest": [
+          3.9973670856912915,
+          0.5010585862621323
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2031,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.9,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.002627161913678,
+          0.45637313193114565
+        ],
+        "search": [
+          3.9984911924339643,
+          0.500671295478217
+        ],
+        "random": [
+          4.002590385326507,
+          0.4963845811964545
+        ],
+        "largest": [
+          3.9980080509006672,
+          0.500789511329645
+        ]
+      },
+      "verdict": {
+        "none": "INCONCLUSIVE",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2032,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.9,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.0065498535626745,
+          0.3276814162540498
+        ],
+        "search": [
+          3.9970286398823185,
+          0.5012600974762645
+        ],
+        "random": [
+          3.9976618368540486,
+          0.5019716423332994
+        ],
+        "largest": [
+          3.9990018555576543,
+          0.5004377434841545
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2033,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.9,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.997018593740554,
+          0.5613484344103141
+        ],
+        "search": [
+          4.001123665595454,
+          0.4993927654372097
+        ],
+        "random": [
+          4.003634758653052,
+          0.49508925005256604
+        ],
+        "largest": [
+          4.001847737985644,
+          0.4991397294977525
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2034,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.2,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.9986744906231553,
+          0.422378795603353
+        ],
+        "search": [
+          3.9977015611943605,
+          0.5008315530300944
+        ],
+        "random": [
+          4.001519800295832,
+          0.34371183536496025
+        ],
+        "largest": [
+          3.9970359816534984,
+          0.5011736456946789
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "random": "REFUTED",
+        "largest": "NOT_REFUTED_UNDER_TESTED_CONDITIONS"
+      }
+    },
+    {
+      "seed": 2035,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          6.0
+        ],
+        "random": [
+          0.9,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.0019079625516,
+          0.42993358508427454
+        ],
+        "search": [
+          3.999612444155015,
+          0.5001521066570074
+        ],
+        "random": [
+          3.9971110132381167,
+          0.5041378144172408
+        ],
+        "largest": [
+          3.9994637692690156,
+          0.5005449780700159
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2036,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          1.3,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.99490890564906,
+          0.5314966586564909
+        ],
+        "search": [
+          3.996435530081189,
+          0.5013973026297492
+        ],
+        "random": [
+          4.004219543166543,
+          0.4975306424621063
+        ],
+        "largest": [
+          4.000335984049305,
+          0.49968715624471893
+        ]
+      },
+      "verdict": {
+        "none": "INCONCLUSIVE",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2037,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          1.7,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.980425627065355,
+          0.8525115577577521
+        ],
+        "search": [
+          4.002939846905636,
+          0.4990146032770217
+        ],
+        "random": [
+          4.004968634192315,
+          0.49866209974768694
+        ],
+        "largest": [
+          4.002883009890632,
+          0.498556486389872
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2038,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          1.3,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.9806387462381663,
+          0.7390301234465285
+        ],
+        "search": [
+          4.003140212522612,
+          0.4986251174399778
+        ],
+        "random": [
+          3.9981032571941113,
+          0.5015911540099497
+        ],
+        "largest": [
+          3.996910681411803,
+          0.5011450364015019
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2039,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          1.3,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.020002009643659,
+          0.061330487074484255
+        ],
+        "search": [
+          4.004554858178724,
+          0.4988004403965463
+        ],
+        "random": [
+          4.003485520990579,
+          0.49809754718268456
+        ],
+        "largest": [
+          3.998714870750447,
+          0.5005552300918232
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2040,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.9,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.02386061937612,
+          0.23547864648015893
+        ],
+        "search": [
+          3.9999875152740443,
+          0.4998664826552651
+        ],
+        "random": [
+          4.007494572742514,
+          0.49137422156845995
+        ],
+        "largest": [
+          4.000427434505159,
+          0.5001240007742828
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2041,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          1.7,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.003022683327902,
+          0.3527415714903358
+        ],
+        "search": [
+          4.000700891143797,
+          0.4996189035378432
+        ],
+        "random": [
+          4.001345708087423,
+          0.49948432743415866
+        ],
+        "largest": [
+          4.000930850402034,
+          0.4992607088464731
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2042,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.2,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.988778044303258,
+          0.6794708065355237
+        ],
+        "search": [
+          4.0026887446200226,
+          0.4993046370162884
+        ],
+        "random": [
+          3.9909431281211294,
+          0.6152892034130526
+        ],
+        "largest": [
+          3.999385776009319,
+          0.500805842049013
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2043,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.2,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.9974576171049097,
+          0.48115850651835407
+        ],
+        "search": [
+          4.001708449028414,
+          0.499270323620382
+        ],
+        "random": [
+          4.006394784353536,
+          0.3435703804116053
+        ],
+        "largest": [
+          3.9997047571443214,
+          0.49974229551366833
+        ]
+      },
+      "verdict": {
+        "none": "INCONCLUSIVE",
+        "search": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "random": "REFUTED",
+        "largest": "NOT_REFUTED_UNDER_TESTED_CONDITIONS"
+      }
+    },
+    {
+      "seed": 2044,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.9,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.013021336592488,
+          0.1829243223302458
+        ],
+        "search": [
+          3.994629352079703,
+          0.5014808812934495
+        ],
+        "random": [
+          4.000923616586871,
+          0.5001923394442949
+        ],
+        "largest": [
+          4.000661308091801,
+          0.4995841940165852
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2045,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.5,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.017962211665355,
+          0.2318143435616831
+        ],
+        "search": [
+          4.001792094359768,
+          0.4995200334299914
+        ],
+        "random": [
+          3.996538656205454,
+          0.514618488669297
+        ],
+        "largest": [
+          3.9998459412667753,
+          0.4998713027904145
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2046,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.2,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.982981596175801,
+          0.8409288330067785
+        ],
+        "search": [
+          3.999847177688854,
+          0.5002285940095289
+        ],
+        "random": [
+          3.9789620571909183,
+          0.8691817445868617
+        ],
+        "largest": [
+          3.9987938446905575,
+          0.5009064002464013
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2047,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.5,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.965692858592865,
+          1.0519802918623733
+        ],
+        "search": [
+          4.000511601585773,
+          0.4995142469259057
+        ],
+        "random": [
+          4.0061484377703165,
+          0.46197183381933027
+        ],
+        "largest": [
+          3.9979949328743105,
+          0.5008900438308634
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2048,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.2,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.02823364355513,
+          -0.022360274688745546
+        ],
+        "search": [
+          4.003018975387201,
+          0.49874080257202896
+        ],
+        "random": [
+          4.022028465143782,
+          0.04728874220825995
+        ],
+        "largest": [
+          3.999371156615434,
+          0.5004148407255645
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2049,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.9,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.000528147867025,
+          0.4677104623601025
+        ],
+        "search": [
+          3.9995596729592227,
+          0.5002783110088931
+        ],
+        "random": [
+          3.999189721982102,
+          0.5000371811429316
+        ],
+        "largest": [
+          4.002955756805346,
+          0.49880458284740314
+        ]
+      },
+      "verdict": {
+        "none": "INCONCLUSIVE",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2050,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.5,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.98810003534484,
+          0.6057766092743441
+        ],
+        "search": [
+          3.9962023173961185,
+          0.5016840627057318
+        ],
+        "random": [
+          4.002762414410134,
+          0.47807616543400966
+        ],
+        "largest": [
+          3.9972361329482804,
+          0.5009722902311539
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2051,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.5,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.9875737012375287,
+          0.5756323799108864
+        ],
+        "search": [
+          4.000305623641455,
+          0.49950637658804004
+        ],
+        "random": [
+          3.9938741837239,
+          0.5355566361086591
+        ],
+        "largest": [
+          3.9965693769803368,
+          0.501210887597613
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2052,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.2,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.009346984874496,
+          0.36808505724588303
+        ],
+        "search": [
+          4.001869751116703,
+          0.498569883794272
+        ],
+        "random": [
+          4.00495995912562,
+          0.3801918007721442
+        ],
+        "largest": [
+          4.002010720956519,
+          0.4994479839074171
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "NOT_REFUTED_UNDER_TESTED_CONDITIONS"
+      }
+    },
+    {
+      "seed": 2053,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          2.0
+        ],
+        "random": [
+          0.5,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.004467841689912,
+          0.32140490749907374
+        ],
+        "search": [
+          4.0012460671809595,
+          0.4994640548315278
+        ],
+        "random": [
+          3.9922943453865813,
+          0.5130891785644912
+        ],
+        "largest": [
+          4.0012866785542975,
+          0.49983539248783004
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2054,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.9,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.994631943936857,
+          0.5984203636489779
+        ],
+        "search": [
+          3.997376220269992,
+          0.5011162762728442
+        ],
+        "random": [
+          4.00280667743192,
+          0.4960295446640257
+        ],
+        "largest": [
+          4.000815897827121,
+          0.49992640372877445
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "random": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "largest": "NOT_REFUTED_UNDER_TESTED_CONDITIONS"
+      }
+    },
+    {
+      "seed": 2055,
+      "noise_sd": 0.001,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.9,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.9845579038586507,
+          0.7094242041002781
+        ],
+        "search": [
+          3.999493161774175,
+          0.5004160657998891
+        ],
+        "random": [
+          4.0094832511733935,
+          0.4857451629394534
+        ],
+        "largest": [
+          4.006470837694986,
+          0.49742751865313245
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2026,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          2.0
+        ],
+        "random": [
+          1.7,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.381733908744751,
+          -7.771619514347277
+        ],
+        "search": [
+          3.9857761626677184,
+          0.5025345065512009
+        ],
+        "random": [
+          4.06381254624981,
+          0.4723091869762729
+        ],
+        "largest": [
+          4.0334163886884316,
+          0.48362052898487656
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2027,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          2.0
+        ],
+        "random": [
+          1.7,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.117838809001786,
+          -3.5357974715035723
+        ],
+        "search": [
+          4.082529555121614,
+          0.4714801684105354
+        ],
+        "random": [
+          4.015589841223428,
+          0.49568465669217493
+        ],
+        "largest": [
+          4.05399510209923,
+          0.4780692863173655
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2028,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.9,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.199372454504751,
+          -4.30421873464392
+        ],
+        "search": [
+          3.9952279780685838,
+          0.5017511897471129
+        ],
+        "random": [
+          4.050280933106874,
+          0.4458632851952112
+        ],
+        "largest": [
+          4.050763731959351,
+          0.4836314719710651
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2029,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.2,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.1863895719689,
+          -4.471550581734765
+        ],
+        "search": [
+          3.9889623730740826,
+          0.5033594031351569
+        ],
+        "random": [
+          4.1036648998612595,
+          -4.483962695524425
+        ],
+        "largest": [
+          4.05556473290233,
+          0.4765697868875253
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2030,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          6.0
+        ],
+        "random": [
+          0.2,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.078056927036668,
+          -1.1126413094386842
+        ],
+        "search": [
+          4.042119936048061,
+          0.48309909315535426
+        ],
+        "random": [
+          4.033783253327599,
+          -1.8864701522348164
+        ],
+        "largest": [
+          3.9945836675393047,
+          0.5022018593710429
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2031,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.9,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.114621090004197,
+          -2.9344454068661383
+        ],
+        "search": [
+          4.007847142174258,
+          0.49758514866924164
+        ],
+        "random": [
+          4.081238615731923,
+          0.3863156173058201
+        ],
+        "largest": [
+          4.003206313649061,
+          0.49871382814713755
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2032,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          2.0
+        ],
+        "random": [
+          0.9,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.211796941823893,
+          -4.938760024072449
+        ],
+        "search": [
+          4.009558216321377,
+          0.4938320075178215
+        ],
+        "random": [
+          4.02216063531494,
+          0.45426523819727155
+        ],
+        "largest": [
+          4.01323939019774,
+          0.4951897233652131
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2033,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.9,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.157418809635159,
+          -3.671682202017727
+        ],
+        "search": [
+          4.036212647629504,
+          0.48404352977948506
+        ],
+        "random": [
+          4.082671338678507,
+          0.38438622535526473
+        ],
+        "largest": [
+          4.037427810780748,
+          0.4837878530094293
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2034,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          2.0
+        ],
+        "random": [
+          0.2,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.073262521766592,
+          -2.9218774651578774
+        ],
+        "search": [
+          3.9932368354194674,
+          0.5041858643570066
+        ],
+        "random": [
+          4.1329370103903065,
+          -5.4877230803810155
+        ],
+        "largest": [
+          3.9883796813109833,
+          0.5044776497709023
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2035,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          6.0
+        ],
+        "random": [
+          0.9,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.247512864286848,
+          -5.331936490839571
+        ],
+        "search": [
+          4.015831666262995,
+          0.49354346573887486
+        ],
+        "random": [
+          4.020768484250569,
+          0.4694928787861653
+        ],
+        "largest": [
+          4.017367674740459,
+          0.4963763817191044
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2036,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          1.3,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.124650277283197,
+          -3.4251726922927057
+        ],
+        "search": [
+          3.987481689684855,
+          0.504755409871658
+        ],
+        "random": [
+          4.076881560379355,
+          0.45186102150866986
+        ],
+        "largest": [
+          4.025546819774888,
+          0.48800436310751666
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2037,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          6.0
+        ],
+        "random": [
+          1.7,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.903276137433561,
+          0.9690782208511588
+        ],
+        "search": [
+          4.003644169225743,
+          0.4961819250164048
+        ],
+        "random": [
+          4.071757411783885,
+          0.47790623643869834
+        ],
+        "largest": [
+          4.0603637516294775,
+          0.4731638433652421
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2038,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          2.0
+        ],
+        "random": [
+          1.3,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.9356871796981356,
+          -0.655688973757649
+        ],
+        "search": [
+          4.057531800908826,
+          0.4777406186289045
+        ],
+        "random": [
+          4.0171839041943045,
+          0.4915519357902802
+        ],
+        "largest": [
+          3.989204115088413,
+          0.5034214633834518
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2039,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          1.3,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.275118293343957,
+          -6.409152588035762
+        ],
+        "search": [
+          4.069344526629642,
+          0.4785785705561876
+        ],
+        "random": [
+          4.069305999831769,
+          0.45771051222086817
+        ],
+        "largest": [
+          4.007680327775344,
+          0.4973989039650961
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2040,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          6.0
+        ],
+        "random": [
+          0.9,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.294130314994586,
+          -4.601305839771953
+        ],
+        "search": [
+          4.008170080112009,
+          0.4939043782933925
+        ],
+        "random": [
+          4.116482022909561,
+          0.3531390514419042
+        ],
+        "largest": [
+          4.02852276888058,
+          0.4916476291124962
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2041,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          1.7,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.116734392806213,
+          -3.7103060566362944
+        ],
+        "search": [
+          4.034458546754202,
+          0.48533030375133596
+        ],
+        "random": [
+          4.034610917241437,
+          0.48633908070958626
+        ],
+        "largest": [
+          4.027867421413766,
+          0.48514565250436775
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2042,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          6.0
+        ],
+        "random": [
+          0.2,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.081440479139055,
+          -2.400233070829693
+        ],
+        "search": [
+          3.989550345197513,
+          0.5042991784602796
+        ],
+        "random": [
+          4.105616776560571,
+          -4.576301115025187
+        ],
+        "largest": [
+          4.013138448187167,
+          0.5002475670380858
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2043,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          2.0
+        ],
+        "random": [
+          0.2,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.216991028596429,
+          -5.22208066312877
+        ],
+        "search": [
+          4.015982188109232,
+          0.49252608044729
+        ],
+        "random": [
+          4.241697857232804,
+          -6.78832429623327
+        ],
+        "largest": [
+          4.014161908387687,
+          0.4905014804262456
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2044,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.9,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.203924334107592,
+          -5.105635776948155
+        ],
+        "search": [
+          3.9691167161948937,
+          0.5057270160607806
+        ],
+        "random": [
+          4.0682264331740345,
+          0.4184444701168551
+        ],
+        "largest": [
+          4.027630754543655,
+          0.48744617230768644
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2045,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          2.0
+        ],
+        "random": [
+          0.5,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.21531064705191,
+          -4.139500671070213
+        ],
+        "search": [
+          4.035642079164512,
+          0.4904500184183599
+        ],
+        "random": [
+          4.087185837764531,
+          0.029204775978132938
+        ],
+        "largest": [
+          4.020317584593544,
+          0.49010243452343605
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2046,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.2,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.929349385332929,
+          0.8351280395846308
+        ],
+        "search": [
+          4.022183467533287,
+          0.49281172243000054
+        ],
+        "random": [
+          3.909427725446703,
+          -0.38622682530716756
+        ],
+        "largest": [
+          4.009574772491429,
+          0.5004301774460266
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2047,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.5,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.7675967111325397,
+          2.750584564334706
+        ],
+        "search": [
+          4.030623434009332,
+          0.4850766827283292
+        ],
+        "random": [
+          4.174454219106509,
+          -0.44443643558650453
+        ],
+        "largest": [
+          4.004087961297726,
+          0.49928214496422896
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2048,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          2.0
+        ],
+        "random": [
+          0.2,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.355649963070369,
+          -7.25979202331486
+        ],
+        "search": [
+          4.027159616262804,
+          0.48520255876515717
+        ],
+        "random": [
+          4.316601840665612,
+          -8.02965713980589
+        ],
+        "largest": [
+          4.016933671221208,
+          0.4948829983919416
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2049,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          6.0
+        ],
+        "random": [
+          0.9,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.09745837354908,
+          -2.7630605156365915
+        ],
+        "search": [
+          4.0079011648566345,
+          0.4971533387927552
+        ],
+        "random": [
+          4.046474324459062,
+          0.4219361740409068
+        ],
+        "largest": [
+          4.052274588941027,
+          0.4789875007574623
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2050,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.5,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          3.9970110259882254,
+          -1.7627561079899918
+        ],
+        "search": [
+          3.9823396326356555,
+          0.5087094020660935
+        ],
+        "random": [
+          4.128873165490717,
+          -0.22693529909455892
+        ],
+        "largest": [
+          3.9908809731509836,
+          0.5022836375565625
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2051,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          2.0
+        ],
+        "random": [
+          0.5,
+          6.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.061470811692282,
+          -3.1597132825030063
+        ],
+        "search": [
+          4.041168894469021,
+          0.482330549961246
+        ],
+        "random": [
+          4.054693987469776,
+          0.26076069255058537
+        ],
+        "largest": [
+          3.9915461372028815,
+          0.501854377751057
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2052,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          12.0
+        ],
+        "random": [
+          0.2,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.204384610488578,
+          -4.18372350281499
+        ],
+        "search": [
+          4.040792249203745,
+          0.4769140176033227
+        ],
+        "random": [
+          4.16800036441037,
+          -5.0822004410796175
+        ],
+        "largest": [
+          4.038195547715815,
+          0.4871396298511278
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2053,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          2.0
+        ],
+        "random": [
+          0.5,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.193540470892121,
+          -5.436222844848534
+        ],
+        "search": [
+          4.03326843681546,
+          0.4862129182176931
+        ],
+        "random": [
+          4.019313309329476,
+          0.14076403380669805
+        ],
+        "largest": [
+          4.035123697690605,
+          0.48945805340628556
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2054,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          6.0
+        ],
+        "random": [
+          0.9,
+          12.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.207910686460917,
+          -4.512310226099764
+        ],
+        "search": [
+          4.001137929316285,
+          0.49662534152771226
+        ],
+        "random": [
+          4.09155387226372,
+          0.36987780717269697
+        ],
+        "largest": [
+          4.027584191512706,
+          0.49154499861198714
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "INCONCLUSIVE",
+        "largest": "INCONCLUSIVE"
+      }
+    },
+    {
+      "seed": 2055,
+      "noise_sd": 0.01,
+      "extra_condition": {
+        "none": null,
+        "search": [
+          1.7,
+          6.0
+        ],
+        "random": [
+          0.9,
+          2.0
+        ],
+        "largest": [
+          1.7,
+          12.0
+        ]
+      },
+      "coefficients": {
+        "none": [
+          4.080275855633369,
+          -3.0722516253571803
+        ],
+        "search": [
+          4.01279603302863,
+          0.500259407477235
+        ],
+        "random": [
+          4.150134055131167,
+          0.2803714287614291
+        ],
+        "largest": [
+          4.086620735745794,
+          0.46555583880341866
+        ]
+      },
+      "verdict": {
+        "none": "REFUTED",
+        "search": "INCONCLUSIVE",
+        "random": "REFUTED",
+        "largest": "INCONCLUSIVE"
+      }
+    }
+  ]
+}

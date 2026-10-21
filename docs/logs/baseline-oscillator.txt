@@ -1,0 +1,26 @@
+
+harmonic_undamped_control
+  proposed: Q = v^2 + 4.000000 x^2
+  training drift: 0.00000%
+  held-out drift: 0.00000%
+  initial verdict: NOT_REFUTED
+
+duffing_nonlinearity
+  proposed: Q = v^2 + 4.031008 x^2
+  training drift: 0.59227%
+  held-out drift: 20.24542%
+  initial verdict: REFUTED
+  revised: Q = v^2 + 4.000000 x^2 + 0.500000 x^4
+  revised held-out drift: 0.00000%
+  revised verdict: NOT_REFUTED
+
+weakly_damped_negative_control
+  proposed: Q = v^2 + 3.978267 x^2
+  training drift: 0.34005%
+  held-out drift: 8.67316%
+  initial verdict: REFUTED
+  revised: Q = v^2 + 4.036365 x^2 + -0.081205 x^4
+  revised held-out drift: 10.05566%
+  revised verdict: REFUTED
+
+Saved reproducible results to /deltos/e/lesion_phes/code/python/pipeline/falsifylab/baseline/reproduced_oscillator

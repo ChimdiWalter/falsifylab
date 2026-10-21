@@ -1,0 +1,6 @@
+Synthetic stress-strain: 30 independent seeds; each search strategy 10 probes, 40 measurements/seed
+   active median onset-bracket width: 0.000051 strain (nonmonotone 0/30)
+  uniform median onset-bracket width: 0.001444 strain (nonmonotone 0/30)
+   random median onset-bracket width: 0.002139 strain (nonmonotone 0/30)
+  Heldout median MAE (MPa): linear 1068.981; revised 0.401
+Wrote baseline/reproduced_materials

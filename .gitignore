@@ -1,0 +1,20 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+*.egg-info/
+*.zip
+.cache/
+dist/
+# User-supplied loose copies are preserved on disk; current artifacts live below outputs/.
+/CHECKLIST_2026.md
+/LINKEDIN_POST_READY.md
+/MOMENT_WRITEUP_READY.md
+/SHARED_AGENT_HANDOFF.md
+/VIDEO_SHOTLIST_4MIN.md
+/demo.html
+/duffing_counterexample.png
+/stress_strain_boundary.png
+
+__marimo__/
+audit_runs/

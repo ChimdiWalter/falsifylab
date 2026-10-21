@@ -1,0 +1,4 @@
+note: oscillator harmonic_undamped_control catalog drifts tie (top two 1.280324735130879e-10, 1.2769056645488412e-10); recorded selection replayed
+note: oscillator weakly_damped_negative_control catalog drifts tie (top two 0.0946991438406147, 0.09469914381806203); recorded selection replayed
+engine parity: 1500/1500 checks pass over 42 material runs and 3 oscillator cases
+worst deviations: {"ehat_rel":4.1584774047588907e-16,"yield_rel":3.1953074793054307e-9,"hardening_abs_mpa":0.0001918500158808456,"audit_mae_abs_mpa":5.427979417049755e-7,"quadratic_abs":1.9201085166287157e-11,"revised_abs":5.130527946928254e-11,"catalog_drift_rel":2.3382905102839184e-8,"audit_drift_rel":1.2247940047169e-9}

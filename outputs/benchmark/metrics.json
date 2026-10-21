@@ -1,0 +1,1545 @@
+{
+  "ablations": {
+    "independent_audit": "No audit ablation is conceptual only: removing it hides the failed quadratic claim; no holdout was used for fitting.",
+    "materials_no_search_and_no_revision": {
+      "iqr": 1.4819073952933195,
+      "median": 1064.7931676310984,
+      "n": 30,
+      "q25": 1064.0464534292166,
+      "q75": 1065.52836082451
+    },
+    "oscillator_no_search": "Quartic fit from discovery only; same holdout. Can succeed without search in noiseless toy; see per-system survival rates."
+  },
+  "failures": [],
+  "interpretation": [
+    "Control rates are descriptive across simulation/noise seeds, not calibrated p-values",
+    "No claim of superiority over active learning or symbolic regression",
+    "Boundary width alone is not accuracy: inspect coverage and inconclusive fractions",
+    "Repeated seeds refer to one physical system per case, not independent materials"
+  ],
+  "materials": {
+    "budget": {
+      "common_final_audit_measurements": 249,
+      "common_training_measurements": 40,
+      "per_policy_probe_measurements": 40
+    },
+    "holdout_linear_mae_mpa": {
+      "iqr": 1.4819073952933195,
+      "median": 1064.7931676310984,
+      "n": 30,
+      "q25": 1064.0464534292166,
+      "q75": 1065.52836082451
+    },
+    "holdout_revised_mae_mpa": {
+      "iqr": 0.06819761878351616,
+      "median": 0.40118620179648207,
+      "n": 30,
+      "q25": 0.3725340623304727,
+      "q75": 0.44073168111398886
+    },
+    "median_holdout_linear_mae_mpa": 1064.7931676310984,
+    "median_holdout_revised_mae_mpa": 0.40118620179648207,
+    "methods": {
+      "active": {
+        "bracket_width_summary": {
+          "iqr": 0.0,
+          "median": 5.0781250000000045e-05,
+          "n": 30,
+          "q25": 5.0781250000000045e-05,
+          "q75": 5.0781250000000045e-05
+        },
+        "coverage_denominator": 30,
+        "holdout_revised_mae_mpa": {
+          "iqr": 0.06819761878351616,
+          "median": 0.40118620179648207,
+          "n": 30,
+          "q25": 0.3725340623304727,
+          "q75": 0.44073168111398886
+        },
+        "inconclusive_boundary_fraction": 0.0,
+        "measurements_per_seed": 40,
+        "median_bracket_width_strain": 5.0781250000000045e-05,
+        "nonmonotone_replicates": 0,
+        "probes_per_seed": 10,
+        "reference_onset_coverage_fraction": 1.0,
+        "revision_audit_inconclusive_fraction": 0.0,
+        "revision_audit_survival_fraction": 1.0
+      },
+      "random": {
+        "bracket_width_summary": {
+          "iqr": 0.0010553143310627578,
+          "median": 0.0015608898681845143,
+          "n": 30,
+          "q25": 0.001281353323671935,
+          "q75": 0.002336667654734693
+        },
+        "coverage_denominator": 30,
+        "holdout_revised_mae_mpa": {
+          "iqr": 0.06243760352519179,
+          "median": 0.39732915143191494,
+          "n": 30,
+          "q25": 0.36381569503280786,
+          "q75": 0.42625329855799965
+        },
+        "inconclusive_boundary_fraction": 0.0,
+        "measurements_per_seed": 40,
+        "median_bracket_width_strain": 0.0015608898681845143,
+        "nonmonotone_replicates": 0,
+        "probes_per_seed": 10,
+        "reference_onset_coverage_fraction": 1.0,
+        "revision_audit_inconclusive_fraction": 0.0,
+        "revision_audit_survival_fraction": 1.0
+      },
+      "uniform": {
+        "bracket_width_summary": {
+          "iqr": 0.0,
+          "median": 0.0014444444444444444,
+          "n": 30,
+          "q25": 0.0014444444444444444,
+          "q75": 0.0014444444444444444
+        },
+        "coverage_denominator": 30,
+        "holdout_revised_mae_mpa": {
+          "iqr": 0.05382450118436971,
+          "median": 0.40262087876811725,
+          "n": 30,
+          "q25": 0.367302283679477,
+          "q75": 0.4211267848638467
+        },
+        "inconclusive_boundary_fraction": 0.0,
+        "measurements_per_seed": 40,
+        "median_bracket_width_strain": 0.0014444444444444444,
+        "nonmonotone_replicates": 0,
+        "probes_per_seed": 10,
+        "reference_onset_coverage_fraction": 1.0,
+        "revision_audit_inconclusive_fraction": 0.0,
+        "revision_audit_survival_fraction": 1.0
+      }
+    },
+    "protocol_version": "3.0.0",
+    "scientific_limits": [
+      "One synthetic material, repeated noise seeds, not independent physical materials",
+      "Monotonic prior; intervals are not confidence intervals",
+      "Bilinear family predeclared; no comparison with state-of-the-art constitutive fitting",
+      "MAE is against independent three-reading means, which include instrument noise"
+    ],
+    "seed_count": 30,
+    "seed_ids": [
+      2026,
+      2027,
+      2028,
+      2029,
+      2030,
+      2031,
+      2032,
+      2033,
+      2034,
+      2035,
+      2036,
+      2037,
+      2038,
+      2039,
+      2040,
+      2041,
+      2042,
+      2043,
+      2044,
+      2045,
+      2046,
+      2047,
+      2048,
+      2049,
+      2050,
+      2051,
+      2052,
+      2053,
+      2054,
+      2055
+    ]
+  },
+  "oscillator": [
+    {
+      "costs_example": {
+        "discovery": {
+          "measurements": 726,
+          "observation_points": 363,
+          "rhs_evaluations": 336,
+          "simulated_duration_s": 2.4000000000000004,
+          "simulator_calls": 3
+        },
+        "holdout": {
+          "measurements": 3886,
+          "observation_points": 1943,
+          "rhs_evaluations": 3441,
+          "simulated_duration_s": 29.43,
+          "simulator_calls": 3
+        },
+        "probe": {
+          "measurements": 12030,
+          "observation_points": 6015,
+          "rhs_evaluations": 11994,
+          "simulated_duration_s": 100.0,
+          "simulator_calls": 15
+        }
+      },
+      "initial_drift": {
+        "iqr": 1.7514621532594013e-13,
+        "median": 1.2454698722544309e-10,
+        "n": 30,
+        "q25": 1.244209219284423e-10,
+        "q75": 1.2459606814376825e-10
+      },
+      "initial_false_refutation_rate_valid_control": 0.0,
+      "initial_inconclusive_fraction": 0.0,
+      "initial_refutation_rate": 0.0,
+      "n": 30,
+      "negative_control_revised_refutation_rate": null,
+      "no_revision_survival_rate": 1.0,
+      "no_search_quartic_survival_rate": 1.0,
+      "revised_drift": {
+        "iqr": null,
+        "median": null,
+        "n": 0,
+        "q25": null,
+        "q75": null
+      },
+      "revised_inconclusive_fraction": null,
+      "revised_survival_rate": null,
+      "system": "harmonic_undamped_control"
+    },
+    {
+      "costs_example": {
+        "discovery": {
+          "measurements": 726,
+          "observation_points": 363,
+          "rhs_evaluations": 366,
+          "simulated_duration_s": 2.4000000000000004,
+          "simulator_calls": 3
+        },
+        "holdout": {
+          "measurements": 3886,
+          "observation_points": 1943,
+          "rhs_evaluations": 7410,
+          "simulated_duration_s": 29.43,
+          "simulator_calls": 3
+        },
+        "probe": {
+          "measurements": 12030,
+          "observation_points": 6015,
+          "rhs_evaluations": 20238,
+          "simulated_duration_s": 100.0,
+          "simulator_calls": 15
+        },
+        "revision": {
+          "measurements": 1002,
+          "observation_points": 501,
+          "rhs_evaluations": 3230,
+          "simulated_duration_s": 12.0,
+          "simulator_calls": 1
+        }
+      },
+      "initial_drift": {
+        "iqr": 0.0038243386600423646,
+        "median": 0.22368404039501358,
+        "n": 30,
+        "q25": 0.22091530958111197,
+        "q75": 0.22473964824115433
+      },
+      "initial_false_refutation_rate_valid_control": null,
+      "initial_inconclusive_fraction": 0.0,
+      "initial_refutation_rate": 1.0,
+      "n": 30,
+      "negative_control_revised_refutation_rate": null,
+      "no_revision_survival_rate": 0.0,
+      "no_search_quartic_survival_rate": 1.0,
+      "revised_drift": {
+        "iqr": 1.4260680417022973e-11,
+        "median": 5.646190754198267e-11,
+        "n": 30,
+        "q25": 5.235316808948098e-11,
+        "q75": 6.661384850650395e-11
+      },
+      "revised_inconclusive_fraction": 0.0,
+      "revised_survival_rate": 1.0,
+      "system": "duffing_nonlinearity"
+    },
+    {
+      "costs_example": {
+        "discovery": {
+          "measurements": 726,
+          "observation_points": 363,
+          "rhs_evaluations": 336,
+          "simulated_duration_s": 2.4000000000000004,
+          "simulator_calls": 3
+        },
+        "holdout": {
+          "measurements": 3886,
+          "observation_points": 1943,
+          "rhs_evaluations": 3426,
+          "simulated_duration_s": 29.43,
+          "simulator_calls": 3
+        },
+        "probe": {
+          "measurements": 12030,
+          "observation_points": 6015,
+          "rhs_evaluations": 11949,
+          "simulated_duration_s": 100.0,
+          "simulator_calls": 15
+        },
+        "revision": {
+          "measurements": 1002,
+          "observation_points": 501,
+          "rhs_evaluations": 1409,
+          "simulated_duration_s": 12.0,
+          "simulator_calls": 1
+        }
+      },
+      "initial_drift": {
+        "iqr": 3.982283236503292e-08,
+        "median": 0.07702141683720312,
+        "n": 30,
+        "q25": 0.07702141583942781,
+        "q75": 0.07702145566226018
+      },
+      "initial_false_refutation_rate_valid_control": null,
+      "initial_inconclusive_fraction": 0.0,
+      "initial_refutation_rate": 1.0,
+      "n": 30,
+      "negative_control_revised_refutation_rate": 1.0,
+      "no_revision_survival_rate": 0.0,
+      "no_search_quartic_survival_rate": 0.0,
+      "revised_drift": {
+        "iqr": 0.000766869324965419,
+        "median": 0.10433735101703845,
+        "n": 30,
+        "q25": 0.1037843035531088,
+        "q75": 0.10455117287807422
+      },
+      "revised_inconclusive_fraction": 0.0,
+      "revised_survival_rate": 0.0,
+      "system": "weakly_damped_negative_control"
+    }
+  ],
+  "protocol_version": "v3-frozen-2026-10-21",
+  "robustness": {
+    "materials": [
+      {
+        "budget": {
+          "common_final_audit_measurements": 249,
+          "common_training_measurements": 40,
+          "per_policy_probe_measurements": 40
+        },
+        "holdout_linear_mae_mpa": {
+          "iqr": 0.0,
+          "median": 1064.3512043784892,
+          "n": 3,
+          "q25": 1064.3512043784892,
+          "q75": 1064.3512043784892
+        },
+        "holdout_revised_mae_mpa": {
+          "iqr": 0.0,
+          "median": 3.176040421289122e-14,
+          "n": 3,
+          "q25": 3.176040421289122e-14,
+          "q75": 3.176040421289122e-14
+        },
+        "median_holdout_linear_mae_mpa": 1064.3512043784892,
+        "median_holdout_revised_mae_mpa": 3.176040421289122e-14,
+        "methods": {
+          "active": {
+            "bracket_width_summary": {
+              "iqr": 0.0,
+              "median": 5.0781250000000045e-05,
+              "n": 3,
+              "q25": 5.0781250000000045e-05,
+              "q75": 5.0781250000000045e-05
+            },
+            "coverage_denominator": 3,
+            "holdout_revised_mae_mpa": {
+              "iqr": 0.0,
+              "median": 3.176040421289122e-14,
+              "n": 3,
+              "q25": 3.176040421289122e-14,
+              "q75": 3.176040421289122e-14
+            },
+            "inconclusive_boundary_fraction": 0.0,
+            "measurements_per_seed": 40,
+            "median_bracket_width_strain": 5.0781250000000045e-05,
+            "nonmonotone_replicates": 0,
+            "probes_per_seed": 10,
+            "reference_onset_coverage_fraction": 1.0,
+            "revision_audit_inconclusive_fraction": 0.0,
+            "revision_audit_survival_fraction": 1.0
+          },
+          "random": {
+            "bracket_width_summary": {
+              "iqr": 0.0006403804397540334,
+              "median": 0.0013541324019770418,
+              "n": 3,
+              "q25": 0.0013138196645585197,
+              "q75": 0.001954200104312553
+            },
+            "coverage_denominator": 3,
+            "holdout_revised_mae_mpa": {
+              "iqr": 2.7394418728100273e-15,
+              "median": 3.792414842671378e-14,
+              "n": 3,
+              "q25": 3.518470655390375e-14,
+              "q75": 3.792414842671378e-14
+            },
+            "inconclusive_boundary_fraction": 0.0,
+            "measurements_per_seed": 40,
+            "median_bracket_width_strain": 0.0013541324019770418,
+            "nonmonotone_replicates": 0,
+            "probes_per_seed": 10,
+            "reference_onset_coverage_fraction": 1.0,
+            "revision_audit_inconclusive_fraction": 0.0,
+            "revision_audit_survival_fraction": 1.0
+          },
+          "uniform": {
+            "bracket_width_summary": {
+              "iqr": 0.0,
+              "median": 0.0014444444444444444,
+              "n": 3,
+              "q25": 0.0014444444444444444,
+              "q75": 0.0014444444444444444
+            },
+            "coverage_denominator": 3,
+            "holdout_revised_mae_mpa": {
+              "iqr": 0.0,
+              "median": 3.449984608570125e-14,
+              "n": 3,
+              "q25": 3.449984608570125e-14,
+              "q75": 3.449984608570125e-14
+            },
+            "inconclusive_boundary_fraction": 0.0,
+            "measurements_per_seed": 40,
+            "median_bracket_width_strain": 0.0014444444444444444,
+            "nonmonotone_replicates": 0,
+            "probes_per_seed": 10,
+            "reference_onset_coverage_fraction": 1.0,
+            "revision_audit_inconclusive_fraction": 0.0,
+            "revision_audit_survival_fraction": 1.0
+          }
+        },
+        "noise_sd_mpa": 0.0,
+        "scientific_limits": [
+          "One synthetic material, repeated noise seeds, not independent physical materials",
+          "Monotonic prior; intervals are not confidence intervals",
+          "Bilinear family predeclared; no comparison with state-of-the-art constitutive fitting",
+          "MAE is against independent three-reading means, which include instrument noise"
+        ],
+        "seed_count": 3,
+        "seed_ids": [
+          2026,
+          2027,
+          2028
+        ]
+      },
+      {
+        "budget": {
+          "common_final_audit_measurements": 249,
+          "common_training_measurements": 40,
+          "per_policy_probe_measurements": 40
+        },
+        "holdout_linear_mae_mpa": {
+          "iqr": 1.43144687243921,
+          "median": 1064.5126613735629,
+          "n": 3,
+          "q25": 1064.3143269600591,
+          "q75": 1065.7457738324983
+        },
+        "holdout_revised_mae_mpa": {
+          "iqr": 0.03676935695367156,
+          "median": 0.41691876787988036,
+          "n": 3,
+          "q25": 0.41237443749313885,
+          "q75": 0.4491437944468104
+        },
+        "median_holdout_linear_mae_mpa": 1064.5126613735629,
+        "median_holdout_revised_mae_mpa": 0.41691876787988036,
+        "methods": {
+          "active": {
+            "bracket_width_summary": {
+              "iqr": 0.0,
+              "median": 5.0781250000000045e-05,
+              "n": 3,
+              "q25": 5.0781250000000045e-05,
+              "q75": 5.0781250000000045e-05
+            },
+            "coverage_denominator": 3,
+            "holdout_revised_mae_mpa": {
+              "iqr": 0.03676935695367156,
+              "median": 0.41691876787988036,
+              "n": 3,
+              "q25": 0.41237443749313885,
+              "q75": 0.4491437944468104
+            },
+            "inconclusive_boundary_fraction": 0.0,
+            "measurements_per_seed": 40,
+            "median_bracket_width_strain": 5.0781250000000045e-05,
+            "nonmonotone_replicates": 0,
+            "probes_per_seed": 10,
+            "reference_onset_coverage_fraction": 1.0,
+            "revision_audit_inconclusive_fraction": 0.0,
+            "revision_audit_survival_fraction": 1.0
+          },
+          "random": {
+            "bracket_width_summary": {
+              "iqr": 0.0006403804397540334,
+              "median": 0.0013541324019770418,
+              "n": 3,
+              "q25": 0.0013138196645585197,
+              "q75": 0.001954200104312553
+            },
+            "coverage_denominator": 3,
+            "holdout_revised_mae_mpa": {
+              "iqr": 0.006860156645935367,
+              "median": 0.36068334702575156,
+              "n": 3,
+              "q25": 0.3600878863939288,
+              "q75": 0.36694804303986417
+            },
+            "inconclusive_boundary_fraction": 0.0,
+            "measurements_per_seed": 40,
+            "median_bracket_width_strain": 0.0013541324019770418,
+            "nonmonotone_replicates": 0,
+            "probes_per_seed": 10,
+            "reference_onset_coverage_fraction": 1.0,
+            "revision_audit_inconclusive_fraction": 0.0,
+            "revision_audit_survival_fraction": 1.0
+          },
+          "uniform": {
+            "bracket_width_summary": {
+              "iqr": 0.0,
+              "median": 0.0014444444444444444,
+              "n": 3,
+              "q25": 0.0014444444444444444,
+              "q75": 0.0014444444444444444
+            },
+            "coverage_denominator": 3,
+            "holdout_revised_mae_mpa": {
+              "iqr": 0.05139959467518562,
+              "median": 0.3665619796936989,
+              "n": 3,
+              "q25": 0.356345413258237,
+              "q75": 0.4077450079334226
+            },
+            "inconclusive_boundary_fraction": 0.0,
+            "measurements_per_seed": 40,
+            "median_bracket_width_strain": 0.0014444444444444444,
+            "nonmonotone_replicates": 0,
+            "probes_per_seed": 10,
+            "reference_onset_coverage_fraction": 1.0,
+            "revision_audit_inconclusive_fraction": 0.0,
+            "revision_audit_survival_fraction": 1.0
+          }
+        },
+        "noise_sd_mpa": 0.8,
+        "scientific_limits": [
+          "One synthetic material, repeated noise seeds, not independent physical materials",
+          "Monotonic prior; intervals are not confidence intervals",
+          "Bilinear family predeclared; no comparison with state-of-the-art constitutive fitting",
+          "MAE is against independent three-reading means, which include instrument noise"
+        ],
+        "seed_count": 3,
+        "seed_ids": [
+          2026,
+          2027,
+          2028
+        ]
+      },
+      {
+        "budget": {
+          "common_final_audit_measurements": 249,
+          "common_training_measurements": 40,
+          "per_policy_probe_measurements": 40
+        },
+        "holdout_linear_mae_mpa": {
+          "iqr": 14.31446872439119,
+          "median": 1065.965774329227,
+          "n": 3,
+          "q25": 1063.982430194189,
+          "q75": 1078.2968989185802
+        },
+        "holdout_revised_mae_mpa": {
+          "iqr": 0.3488392223524954,
+          "median": 4.271960192400607,
+          "n": 3,
+          "q25": 4.1901667428045215,
+          "q75": 4.539005965157017
+        },
+        "median_holdout_linear_mae_mpa": 1065.965774329227,
+        "median_holdout_revised_mae_mpa": 4.271960192400607,
+        "methods": {
+          "active": {
+            "bracket_width_summary": {
+              "iqr": 0.0,
+              "median": 5.0781250000000045e-05,
+              "n": 3,
+              "q25": 5.0781250000000045e-05,
+              "q75": 5.0781250000000045e-05
+            },
+            "coverage_denominator": 3,
+            "holdout_revised_mae_mpa": {
+              "iqr": 0.3488392223524954,
+              "median": 4.271960192400607,
+              "n": 3,
+              "q25": 4.1901667428045215,
+              "q75": 4.539005965157017
+            },
+            "inconclusive_boundary_fraction": 1.0,
+            "measurements_per_seed": 40,
+            "median_bracket_width_strain": 5.0781250000000045e-05,
+            "nonmonotone_replicates": 0,
+            "probes_per_seed": 10,
+            "reference_onset_coverage_fraction": 0.3333333333333333,
+            "revision_audit_inconclusive_fraction": 1.0,
+            "revision_audit_survival_fraction": 0.0
+          },
+          "random": {
+            "bracket_width_summary": {
+              "iqr": 0.0006403804397540334,
+              "median": 0.0013541324019770418,
+              "n": 3,
+              "q25": 0.0013138196645585197,
+              "q75": 0.001954200104312553
+            },
+            "coverage_denominator": 3,
+            "holdout_revised_mae_mpa": {
+              "iqr": 0.03536483381400801,
+              "median": 3.6068334371548154,
+              "n": 3,
+              "q25": 3.600878837786126,
+              "q75": 3.636243671600134
+            },
+            "inconclusive_boundary_fraction": 1.0,
+            "measurements_per_seed": 40,
+            "median_bracket_width_strain": 0.0013541324019770418,
+            "nonmonotone_replicates": 0,
+            "probes_per_seed": 10,
+            "reference_onset_coverage_fraction": 1.0,
+            "revision_audit_inconclusive_fraction": 1.0,
+            "revision_audit_survival_fraction": 0.0
+          },
+          "uniform": {
+            "bracket_width_summary": {
+              "iqr": 0.0,
+              "median": 0.0014444444444444444,
+              "n": 3,
+              "q25": 0.0014444444444444444,
+              "q75": 0.0014444444444444444
+            },
+            "coverage_denominator": 3,
+            "holdout_revised_mae_mpa": {
+              "iqr": 0.483195977657207,
+              "median": 3.665619789095922,
+              "n": 3,
+              "q25": 3.5634541351302937,
+              "q75": 4.046650112787501
+            },
+            "inconclusive_boundary_fraction": 1.0,
+            "measurements_per_seed": 40,
+            "median_bracket_width_strain": 0.0014444444444444444,
+            "nonmonotone_replicates": 0,
+            "probes_per_seed": 10,
+            "reference_onset_coverage_fraction": 1.0,
+            "revision_audit_inconclusive_fraction": 1.0,
+            "revision_audit_survival_fraction": 0.0
+          }
+        },
+        "noise_sd_mpa": 8.0,
+        "scientific_limits": [
+          "One synthetic material, repeated noise seeds, not independent physical materials",
+          "Monotonic prior; intervals are not confidence intervals",
+          "Bilinear family predeclared; no comparison with state-of-the-art constitutive fitting",
+          "MAE is against independent three-reading means, which include instrument noise"
+        ],
+        "seed_count": 3,
+        "seed_ids": [
+          2026,
+          2027,
+          2028
+        ]
+      },
+      {
+        "budget": {
+          "common_final_audit_measurements": 249,
+          "common_training_measurements": 40,
+          "per_policy_probe_measurements": 40
+        },
+        "holdout_linear_mae_mpa": {
+          "iqr": 143.0450065372545,
+          "median": 1081.5166822749177,
+          "n": 3,
+          "q25": 1061.2730324366694,
+          "q75": 1204.3180389739239
+        },
+        "holdout_revised_mae_mpa": {
+          "iqr": 5.496290084658661,
+          "median": 36.94261413917941,
+          "n": 3,
+          "q25": 36.884290235736024,
+          "q75": 42.380580320394685
+        },
+        "median_holdout_linear_mae_mpa": 1081.5166822749177,
+        "median_holdout_revised_mae_mpa": 36.94261413917941,
+        "methods": {
+          "active": {
+            "bracket_width_summary": {
+              "iqr": 0.0,
+              "median": 5.078124999999983e-05,
+              "n": 1,
+              "q25": 5.078124999999983e-05,
+              "q75": 5.078124999999983e-05
+            },
+            "coverage_denominator": 1,
+            "holdout_revised_mae_mpa": {
+              "iqr": 5.496290084658661,
+              "median": 36.94261413917941,
+              "n": 3,
+              "q25": 36.884290235736024,
+              "q75": 42.380580320394685
+            },
+            "inconclusive_boundary_fraction": 1.0,
+            "measurements_per_seed": 40,
+            "median_bracket_width_strain": 5.078124999999983e-05,
+            "nonmonotone_replicates": 0,
+            "probes_per_seed": 10,
+            "reference_onset_coverage_fraction": 0.0,
+            "revision_audit_inconclusive_fraction": 1.0,
+            "revision_audit_survival_fraction": 0.0
+          },
+          "random": {
+            "bracket_width_summary": {
+              "iqr": null,
+              "median": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "coverage_denominator": 0,
+            "holdout_revised_mae_mpa": {
+              "iqr": 0.31636936278572136,
+              "median": 35.9492423427548,
+              "n": 3,
+              "q25": 35.90502603009236,
+              "q75": 36.22139539287808
+            },
+            "inconclusive_boundary_fraction": 1.0,
+            "measurements_per_seed": 40,
+            "median_bracket_width_strain": null,
+            "nonmonotone_replicates": 0,
+            "probes_per_seed": 10,
+            "reference_onset_coverage_fraction": null,
+            "revision_audit_inconclusive_fraction": 1.0,
+            "revision_audit_survival_fraction": 0.0
+          },
+          "uniform": {
+            "bracket_width_summary": {
+              "iqr": null,
+              "median": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "coverage_denominator": 0,
+            "holdout_revised_mae_mpa": {
+              "iqr": 4.531814981147853,
+              "median": 36.28841095673521,
+              "n": 3,
+              "q25": 35.44167532986472,
+              "q75": 39.973490311012576
+            },
+            "inconclusive_boundary_fraction": 1.0,
+            "measurements_per_seed": 40,
+            "median_bracket_width_strain": null,
+            "nonmonotone_replicates": 0,
+            "probes_per_seed": 10,
+            "reference_onset_coverage_fraction": null,
+            "revision_audit_inconclusive_fraction": 1.0,
+            "revision_audit_survival_fraction": 0.0
+          }
+        },
+        "noise_sd_mpa": 80.0,
+        "scientific_limits": [
+          "One synthetic material, repeated noise seeds, not independent physical materials",
+          "Monotonic prior; intervals are not confidence intervals",
+          "Bilinear family predeclared; no comparison with state-of-the-art constitutive fitting",
+          "MAE is against independent three-reading means, which include instrument noise"
+        ],
+        "seed_count": 3,
+        "seed_ids": [
+          2026,
+          2027,
+          2028
+        ]
+      }
+    ],
+    "oscillator": [
+      {
+        "horizon_factor": 0.5,
+        "noise_sd_x_and_v": 0.001,
+        "systems": [
+          {
+            "costs_example": {
+              "discovery": {
+                "measurements": 726,
+                "observation_points": 363,
+                "rhs_evaluations": 336,
+                "simulated_duration_s": 2.4000000000000004,
+                "simulator_calls": 3
+              },
+              "holdout": {
+                "measurements": 3886,
+                "observation_points": 1943,
+                "rhs_evaluations": 1746,
+                "simulated_duration_s": 14.715,
+                "simulator_calls": 3
+              },
+              "probe": {
+                "measurements": 12030,
+                "observation_points": 6015,
+                "rhs_evaluations": 6303,
+                "simulated_duration_s": 50.0,
+                "simulator_calls": 15
+              }
+            },
+            "initial_drift": {
+              "iqr": 0.0006616151141953909,
+              "median": 0.0070602470230318876,
+              "n": 3,
+              "q25": 0.007013272919470711,
+              "q75": 0.0076748880336661015
+            },
+            "initial_false_refutation_rate_valid_control": 0.0,
+            "initial_inconclusive_fraction": 0.0,
+            "initial_refutation_rate": 0.0,
+            "n": 3,
+            "negative_control_revised_refutation_rate": null,
+            "no_revision_survival_rate": 1.0,
+            "no_search_quartic_survival_rate": 0.0,
+            "revised_drift": {
+              "iqr": null,
+              "median": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "revised_inconclusive_fraction": null,
+            "revised_survival_rate": null,
+            "system": "harmonic_undamped_control"
+          },
+          {
+            "costs_example": {
+              "discovery": {
+                "measurements": 726,
+                "observation_points": 363,
+                "rhs_evaluations": 366,
+                "simulated_duration_s": 2.4000000000000004,
+                "simulator_calls": 3
+              },
+              "holdout": {
+                "measurements": 3886,
+                "observation_points": 1943,
+                "rhs_evaluations": 3750,
+                "simulated_duration_s": 14.715,
+                "simulator_calls": 3
+              },
+              "probe": {
+                "measurements": 12030,
+                "observation_points": 6015,
+                "rhs_evaluations": 10326,
+                "simulated_duration_s": 50.0,
+                "simulator_calls": 15
+              },
+              "revision": {
+                "measurements": 1002,
+                "observation_points": 501,
+                "rhs_evaluations": 824,
+                "simulated_duration_s": 3.0,
+                "simulator_calls": 1
+              }
+            },
+            "initial_drift": {
+              "iqr": 0.002219661781312471,
+              "median": 0.22465577957179877,
+              "n": 3,
+              "q25": 0.22264615065241075,
+              "q75": 0.22486581243372322
+            },
+            "initial_false_refutation_rate_valid_control": null,
+            "initial_inconclusive_fraction": 0.0,
+            "initial_refutation_rate": 1.0,
+            "n": 3,
+            "negative_control_revised_refutation_rate": null,
+            "no_revision_survival_rate": 0.0,
+            "no_search_quartic_survival_rate": 0.0,
+            "revised_drift": {
+              "iqr": 0.001027197258013519,
+              "median": 0.008806523618019979,
+              "n": 3,
+              "q25": 0.007829632503434271,
+              "q75": 0.00885682976144779
+            },
+            "revised_inconclusive_fraction": 0.3333333333333333,
+            "revised_survival_rate": 0.6666666666666666,
+            "system": "duffing_nonlinearity"
+          },
+          {
+            "costs_example": {
+              "discovery": {
+                "measurements": 726,
+                "observation_points": 363,
+                "rhs_evaluations": 336,
+                "simulated_duration_s": 2.4000000000000004,
+                "simulator_calls": 3
+              },
+              "holdout": {
+                "measurements": 3886,
+                "observation_points": 1943,
+                "rhs_evaluations": 1746,
+                "simulated_duration_s": 14.715,
+                "simulator_calls": 3
+              },
+              "probe": {
+                "measurements": 12030,
+                "observation_points": 6015,
+                "rhs_evaluations": 6261,
+                "simulated_duration_s": 50.0,
+                "simulator_calls": 15
+              },
+              "revision": {
+                "measurements": 1002,
+                "observation_points": 501,
+                "rhs_evaluations": 722,
+                "simulated_duration_s": 6.0,
+                "simulator_calls": 1
+              }
+            },
+            "initial_drift": {
+              "iqr": 0.000831736936539991,
+              "median": 0.04552482956611292,
+              "n": 3,
+              "q25": 0.04488907739061831,
+              "q75": 0.0457208143271583
+            },
+            "initial_false_refutation_rate_valid_control": null,
+            "initial_inconclusive_fraction": 0.0,
+            "initial_refutation_rate": 1.0,
+            "n": 3,
+            "negative_control_revised_refutation_rate": 1.0,
+            "no_revision_survival_rate": 0.0,
+            "no_search_quartic_survival_rate": 0.0,
+            "revised_drift": {
+              "iqr": 0.06010489922076895,
+              "median": 0.1235244533661406,
+              "n": 3,
+              "q25": 0.08398472326135778,
+              "q75": 0.14408962248212673
+            },
+            "revised_inconclusive_fraction": 0.0,
+            "revised_survival_rate": 0.0,
+            "system": "weakly_damped_negative_control"
+          }
+        ]
+      },
+      {
+        "horizon_factor": 2.0,
+        "noise_sd_x_and_v": 0.001,
+        "systems": [
+          {
+            "costs_example": {
+              "discovery": {
+                "measurements": 726,
+                "observation_points": 363,
+                "rhs_evaluations": 336,
+                "simulated_duration_s": 2.4000000000000004,
+                "simulator_calls": 3
+              },
+              "holdout": {
+                "measurements": 3886,
+                "observation_points": 1943,
+                "rhs_evaluations": 6816,
+                "simulated_duration_s": 58.86,
+                "simulator_calls": 3
+              },
+              "probe": {
+                "measurements": 12030,
+                "observation_points": 6015,
+                "rhs_evaluations": 23457,
+                "simulated_duration_s": 200.0,
+                "simulator_calls": 15
+              }
+            },
+            "initial_drift": {
+              "iqr": 0.0005902182931646878,
+              "median": 0.006925194988898213,
+              "n": 3,
+              "q25": 0.0065589298887733325,
+              "q75": 0.00714914818193802
+            },
+            "initial_false_refutation_rate_valid_control": 0.0,
+            "initial_inconclusive_fraction": 0.0,
+            "initial_refutation_rate": 0.0,
+            "n": 3,
+            "negative_control_revised_refutation_rate": null,
+            "no_revision_survival_rate": 1.0,
+            "no_search_quartic_survival_rate": 0.0,
+            "revised_drift": {
+              "iqr": null,
+              "median": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "revised_inconclusive_fraction": null,
+            "revised_survival_rate": null,
+            "system": "harmonic_undamped_control"
+          },
+          {
+            "costs_example": {
+              "discovery": {
+                "measurements": 726,
+                "observation_points": 363,
+                "rhs_evaluations": 366,
+                "simulated_duration_s": 2.4000000000000004,
+                "simulator_calls": 3
+              },
+              "holdout": {
+                "measurements": 3886,
+                "observation_points": 1943,
+                "rhs_evaluations": 14778,
+                "simulated_duration_s": 58.86,
+                "simulator_calls": 3
+              },
+              "probe": {
+                "measurements": 12030,
+                "observation_points": 6015,
+                "rhs_evaluations": 40053,
+                "simulated_duration_s": 200.0,
+                "simulator_calls": 15
+              },
+              "revision": {
+                "measurements": 1002,
+                "observation_points": 501,
+                "rhs_evaluations": 1115,
+                "simulated_duration_s": 4.0,
+                "simulator_calls": 1
+              }
+            },
+            "initial_drift": {
+              "iqr": 0.0021556771379101503,
+              "median": 0.22456215050600306,
+              "n": 3,
+              "q25": 0.22295390780407726,
+              "q75": 0.2251095849419874
+            },
+            "initial_false_refutation_rate_valid_control": null,
+            "initial_inconclusive_fraction": 0.0,
+            "initial_refutation_rate": 1.0,
+            "n": 3,
+            "negative_control_revised_refutation_rate": null,
+            "no_revision_survival_rate": 0.0,
+            "no_search_quartic_survival_rate": 0.0,
+            "revised_drift": {
+              "iqr": 0.0006455853966158779,
+              "median": 0.00849265014685483,
+              "n": 3,
+              "q25": 0.008025980905718011,
+              "q75": 0.00867156630233389
+            },
+            "revised_inconclusive_fraction": 0.6666666666666666,
+            "revised_survival_rate": 0.3333333333333333,
+            "system": "duffing_nonlinearity"
+          },
+          {
+            "costs_example": {
+              "discovery": {
+                "measurements": 726,
+                "observation_points": 363,
+                "rhs_evaluations": 336,
+                "simulated_duration_s": 2.4000000000000004,
+                "simulator_calls": 3
+              },
+              "holdout": {
+                "measurements": 3886,
+                "observation_points": 1943,
+                "rhs_evaluations": 6801,
+                "simulated_duration_s": 58.86,
+                "simulator_calls": 3
+              },
+              "probe": {
+                "measurements": 12030,
+                "observation_points": 6015,
+                "rhs_evaluations": 23400,
+                "simulated_duration_s": 200.0,
+                "simulator_calls": 15
+              },
+              "revision": {
+                "measurements": 1002,
+                "observation_points": 501,
+                "rhs_evaluations": 2762,
+                "simulated_duration_s": 24.0,
+                "simulator_calls": 1
+              }
+            },
+            "initial_drift": {
+              "iqr": 0.000415603292683836,
+              "median": 0.15676535107168493,
+              "n": 3,
+              "q25": 0.15639672172239422,
+              "q75": 0.15681232501507805
+            },
+            "initial_false_refutation_rate_valid_control": null,
+            "initial_inconclusive_fraction": 0.0,
+            "initial_refutation_rate": 1.0,
+            "n": 3,
+            "negative_control_revised_refutation_rate": 1.0,
+            "no_revision_survival_rate": 0.0,
+            "no_search_quartic_survival_rate": 0.0,
+            "revised_drift": {
+              "iqr": 0.09346942309061534,
+              "median": 0.5583921764064893,
+              "n": 3,
+              "q25": 0.5164738256537971,
+              "q75": 0.6099432487444124
+            },
+            "revised_inconclusive_fraction": 0.0,
+            "revised_survival_rate": 0.0,
+            "system": "weakly_damped_negative_control"
+          }
+        ]
+      },
+      {
+        "horizon_factor": 0.5,
+        "noise_sd_x_and_v": 0.01,
+        "systems": [
+          {
+            "costs_example": {
+              "discovery": {
+                "measurements": 726,
+                "observation_points": 363,
+                "rhs_evaluations": 336,
+                "simulated_duration_s": 2.4000000000000004,
+                "simulator_calls": 3
+              },
+              "holdout": {
+                "measurements": 3886,
+                "observation_points": 1943,
+                "rhs_evaluations": 1746,
+                "simulated_duration_s": 14.715,
+                "simulator_calls": 3
+              },
+              "probe": {
+                "measurements": 12030,
+                "observation_points": 6015,
+                "rhs_evaluations": 6303,
+                "simulated_duration_s": 50.0,
+                "simulator_calls": 15
+              }
+            },
+            "initial_drift": {
+              "iqr": 0.008696676779105225,
+              "median": 0.0834568715740266,
+              "n": 3,
+              "q25": 0.08035119390199996,
+              "q75": 0.08904787068110519
+            },
+            "initial_false_refutation_rate_valid_control": 0.0,
+            "initial_inconclusive_fraction": 1.0,
+            "initial_refutation_rate": 0.0,
+            "n": 3,
+            "negative_control_revised_refutation_rate": null,
+            "no_revision_survival_rate": 0.0,
+            "no_search_quartic_survival_rate": 0.0,
+            "revised_drift": {
+              "iqr": null,
+              "median": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "revised_inconclusive_fraction": null,
+            "revised_survival_rate": null,
+            "system": "harmonic_undamped_control"
+          },
+          {
+            "costs_example": {
+              "discovery": {
+                "measurements": 726,
+                "observation_points": 363,
+                "rhs_evaluations": 366,
+                "simulated_duration_s": 2.4000000000000004,
+                "simulator_calls": 3
+              },
+              "holdout": {
+                "measurements": 3886,
+                "observation_points": 1943,
+                "rhs_evaluations": 3750,
+                "simulated_duration_s": 14.715,
+                "simulator_calls": 3
+              },
+              "probe": {
+                "measurements": 12030,
+                "observation_points": 6015,
+                "rhs_evaluations": 10326,
+                "simulated_duration_s": 50.0,
+                "simulator_calls": 15
+              },
+              "revision": {
+                "measurements": 1002,
+                "observation_points": 501,
+                "rhs_evaluations": 824,
+                "simulated_duration_s": 3.0,
+                "simulator_calls": 1
+              }
+            },
+            "initial_drift": {
+              "iqr": 0.00845011170296217,
+              "median": 0.29484670776011573,
+              "n": 3,
+              "q25": 0.2887861991149495,
+              "q75": 0.2972363108179117
+            },
+            "initial_false_refutation_rate_valid_control": null,
+            "initial_inconclusive_fraction": 0.0,
+            "initial_refutation_rate": 1.0,
+            "n": 3,
+            "negative_control_revised_refutation_rate": null,
+            "no_revision_survival_rate": 0.0,
+            "no_search_quartic_survival_rate": 0.0,
+            "revised_drift": {
+              "iqr": 0.009803882655103832,
+              "median": 0.08797382921347018,
+              "n": 3,
+              "q25": 0.07837391536717239,
+              "q75": 0.08817779802227622
+            },
+            "revised_inconclusive_fraction": 1.0,
+            "revised_survival_rate": 0.0,
+            "system": "duffing_nonlinearity"
+          },
+          {
+            "costs_example": {
+              "discovery": {
+                "measurements": 726,
+                "observation_points": 363,
+                "rhs_evaluations": 336,
+                "simulated_duration_s": 2.4000000000000004,
+                "simulator_calls": 3
+              },
+              "holdout": {
+                "measurements": 3886,
+                "observation_points": 1943,
+                "rhs_evaluations": 1746,
+                "simulated_duration_s": 14.715,
+                "simulator_calls": 3
+              },
+              "probe": {
+                "measurements": 12030,
+                "observation_points": 6015,
+                "rhs_evaluations": 6261,
+                "simulated_duration_s": 50.0,
+                "simulator_calls": 15
+              },
+              "revision": {
+                "measurements": 1002,
+                "observation_points": 501,
+                "rhs_evaluations": 719,
+                "simulated_duration_s": 6.0,
+                "simulator_calls": 1
+              }
+            },
+            "initial_drift": {
+              "iqr": 0.007777735869667207,
+              "median": 0.11916234768654692,
+              "n": 3,
+              "q25": 0.11193289483314922,
+              "q75": 0.11971063070281643
+            },
+            "initial_false_refutation_rate_valid_control": null,
+            "initial_inconclusive_fraction": 0.0,
+            "initial_refutation_rate": 1.0,
+            "n": 3,
+            "negative_control_revised_refutation_rate": 0.3333333333333333,
+            "no_revision_survival_rate": 0.0,
+            "no_search_quartic_survival_rate": 0.0,
+            "revised_drift": {
+              "iqr": 0.0055112289397641345,
+              "median": 0.09826276207207295,
+              "n": 3,
+              "q25": 0.09685488532366396,
+              "q75": 0.10236611426342809
+            },
+            "revised_inconclusive_fraction": 0.6666666666666666,
+            "revised_survival_rate": 0.0,
+            "system": "weakly_damped_negative_control"
+          }
+        ]
+      },
+      {
+        "horizon_factor": 2.0,
+        "noise_sd_x_and_v": 0.01,
+        "systems": [
+          {
+            "costs_example": {
+              "discovery": {
+                "measurements": 726,
+                "observation_points": 363,
+                "rhs_evaluations": 336,
+                "simulated_duration_s": 2.4000000000000004,
+                "simulator_calls": 3
+              },
+              "holdout": {
+                "measurements": 3886,
+                "observation_points": 1943,
+                "rhs_evaluations": 6816,
+                "simulated_duration_s": 58.86,
+                "simulator_calls": 3
+              },
+              "probe": {
+                "measurements": 12030,
+                "observation_points": 6015,
+                "rhs_evaluations": 23457,
+                "simulated_duration_s": 200.0,
+                "simulator_calls": 15
+              }
+            },
+            "initial_drift": {
+              "iqr": 0.008389881900534135,
+              "median": 0.08609510521615588,
+              "n": 3,
+              "q25": 0.07884794502874337,
+              "q75": 0.0872378269292775
+            },
+            "initial_false_refutation_rate_valid_control": 0.0,
+            "initial_inconclusive_fraction": 1.0,
+            "initial_refutation_rate": 0.0,
+            "n": 3,
+            "negative_control_revised_refutation_rate": null,
+            "no_revision_survival_rate": 0.0,
+            "no_search_quartic_survival_rate": 0.0,
+            "revised_drift": {
+              "iqr": null,
+              "median": null,
+              "n": 0,
+              "q25": null,
+              "q75": null
+            },
+            "revised_inconclusive_fraction": null,
+            "revised_survival_rate": null,
+            "system": "harmonic_undamped_control"
+          },
+          {
+            "costs_example": {
+              "discovery": {
+                "measurements": 726,
+                "observation_points": 363,
+                "rhs_evaluations": 366,
+                "simulated_duration_s": 2.4000000000000004,
+                "simulator_calls": 3
+              },
+              "holdout": {
+                "measurements": 3886,
+                "observation_points": 1943,
+                "rhs_evaluations": 14778,
+                "simulated_duration_s": 58.86,
+                "simulator_calls": 3
+              },
+              "probe": {
+                "measurements": 12030,
+                "observation_points": 6015,
+                "rhs_evaluations": 40053,
+                "simulated_duration_s": 200.0,
+                "simulator_calls": 15
+              },
+              "revision": {
+                "measurements": 1002,
+                "observation_points": 501,
+                "rhs_evaluations": 6422,
+                "simulated_duration_s": 24.0,
+                "simulator_calls": 1
+              }
+            },
+            "initial_drift": {
+              "iqr": 0.017270000516138306,
+              "median": 0.2941426856198681,
+              "n": 3,
+              "q25": 0.2856928486881777,
+              "q75": 0.302962849204316
+            },
+            "initial_false_refutation_rate_valid_control": null,
+            "initial_inconclusive_fraction": 0.0,
+            "initial_refutation_rate": 1.0,
+            "n": 3,
+            "negative_control_revised_refutation_rate": null,
+            "no_revision_survival_rate": 0.0,
+            "no_search_quartic_survival_rate": 0.0,
+            "revised_drift": {
+              "iqr": 0.006090630828935406,
+              "median": 0.08538934455234462,
+              "n": 3,
+              "q25": 0.08047797401755954,
+              "q75": 0.08656860484649495
+            },
+            "revised_inconclusive_fraction": 1.0,
+            "revised_survival_rate": 0.0,
+            "system": "duffing_nonlinearity"
+          },
+          {
+            "costs_example": {
+              "discovery": {
+                "measurements": 726,
+                "observation_points": 363,
+                "rhs_evaluations": 336,
+                "simulated_duration_s": 2.4000000000000004,
+                "simulator_calls": 3
+              },
+              "holdout": {
+                "measurements": 3886,
+                "observation_points": 1943,
+                "rhs_evaluations": 6801,
+                "simulated_duration_s": 58.86,
+                "simulator_calls": 3
+              },
+              "probe": {
+                "measurements": 12030,
+                "observation_points": 6015,
+                "rhs_evaluations": 23400,
+                "simulated_duration_s": 200.0,
+                "simulator_calls": 15
+              },
+              "revision": {
+                "measurements": 1002,
+                "observation_points": 501,
+                "rhs_evaluations": 2774,
+                "simulated_duration_s": 24.0,
+                "simulator_calls": 1
+              }
+            },
+            "initial_drift": {
+              "iqr": 0.01202414970091148,
+              "median": 0.2092999548318609,
+              "n": 3,
+              "q25": 0.20553300942533415,
+              "q75": 0.21755715912624563
+            },
+            "initial_false_refutation_rate_valid_control": null,
+            "initial_inconclusive_fraction": 0.0,
+            "initial_refutation_rate": 1.0,
+            "n": 3,
+            "negative_control_revised_refutation_rate": 1.0,
+            "no_revision_survival_rate": 0.0,
+            "no_search_quartic_survival_rate": 0.0,
+            "revised_drift": {
+              "iqr": 0.5902593577006012,
+              "median": 1.0556763502520494,
+              "n": 3,
+              "q25": 0.965457450420836,
+              "q75": 1.5557168081214372
+            },
+            "revised_inconclusive_fraction": 0.0,
+            "revised_survival_rate": 0.0,
+            "system": "weakly_damped_negative_control"
+          }
+        ]
+      }
+    ]
+  },
+  "seed_count": 30,
+  "seed_ids": [
+    2026,
+    2027,
+    2028,
+    2029,
+    2030,
+    2031,
+    2032,
+    2033,
+    2034,
+    2035,
+    2036,
+    2037,
+    2038,
+    2039,
+    2040,
+    2041,
+    2042,
+    2043,
+    2044,
+    2045,
+    2046,
+    2047,
+    2048,
+    2049,
+    2050,
+    2051,
+    2052,
+    2053,
+    2054,
+    2055
+  ],
+  "solver_sensitivity": [
+    {
+      "atol": 1e-13,
+      "initial_drift": 1.2444263050600548e-10,
+      "initial_status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+      "revised_drift": null,
+      "revised_status": null,
+      "rhs_evaluations": 15771,
+      "rtol": 2e-11,
+      "system": "harmonic_undamped_control"
+    },
+    {
+      "atol": 1e-13,
+      "initial_drift": 0.22142525131342197,
+      "initial_status": "REFUTED",
+      "revised_drift": 5.3706473298583903e-11,
+      "revised_status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+      "rhs_evaluations": 31244,
+      "rtol": 2e-11,
+      "system": "duffing_nonlinearity"
+    },
+    {
+      "atol": 1e-13,
+      "initial_drift": 0.07702141663944385,
+      "initial_status": "REFUTED",
+      "revised_drift": 0.10388152610181607,
+      "revised_status": "REFUTED",
+      "rhs_evaluations": 17120,
+      "rtol": 2e-11,
+      "system": "weakly_damped_negative_control"
+    },
+    {
+      "atol": 1e-09,
+      "initial_drift": 6.689323479279245e-07,
+      "initial_status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+      "revised_drift": null,
+      "revised_status": null,
+      "rhs_evaluations": 5916,
+      "rtol": 1e-07,
+      "system": "harmonic_undamped_control"
+    },
+    {
+      "atol": 1e-09,
+      "initial_drift": 0.22142547832808368,
+      "initial_status": "REFUTED",
+      "revised_drift": 2.977038324093659e-07,
+      "revised_status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+      "rhs_evaluations": 12266,
+      "rtol": 1e-07,
+      "system": "duffing_nonlinearity"
+    },
+    {
+      "atol": 1e-09,
+      "initial_drift": 0.07702152112565892,
+      "initial_status": "REFUTED",
+      "revised_drift": 0.10388170425383884,
+      "revised_status": "REFUTED",
+      "rhs_evaluations": 6428,
+      "rtol": 1e-07,
+      "system": "weakly_damped_negative_control"
+    }
+  ]
+}

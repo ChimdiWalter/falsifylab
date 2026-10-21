@@ -1,0 +1,5 @@
+Synthetic material: 30 noise seeds; each policy 10 probes / 40 readings
+  active: median bracket=5.0781250000000045e-05; reference coverage=1.0; inconclusive boundary=0.0
+  uniform: median bracket=0.0014444444444444444; reference coverage=1.0; inconclusive boundary=0.0
+  random: median bracket=0.0015608898681845143; reference coverage=1.0; inconclusive boundary=0.0
+  Independent median MAE (MPa): linear=1064.793168; revised=0.40118620179648207

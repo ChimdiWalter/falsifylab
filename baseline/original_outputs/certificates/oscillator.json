@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1.0",
+  "project": "FalsifyLab",
+  "generated_at_utc": "2026-10-21T17:43:19.888612+00:00",
+  "record_type": "reproducible_experiment_provenance_NOT_formal_proof",
+  "source_result_files": {
+    "oscillator_results_json": {
+      "path": "outputs/results.json",
+      "sha256": "b365ae1e9b5aeac0e94101d21b0a8fdc8076dc4a10b1cf2427ad5d305d38e626"
+    },
+    "materials_results_json": {
+      "path": "outputs/materials/results.json",
+      "sha256": "408684514ab383e98bbe1d216c5ee0f535aeb828a92d3cee45f4a70ea455ca94"
+    }
+  },
+  "software_scope": "synthetic_numerical_benchmarks",
+  "scientific_caveat": "Survival does not prove a law. Experimental coverage is finite and verdict thresholds may not be statistically calibrated.",
+  "domain": "nonlinear_oscillator",
+  "question": "Does an apparently conserved quadratic law generalize to larger amplitude/longer observations?",
+  "initial_hypothesis": "Q = v^2 + 4.031008 x^2",
+  "initial_training_relative_drift": 0.005922706734546034,
+  "found_counterexample": {
+    "max_probe_drift": 0.28646232549247586,
+    "amplitude": 1.7,
+    "horizon": 12.0,
+    "probes": 15
+  },
+  "untouched_heldout_relative_drift": 0.2024542114902237,
+  "revised_hypothesis": "Q = v^2 + 4.000000 x^2 + 0.500000 x^4",
+  "revised_heldout_relative_drift": 6.148006246836211e-11,
+  "verdict": "REFUTED",
+  "revised_verdict": "NOT_REFUTED",
+  "valid_control": "NOT_REFUTED",
+  "negative_control": "REFUTED",
+  "limitations": [
+    "Fixed physics-informed polynomial candidates",
+    "Fixed 15-condition grid search",
+    "Noise-free synthetic oscillators",
+    "2% drift is a heuristic, not a statistical test"
+  ],
+  "reproduce": "python -m falsifylab.run_demo"
+}

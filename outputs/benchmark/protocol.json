@@ -1,0 +1,38 @@
+{
+  "choices": "All thresholds, model families and robustness settings predeclared in code; no optimization on final holdout",
+  "development_data": "legacy v1 retained in baseline and v2 smoke tests in /tmp are development; not final evaluation",
+  "materials_final": "83 predeclared new strains with 3 readings each; independent SeedSequence stream",
+  "noise_robustness": {
+    "horizon_factors": [
+      0.5,
+      2.0
+    ],
+    "materials_sd_mpa": [
+      0.0,
+      0.8,
+      8.0,
+      80.0
+    ],
+    "oscillator_sd": [
+      0.001,
+      0.01
+    ],
+    "seed_count_cap": 3
+  },
+  "oscillator_final": "3 predeclared new trajectories, seed-specific +/- .025 m amplitude jitter",
+  "solver_settings": [
+    {
+      "atol": 1e-13,
+      "rtol": 2e-11
+    },
+    {
+      "atol": 1e-09,
+      "rtol": 1e-07
+    }
+  ],
+  "thresholds": {
+    "materials_operational_deviation_mpa": 10.0,
+    "oscillator_relative_drift": 0.02
+  },
+  "version": "v3-frozen-2026-10-21"
+}

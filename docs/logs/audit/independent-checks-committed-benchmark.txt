@@ -1,0 +1,33 @@
+PASS  A symbolic dQ/dt = -2 gamma v^2  {"dQdt": "-2*gamma*Derivative(x(t), t)**2"}
+PASS  B damped energy balance Q(T)-Q(0) = -2 gamma int v^2 (Radau)  {"delta_Q": -0.6289232257495136, "minus_dissipated": -0.62892335734853}
+PASS  D harmonic_undamped_control: frozen models identical across seeds (noise-free primary runs)  {"distinct_frozen_models": 1, "seeds": 30, "note": "seeds only jitter final audit amplitudes; discovery/search/revision are deterministic"}
+PASS  D duffing_nonlinearity: frozen models identical across seeds (noise-free primary runs)  {"distinct_frozen_models": 1, "seeds": 30, "note": "seeds only jitter final audit amplitudes; discovery/search/revision are deterministic"}
+PASS  D weakly_damped_negative_control: frozen models identical across seeds (noise-free primary runs)  {"distinct_frozen_models": 1, "seeds": 30, "note": "seeds only jitter final audit amplitudes; discovery/search/revision are deterministic"}
+PASS  C Duffing quartic revision recovers physical coefficients (omega^2=4, alpha/2=0.5)  {"revised": {"quadratic": 4.000000000023097, "quartic": 0.49999999999973976}, "initial": {"quadratic": 4.031008449037536, "quartic": 0.0}, "no_search": {"quadratic": 4.000000000045417, "quartic": 0.49999999943836115}}
+PASS  C frozen oscillator models re-derived from saved discovery/revision raw data (all seeds)  {"max_abs_coefficient_difference": 0.0, "records": 90}
+PASS  E Duffing audit drift reproduced with Radau (independent of DOP853)  {"radau": [{"amplitude": 1.4581762557207927, "initial": 0.22142525130492902, "revised": 4.9951799678515255e-12}, {"amplitude": 1.603670065644078, "initial": 0.25972204074851946, "revised": 4.793346243204955e-12}, {"ampli
+PASS  O under instrument noise the discovery-only quartic fails where the search-informed quartic does not  {"search_informed_quartic": {"REFUTED": 0, "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 3, "INCONCLUSIVE": 9}, "discovery_only_quartic": {"REFUTED": 10, "NOT_REFUTED_UNDER_TESTED_CONDITIONS": 0, "INCONCLUSIVE": 2}, "harmonic_i
+   noise 0.001 h 0.5 revised ['INCONCLUSIVE', 'NOT_REFUTED_UNDER_TESTED_CONDITIONS', 'NOT_REFUTED_UNDER_TESTED_CONDITIONS'] no-search ['REFUTED', 'REFUTED', 'INCONCLUSIVE'] harmonic ['NOT_REFUTED_UNDER_TESTED_CONDITIONS', 'NOT_REFUTED_UNDER_TESTED_CONDITIONS', 'NOT_REFUTED_UNDER_TESTED_CONDITIONS']
+   noise 0.001 h 2.0 revised ['INCONCLUSIVE', 'INCONCLUSIVE', 'NOT_REFUTED_UNDER_TESTED_CONDITIONS'] no-search ['REFUTED', 'REFUTED', 'INCONCLUSIVE'] harmonic ['NOT_REFUTED_UNDER_TESTED_CONDITIONS', 'NOT_REFUTED_UNDER_TESTED_CONDITIONS', 'NOT_REFUTED_UNDER_TESTED_CONDITIONS']
+   noise 0.01 h 0.5 revised ['INCONCLUSIVE', 'INCONCLUSIVE', 'INCONCLUSIVE'] no-search ['REFUTED', 'REFUTED', 'REFUTED'] harmonic ['INCONCLUSIVE', 'INCONCLUSIVE', 'INCONCLUSIVE']
+   noise 0.01 h 2.0 revised ['INCONCLUSIVE', 'INCONCLUSIVE', 'INCONCLUSIVE'] no-search ['REFUTED', 'REFUTED', 'REFUTED'] harmonic ['INCONCLUSIVE', 'INCONCLUSIVE', 'INCONCLUSIVE']
+PASS  F Hooke slopes re-derived from raw discovery readings (30 seeds)  {"max_abs_diff_mpa": 0.0}
+PASS  F bilinear revisions re-derived from raw probe readings (30 seeds x 3 policies)  {"max_rel_diff": 0.0}
+PASS  G evaluator onset equals closed form (10 + (E-H) eps_y)/(Ehat - H)  {"max_abs_diff_strain": 4.336808689942018e-19}
+PASS  K equal search budget: 10 probes / 40 readings per policy per seed  {}
+PASS  J holdout acquired only after model freeze; nothing after holdout  {}
+PASS  J holdout strains disjoint from probe strains  {}
+PASS  H active bracket width equals design constant (MAX-MIN)/2^8 in every seed  {"design_width": 5.0781250000000004e-05, "uniform_design": 0.0014444444444444446, "uniform_widths": [0.001444444444]}
+PASS  I revised audit MAE sits at the measurement noise floor for every policy  {"expected_mae_of_true_model_mpa": 0.3685270927694246, "true_model_mae_median_mpa": 0.3708089105607376, "revised_mae_median_mpa": {"active": 0.40118620179648207, "uniform": 0.40262087876811725, "random": 0.39732915143191
+PASS  S audit lies inside probed strain domain (interpolation, not extrapolation)  {"holdout_strain_range": [0.000161, 0.013781], "probe_domain": [0.001, 0.014], "holdout_points_before_onset": 12, "holdout_points_after_onset": 71, "note": "audit interpolates inside the probed domain; it is not an extra
+PASS  N leakage probe: active search relocates to a different hidden material (30 seeds)  {"material": "E=70 GPa, eps_y=.0045, H=3 GPa, noise .8 MPa (hypothetical, post-hoc)", "active": {"covered": 27, "boundary_inconclusive": 30, "silent_misses": 0, "revised_audit_survives": 30}, "uniform": {"covered": 30, "
+PASS  M hidden-nonmonotonicity failure case reproduced (documented limitation)  {"seeds": 10, "miss_counts": {"active": 10, "uniform": 0, "random": 2}, "silent_miss_counts": {"active": 10, "uniform": 0, "random": 2}, "nonmonotone_flag_counts": {"active": 0, "uniform": 0, "random": 1}, "note": "local
+PASS  P evidence records carry SHA-256 of the 8 scientific modules that match the published files  {"mismatch": {"outputs/results.json": [], "outputs/materials/results.json": [], "outputs/benchmark/materials/results.json": []}, "post_freeze_changed_non_science_files": ["falsifylab/certificates.py", "falsifylab/verify.
+   sweep 0.8 {'active': (30, 30, 0, 0), 'uniform': (30, 30, 0, 0), 'random': (30, 30, 0, 0)}
+   sweep 2.0 {'active': (30, 30, 26, 0), 'uniform': (30, 30, 0, 0), 'random': (30, 30, 0, 0)}
+   sweep 4.0 {'active': (28, 30, 30, 0), 'uniform': (30, 30, 10, 0), 'random': (30, 30, 16, 0)}
+   sweep 8.0 {'active': (17, 29, 30, 0), 'uniform': (29, 29, 30, 0), 'random': (29, 29, 30, 0)}
+   sweep 16.0 {'active': (2, 23, 30, 0), 'uniform': (24, 24, 30, 0), 'random': (19, 22, 30, 0)}
+PASS  L no silent misses: every uncovered bracket in the noise sweep is flagged INCONCLUSIVE  {"silent": {"0.8": {"active": 0, "uniform": 0, "random": 0}, "2.0": {"active": 0, "uniform": 0, "random": 0}, "4.0": {"active": 0, "uniform": 0, "random": 0}, "8.0": {"active": 0, "uniform": 0, "random": 0}, "16.0": {"ac
+
+22/22 checks pass; wrote audit/independent_checks.json

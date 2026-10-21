@@ -1,0 +1,1908 @@
+{
+  "artifacts": [
+    {
+      "bytes": 1693950,
+      "kind": "results",
+      "path": "../materials/results.json",
+      "sha256": "21561d2851e79a6c3172d53419b2af4ad34c7c3d8051815af766501a34b6a81f"
+    },
+    {
+      "bytes": 17064,
+      "kind": "raw_measurements",
+      "path": "../materials/seed_2026_raw.npz",
+      "sha256": "913b58ebbd0b6fe6b663c87e19a3d67ab04df86d1c5660e7ffab143ccea259df"
+    },
+    {
+      "bytes": 103841,
+      "kind": "figure",
+      "path": "../materials/stress_strain_boundary.png",
+      "sha256": "8f9b768e8a779d49a4d4cf199914777cbf51f4f3d94a72b3fa87833f80f54a2b"
+    }
+  ],
+  "candidate": {
+    "coefficients": {
+      "elastic_modulus_mpa": 209960.23994331033
+    },
+    "expression": "stress = 209960.24 * strain",
+    "variable_units": {
+      "strain": "dimensionless",
+      "stress": "MPa"
+    }
+  },
+  "counterexamples": [
+    {
+      "absolute_deviation_mpa": 2501.8978020563636,
+      "mean_stress_mpa": 437.5455571499811,
+      "rejected": true,
+      "status": "REFUTED",
+      "strain": 0.014,
+      "stress_readings_mpa": [
+        437.5135889725402,
+        437.08402453699614,
+        437.67061856958776,
+        437.91399652080025
+      ],
+      "uncertainty_allowance_mpa": 9.96222568475837
+    },
+    {
+      "absolute_deviation_mpa": 1146.4203569944264,
+      "mean_stress_mpa": 428.28144258040106,
+      "rejected": true,
+      "status": "REFUTED",
+      "strain": 0.0075,
+      "stress_readings_mpa": [
+        428.81110213739504,
+        427.9791216722407,
+        427.90110557943973,
+        428.4344409325287
+      ],
+      "uncertainty_allowance_mpa": 5.432246950451817
+    },
+    {
+      "absolute_deviation_mpa": 468.8277633598542,
+      "mean_stress_mpa": 423.5032563992147,
+      "rejected": true,
+      "status": "REFUTED",
+      "strain": 0.00425,
+      "stress_readings_mpa": [
+        423.35701903729563,
+        425.3190148594681,
+        422.48747712938444,
+        422.84951457071077
+      ],
+      "uncertainty_allowance_mpa": 3.5491588972811865
+    },
+    {
+      "absolute_deviation_mpa": 129.76683286183703,
+      "mean_stress_mpa": 421.37879698935257,
+      "rejected": true,
+      "status": "REFUTED",
+      "strain": 0.002625,
+      "stress_readings_mpa": [
+        421.32117606567715,
+        420.4171022644962,
+        421.1558350069168,
+        422.6210746203201
+      ],
+      "uncertainty_allowance_mpa": 2.308537871362897
+    },
+    {
+      "absolute_deviation_mpa": 44.43925760774442,
+      "mean_stress_mpa": 421.41002476647543,
+      "rejected": true,
+      "status": "REFUTED",
+      "strain": 0.0022187500000000002,
+      "stress_readings_mpa": [
+        421.4113446663579,
+        422.0296988733614,
+        421.1845305207783,
+        421.01452500540415
+      ],
+      "uncertainty_allowance_mpa": 1.9739685080547966
+    },
+    {
+      "absolute_deviation_mpa": 24.461568434307082,
+      "mean_stress_mpa": 420.0636270706703,
+      "rejected": true,
+      "status": "REFUTED",
+      "strain": 0.0021171875,
+      "stress_readings_mpa": [
+        421.90584814149275,
+        421.32501241886956,
+        417.3089450461919,
+        419.714702676127
+      ],
+      "uncertainty_allowance_mpa": 3.4289900733060112
+    },
+    {
+      "absolute_deviation_mpa": 13.726728263850589,
+      "mean_stress_mpa": 420.13642380650555,
+      "rejected": true,
+      "status": "REFUTED",
+      "strain": 0.00206640625,
+      "stress_readings_mpa": [
+        420.45576286617955,
+        420.43668797917235,
+        419.325327024883,
+        420.3279173557874
+      ],
+      "uncertainty_allowance_mpa": 1.8896533115367142
+    }
+  ],
+  "created_at_utc": "2026-10-21T18:24:04.114083+00:00",
+  "experiment_queue": [
+    {
+      "id": "e0000",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 5,
+        "strain": [
+          0.0002,
+          0.00028571428571428574,
+          0.0003714285714285715,
+          0.00045714285714285713,
+          0.0005428571428571429,
+          0.0006285714285714286,
+          0.0007142857142857143,
+          0.0008
+        ]
+      },
+      "measurements": 40,
+      "observation_points": 8,
+      "partition": "discovery",
+      "raw_keys": [
+        "e0000_strain",
+        "e0000_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0001",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.001
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_active",
+      "raw_keys": [
+        "e0001_strain",
+        "e0001_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0002",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.014
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_active",
+      "raw_keys": [
+        "e0002_strain",
+        "e0002_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0003",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.0075
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_active",
+      "raw_keys": [
+        "e0003_strain",
+        "e0003_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0004",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.00425
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_active",
+      "raw_keys": [
+        "e0004_strain",
+        "e0004_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0005",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.002625
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_active",
+      "raw_keys": [
+        "e0005_strain",
+        "e0005_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0006",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.0018125
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_active",
+      "raw_keys": [
+        "e0006_strain",
+        "e0006_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0007",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.0022187500000000002
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_active",
+      "raw_keys": [
+        "e0007_strain",
+        "e0007_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0008",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.002015625
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_active",
+      "raw_keys": [
+        "e0008_strain",
+        "e0008_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0009",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.0021171875
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_active",
+      "raw_keys": [
+        "e0009_strain",
+        "e0009_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0010",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.00206640625
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_active",
+      "raw_keys": [
+        "e0010_strain",
+        "e0010_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0011",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.001
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_uniform",
+      "raw_keys": [
+        "e0011_strain",
+        "e0011_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0012",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.014
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_uniform",
+      "raw_keys": [
+        "e0012_strain",
+        "e0012_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0013",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.0024444444444444444
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_uniform",
+      "raw_keys": [
+        "e0013_strain",
+        "e0013_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0014",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.003888888888888889
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_uniform",
+      "raw_keys": [
+        "e0014_strain",
+        "e0014_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0015",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.005333333333333334
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_uniform",
+      "raw_keys": [
+        "e0015_strain",
+        "e0015_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0016",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.006777777777777778
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_uniform",
+      "raw_keys": [
+        "e0016_strain",
+        "e0016_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0017",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.008222222222222223
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_uniform",
+      "raw_keys": [
+        "e0017_strain",
+        "e0017_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0018",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.009666666666666667
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_uniform",
+      "raw_keys": [
+        "e0018_strain",
+        "e0018_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0019",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.011111111111111113
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_uniform",
+      "raw_keys": [
+        "e0019_strain",
+        "e0019_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0020",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.012555555555555556
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_uniform",
+      "raw_keys": [
+        "e0020_strain",
+        "e0020_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0021",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.001
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_random",
+      "raw_keys": [
+        "e0021_strain",
+        "e0021_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0022",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.014
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_random",
+      "raw_keys": [
+        "e0022_strain",
+        "e0022_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0023",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.0012829512620526533
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_random",
+      "raw_keys": [
+        "e0023_strain",
+        "e0023_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0024",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.008501525564931483
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_random",
+      "raw_keys": [
+        "e0024_strain",
+        "e0024_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0025",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.009672340638116336
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_random",
+      "raw_keys": [
+        "e0025_strain",
+        "e0025_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0026",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.004416182137750274
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_random",
+      "raw_keys": [
+        "e0026_strain",
+        "e0026_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0027",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.0036819435526054475
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_random",
+      "raw_keys": [
+        "e0027_strain",
+        "e0027_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0028",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.002637083664029695
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_random",
+      "raw_keys": [
+        "e0028_strain",
+        "e0028_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0029",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.011848516012489353
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_random",
+      "raw_keys": [
+        "e0029_strain",
+        "e0029_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0030",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 4,
+        "strain": [
+          0.00974803054937683
+        ]
+      },
+      "measurements": 4,
+      "observation_points": 1,
+      "partition": "probe_random",
+      "raw_keys": [
+        "e0030_strain",
+        "e0030_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0031",
+      "kind": "materials",
+      "knobs": {
+        "noise_sd_mpa": 0.8,
+        "replicates": 3,
+        "strain": [
+          0.000161,
+          0.00032709756097560976,
+          0.0004931951219512195,
+          0.0006592926829268293,
+          0.000825390243902439,
+          0.0009914878048780489,
+          0.0011575853658536586,
+          0.0013236829268292684,
+          0.001489780487804878,
+          0.0016558780487804878,
+          0.0018219756097560976,
+          0.0019880731707317073,
+          0.002154170731707317,
+          0.002320268292682927,
+          0.0024863658536585366,
+          0.0026524634146341463,
+          0.002818560975609756,
+          0.002984658536585366,
+          0.0031507560975609756,
+          0.0033168536585365853,
+          0.003482951219512195,
+          0.003649048780487805,
+          0.0038151463414634146,
+          0.003981243902439024,
+          0.004147341463414634,
+          0.004313439024390244,
+          0.004479536585365853,
+          0.0046456341463414624,
+          0.004811731707317073,
+          0.004977829268292683,
+          0.005143926829268292,
+          0.005310024390243901,
+          0.005476121951219512,
+          0.005642219512195122,
+          0.005808317073170731,
+          0.00597441463414634,
+          0.006140512195121951,
+          0.006306609756097561,
+          0.00647270731707317,
+          0.006638804878048779,
+          0.00680490243902439,
+          0.006971,
+          0.007137097560975609,
+          0.007303195121951218,
+          0.007469292682926829,
+          0.007635390243902439,
+          0.007801487804878048,
+          0.007967585365853657,
+          0.008133682926829268,
+          0.008299780487804878,
+          0.008465878048780488,
+          0.008631975609756096,
+          0.008798073170731707,
+          0.008964170731707317,
+          0.009130268292682925,
+          0.009296365853658535,
+          0.009462463414634146,
+          0.009628560975609756,
+          0.009794658536585366,
+          0.009960756097560974,
+          0.010126853658536585,
+          0.010292951219512195,
+          0.010459048780487803,
+          0.010625146341463413,
+          0.010791243902439024,
+          0.010957341463414634,
+          0.011123439024390244,
+          0.011289536585365852,
+          0.011455634146341463,
+          0.011621731707317073,
+          0.011787829268292681,
+          0.011953926829268291,
+          0.012120024390243902,
+          0.012286121951219512,
+          0.012452219512195122,
+          0.01261831707317073,
+          0.01278441463414634,
+          0.01295051219512195,
+          0.013116609756097559,
+          0.01328270731707317,
+          0.01344880487804878,
+          0.01361490243902439,
+          0.013781
+        ]
+      },
+      "measurements": 249,
+      "observation_points": 83,
+      "partition": "holdout",
+      "raw_keys": [
+        "e0031_strain",
+        "e0031_stress_mpa"
+      ],
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    }
+  ],
+  "final_holdout": {
+    "initial_predictions_mpa": [
+      33.80359863087296,
+      68.6774823873106,
+      103.55136614374824,
+      138.4252499001859,
+      173.29913365662352,
+      208.1730174130612,
+      243.04690116949882,
+      277.92078492593646,
+      312.7946686823741,
+      347.66855243881173,
+      382.54243619524937,
+      417.41631995168706,
+      452.2902037081247,
+      487.16408746456233,
+      522.0379712209999,
+      556.9118549774375,
+      591.7857387338752,
+      626.6596224903129,
+      661.5335062467506,
+      696.4073900031882,
+      731.2812737596258,
+      766.1551575160635,
+      801.0290412725011,
+      835.9029250289387,
+      870.7768087853763,
+      905.650692541814,
+      940.5245762982515,
+      975.398460054689,
+      1010.2723438111268,
+      1045.1462275675647,
+      1080.020111324002,
+      1114.8939950804397,
+      1149.7678788368773,
+      1184.6417625933152,
+      1219.5156463497526,
+      1254.3895301061903,
+      1289.2634138626279,
+      1324.1372976190657,
+      1359.0111813755032,
+      1393.8850651319408,
+      1428.7589488883784,
+      1463.6328326448163,
+      1498.5067164012537,
+      1533.3806001576913,
+      1568.254483914129,
+      1603.1283676705668,
+      1638.0022514270045,
+      1672.8761351834419,
+      1707.7500189398797,
+      1742.6239026963174,
+      1777.497786452755,
+      1812.3716702091924,
+      1847.2455539656303,
+      1882.119437722068,
+      1916.9933214785053,
+      1951.867205234943,
+      1986.7410889913808,
+      2021.6149727478185,
+      2056.488856504256,
+      2091.3627402606935,
+      2126.2366240171314,
+      2161.110507773569,
+      2195.9843915300066,
+      2230.858275286444,
+      2265.732159042882,
+      2300.6060427993198,
+      2335.479926555757,
+      2370.3538103121946,
+      2405.2276940686324,
+      2440.1015778250703,
+      2474.9754615815077,
+      2509.849345337945,
+      2544.723229094383,
+      2579.597112850821,
+      2614.4709966072583,
+      2649.3448803636957,
+      2684.2187641201335,
+      2719.0926478765714,
+      2753.966531633009,
+      2788.840415389446,
+      2823.714299145884,
+      2858.588182902322,
+      2893.46206665876
+    ],
+    "protocol": "v3 final split; legacy v1 and v2 are development",
+    "replicates": 3,
+    "strain": [
+      0.000161,
+      0.00032709756097560976,
+      0.0004931951219512195,
+      0.0006592926829268293,
+      0.000825390243902439,
+      0.0009914878048780489,
+      0.0011575853658536586,
+      0.0013236829268292684,
+      0.001489780487804878,
+      0.0016558780487804878,
+      0.0018219756097560976,
+      0.0019880731707317073,
+      0.002154170731707317,
+      0.002320268292682927,
+      0.0024863658536585366,
+      0.0026524634146341463,
+      0.002818560975609756,
+      0.002984658536585366,
+      0.0031507560975609756,
+      0.0033168536585365853,
+      0.003482951219512195,
+      0.003649048780487805,
+      0.0038151463414634146,
+      0.003981243902439024,
+      0.004147341463414634,
+      0.004313439024390244,
+      0.004479536585365853,
+      0.0046456341463414624,
+      0.004811731707317073,
+      0.004977829268292683,
+      0.005143926829268292,
+      0.005310024390243901,
+      0.005476121951219512,
+      0.005642219512195122,
+      0.005808317073170731,
+      0.00597441463414634,
+      0.006140512195121951,
+      0.006306609756097561,
+      0.00647270731707317,
+      0.006638804878048779,
+      0.00680490243902439,
+      0.006971,
+      0.007137097560975609,
+      0.007303195121951218,
+      0.007469292682926829,
+      0.007635390243902439,
+      0.007801487804878048,
+      0.007967585365853657,
+      0.008133682926829268,
+      0.008299780487804878,
+      0.008465878048780488,
+      0.008631975609756096,
+      0.008798073170731707,
+      0.008964170731707317,
+      0.009130268292682925,
+      0.009296365853658535,
+      0.009462463414634146,
+      0.009628560975609756,
+      0.009794658536585366,
+      0.009960756097560974,
+      0.010126853658536585,
+      0.010292951219512195,
+      0.010459048780487803,
+      0.010625146341463413,
+      0.010791243902439024,
+      0.010957341463414634,
+      0.011123439024390244,
+      0.011289536585365852,
+      0.011455634146341463,
+      0.011621731707317073,
+      0.011787829268292681,
+      0.011953926829268291,
+      0.012120024390243902,
+      0.012286121951219512,
+      0.012452219512195122,
+      0.01261831707317073,
+      0.01278441463414634,
+      0.01295051219512195,
+      0.013116609756097559,
+      0.01328270731707317,
+      0.01344880487804878,
+      0.01361490243902439,
+      0.013781
+    ],
+    "stress_mean_mpa": [
+      33.98339766762063,
+      68.97438356629955,
+      103.81417975263632,
+      138.28714191308396,
+      173.1457200604635,
+      208.41388223115635,
+      242.88393380299263,
+      277.8528126789972,
+      312.7929045739045,
+      348.1818092301283,
+      382.0714332480311,
+      416.82104476010454,
+      420.1056819524781,
+      421.13864281694185,
+      420.9556786615473,
+      420.4649352366775,
+      421.02745719142354,
+      421.24088416350634,
+      421.5240153018244,
+      422.8049688970256,
+      422.34711451561265,
+      422.00758140306567,
+      421.80664448665834,
+      422.47189368526887,
+      422.8493876405187,
+      423.5631720767649,
+      422.62916745631446,
+      424.26052553046935,
+      424.5946434678913,
+      424.0538922459457,
+      424.1429237281537,
+      424.82339279524103,
+      425.4415016441119,
+      425.6279636510476,
+      426.2279881595047,
+      426.95518608679726,
+      425.9894063187664,
+      426.6755748672581,
+      426.9349699927602,
+      426.9016321235383,
+      426.8138679133592,
+      427.0043957922741,
+      427.4237103446332,
+      428.67603780205917,
+      428.2921582034012,
+      428.5683843514493,
+      428.53836020405225,
+      428.50799777212774,
+      429.27448079691743,
+      430.4063513550777,
+      429.1058573945758,
+      429.35478239690457,
+      430.62247704073116,
+      430.6925103788514,
+      430.8865263620819,
+      430.7847367539089,
+      431.22307663033075,
+      431.3895072394036,
+      430.97176072458416,
+      432.03666797450387,
+      431.8334345453831,
+      433.28328163198665,
+      433.091914700494,
+      433.2814223235926,
+      433.77102035518357,
+      433.4776113458501,
+      434.0980638294141,
+      433.69071636088137,
+      434.4444456447095,
+      434.68258465386134,
+      434.7536721998272,
+      434.6964077974089,
+      434.7289287941764,
+      435.77384209114035,
+      436.24275834757356,
+      435.4172520536784,
+      436.33466634705275,
+      435.6263073245018,
+      436.5840651337938,
+      437.2922945806252,
+      436.6030849638016,
+      437.9878487514023,
+      437.8262582336071
+    ]
+  },
+  "limitations": [
+    "One synthetic bilinear material; no real alloy measurements",
+    "Preselected revision family; monotonic deviation assumption",
+    "Empirical bracket need not cover noiseless onset; narrowness alone is not accuracy",
+    "Instrument and slope uncertainty are heuristic, not calibrated sequential error control",
+    "Revised audit status tests aggregate MAE against 10 MPa, not a pointwise error guarantee"
+  ],
+  "metrics": {
+    "all_policies": {
+      "active": {
+        "assumption": "Absolute deviation has one pass-to-fail transition over the strain domain; unchecked between observations",
+        "boundary_interval": [
+          0.002015625,
+          0.00206640625
+        ],
+        "boundary_status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "bracket_width": 5.0781250000000045e-05,
+        "fallback": null,
+        "initial_bracket_satisfied": true,
+        "interval_kind": "empirical operational bracket, not a confidence interval and not physical yield",
+        "measurements": 40,
+        "nonmonotone_observations": false,
+        "observations": [
+          {
+            "absolute_deviation_mpa": 0.5744026661781447,
+            "mean_stress_mpa": 210.5346426094885,
+            "rejected": false,
+            "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+            "strain": 0.001,
+            "stress_readings_mpa": [
+              210.34810677262672,
+              210.22174285841336,
+              210.9583607469714,
+              210.61036005994245
+            ],
+            "uncertainty_allowance_mpa": 1.3924833575271551
+          },
+          {
+            "absolute_deviation_mpa": 2501.8978020563636,
+            "mean_stress_mpa": 437.5455571499811,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.014,
+            "stress_readings_mpa": [
+              437.5135889725402,
+              437.08402453699614,
+              437.67061856958776,
+              437.91399652080025
+            ],
+            "uncertainty_allowance_mpa": 9.96222568475837
+          },
+          {
+            "absolute_deviation_mpa": 1146.4203569944264,
+            "mean_stress_mpa": 428.28144258040106,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.0075,
+            "stress_readings_mpa": [
+              428.81110213739504,
+              427.9791216722407,
+              427.90110557943973,
+              428.4344409325287
+            ],
+            "uncertainty_allowance_mpa": 5.432246950451817
+          },
+          {
+            "absolute_deviation_mpa": 468.8277633598542,
+            "mean_stress_mpa": 423.5032563992147,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.00425,
+            "stress_readings_mpa": [
+              423.35701903729563,
+              425.3190148594681,
+              422.48747712938444,
+              422.84951457071077
+            ],
+            "uncertainty_allowance_mpa": 3.5491588972811865
+          },
+          {
+            "absolute_deviation_mpa": 129.76683286183703,
+            "mean_stress_mpa": 421.37879698935257,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.002625,
+            "stress_readings_mpa": [
+              421.32117606567715,
+              420.4171022644962,
+              421.1558350069168,
+              422.6210746203201
+            ],
+            "uncertainty_allowance_mpa": 2.308537871362897
+          },
+          {
+            "absolute_deviation_mpa": 0.06793752543615028,
+            "mean_stress_mpa": 380.62087242268615,
+            "rejected": false,
+            "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+            "strain": 0.0018125,
+            "stress_readings_mpa": [
+              380.1758502812739,
+              380.8003862522627,
+              380.70053202603475,
+              380.8067211311733
+            ],
+            "uncertainty_allowance_mpa": 1.7548006995238818
+          },
+          {
+            "absolute_deviation_mpa": 44.43925760774442,
+            "mean_stress_mpa": 421.41002476647543,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.0022187500000000002,
+            "stress_readings_mpa": [
+              421.4113446663579,
+              422.0296988733614,
+              421.1845305207783,
+              421.01452500540415
+            ],
+            "uncertainty_allowance_mpa": 1.9739685080547966
+          },
+          {
+            "absolute_deviation_mpa": 2.9708458601951975,
+            "mean_stress_mpa": 420.2302627755397,
+            "rejected": false,
+            "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+            "strain": 0.002015625,
+            "stress_readings_mpa": [
+              420.2886921501467,
+              419.61458241172926,
+              418.60327673774293,
+              422.41449980254
+            ],
+            "uncertainty_allowance_mpa": 2.8067219306495095
+          },
+          {
+            "absolute_deviation_mpa": 24.461568434307082,
+            "mean_stress_mpa": 420.0636270706703,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.0021171875,
+            "stress_readings_mpa": [
+              421.90584814149275,
+              421.32501241886956,
+              417.3089450461919,
+              419.714702676127
+            ],
+            "uncertainty_allowance_mpa": 3.4289900733060112
+          },
+          {
+            "absolute_deviation_mpa": 13.726728263850589,
+            "mean_stress_mpa": 420.13642380650555,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.00206640625,
+            "stress_readings_mpa": [
+              420.45576286617955,
+              420.43668797917235,
+              419.325327024883,
+              420.3279173557874
+            ],
+            "uncertainty_allowance_mpa": 1.8896533115367142
+          }
+        ],
+        "probes": 10,
+        "reference_onset_covered_evaluator_only": true,
+        "strategy": "active",
+        "uncertain_probe_count": 0,
+        "uncertainty_aware_observed_interval": [
+          0.002015625,
+          0.00206640625
+        ]
+      },
+      "random": {
+        "assumption": "Absolute deviation has one pass-to-fail transition over the strain domain; unchecked between observations",
+        "boundary_interval": [
+          0.0012829512620526533,
+          0.002637083664029695
+        ],
+        "boundary_status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "bracket_width": 0.0013541324019770418,
+        "fallback": null,
+        "initial_bracket_satisfied": true,
+        "interval_kind": "empirical operational bracket, not a confidence interval and not physical yield",
+        "measurements": 40,
+        "nonmonotone_observations": false,
+        "observations": [
+          {
+            "absolute_deviation_mpa": 0.47702246581548025,
+            "mean_stress_mpa": 209.48321747749486,
+            "rejected": false,
+            "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+            "strain": 0.001,
+            "stress_readings_mpa": [
+              208.33303357494566,
+              210.08268573007126,
+              210.23280568876436,
+              209.2843449161982
+            ],
+            "uncertainty_allowance_mpa": 1.4872116137998017
+          },
+          {
+            "absolute_deviation_mpa": 2501.3332271702825,
+            "mean_stress_mpa": 438.1101320360621,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.014,
+            "stress_readings_mpa": [
+              438.02146007168113,
+              437.6139311820461,
+              438.1307080237783,
+              438.6744288667431
+            ],
+            "uncertainty_allowance_mpa": 9.96222568475837
+          },
+          {
+            "absolute_deviation_mpa": 0.2979131580563603,
+            "mean_stress_mpa": 269.0708416580915,
+            "rejected": false,
+            "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+            "strain": 0.0012829512620526533,
+            "stress_readings_mpa": [
+              269.0321932116386,
+              268.92571659528744,
+              269.21108561632536,
+              269.11437120911467
+            ],
+            "uncertainty_allowance_mpa": 1.503779339907663
+          },
+          {
+            "absolute_deviation_mpa": 1355.4141016615126,
+            "mean_stress_mpa": 429.5682458356886,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.008501525564931483,
+            "stress_readings_mpa": [
+              428.1708006613408,
+              430.0741374487388,
+              429.1151664387309,
+              430.9128787939438
+            ],
+            "uncertainty_allowance_mpa": 6.263623686483214
+          },
+          {
+            "absolute_deviation_mpa": 1598.9086219760766,
+            "mean_stress_mpa": 431.89833921626064,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.009672340638116336,
+            "stress_readings_mpa": [
+              432.5173344625269,
+              432.64876758807725,
+              430.8818843354313,
+              431.54537047900715
+            ],
+            "uncertainty_allowance_mpa": 6.947122267398139
+          },
+          {
+            "absolute_deviation_mpa": 503.0311221448767,
+            "mean_stress_mpa": 424.19153913053196,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.004416182137750274,
+            "stress_readings_mpa": [
+              423.927355374429,
+              424.1308801949521,
+              423.80796528795776,
+              424.89995566478893
+            ],
+            "uncertainty_allowance_mpa": 3.342457594032921
+          },
+          {
+            "absolute_deviation_mpa": 350.64460471427174,
+            "mean_stress_mpa": 422.41714704849244,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.0036819435526054475,
+            "stress_readings_mpa": [
+              421.4463710201234,
+              422.8973751330238,
+              423.09577453438794,
+              422.2290675064345
+            ],
+            "uncertainty_allowance_mpa": 2.8644251916914736
+          },
+          {
+            "absolute_deviation_mpa": 132.6029203161463,
+            "mean_stress_mpa": 421.07979853411246,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.002637083664029695,
+            "stress_readings_mpa": [
+              420.3219246749922,
+              421.4770313197353,
+              421.53677044865333,
+              420.9834676930692
+            ],
+            "uncertainty_allowance_mpa": 2.2159015702106197
+          },
+          {
+            "absolute_deviation_mpa": 2052.538194475159,
+            "mean_stress_mpa": 435.17907047926025,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.011848516012489353,
+            "stress_readings_mpa": [
+              434.95797009477684,
+              434.7397921217066,
+              435.41862692859087,
+              435.59989277196684
+            ],
+            "uncertainty_allowance_mpa": 8.455451998030101
+          },
+          {
+            "absolute_deviation_mpa": 1615.2167898032644,
+            "mean_stress_mpa": 431.48204331861405,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.00974803054937683,
+            "stress_readings_mpa": [
+              431.08216085485964,
+              432.9188526801271,
+              431.20379422337857,
+              430.723365516091
+            ],
+            "uncertainty_allowance_mpa": 7.041020721370048
+          }
+        ],
+        "probes": 10,
+        "reference_onset_covered_evaluator_only": true,
+        "strategy": "random",
+        "uncertain_probe_count": 0,
+        "uncertainty_aware_observed_interval": [
+          0.0012829512620526533,
+          0.002637083664029695
+        ]
+      },
+      "uniform": {
+        "assumption": "Absolute deviation has one pass-to-fail transition over the strain domain; unchecked between observations",
+        "boundary_interval": [
+          0.001,
+          0.0024444444444444444
+        ],
+        "boundary_status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "bracket_width": 0.0014444444444444444,
+        "fallback": null,
+        "initial_bracket_satisfied": true,
+        "interval_kind": "empirical operational bracket, not a confidence interval and not physical yield",
+        "measurements": 40,
+        "nonmonotone_observations": false,
+        "observations": [
+          {
+            "absolute_deviation_mpa": 0.47928347950605144,
+            "mean_stress_mpa": 209.4809564638043,
+            "rejected": false,
+            "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+            "strain": 0.001,
+            "stress_readings_mpa": [
+              208.82536650704301,
+              210.22489297366292,
+              209.62891160323167,
+              209.24465477127958
+            ],
+            "uncertainty_allowance_mpa": 1.3924833575271551
+          },
+          {
+            "absolute_deviation_mpa": 2501.4383286178627,
+            "mean_stress_mpa": 438.00503058848176,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.014,
+            "stress_readings_mpa": [
+              437.9202835312132,
+              436.89296954086325,
+              438.9936122109634,
+              438.21325707088715
+            ],
+            "uncertainty_allowance_mpa": 9.975185506609964
+          },
+          {
+            "absolute_deviation_mpa": 92.42105567006422,
+            "mean_stress_mpa": 420.81508641358323,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.0024444444444444444,
+            "stress_readings_mpa": [
+              421.0181992905918,
+              420.155756717654,
+              421.7838099635688,
+              420.3025796825184
+            ],
+            "uncertainty_allowance_mpa": 2.10279294601665
+          },
+          {
+            "absolute_deviation_mpa": 393.7459475750528,
+            "mean_stress_mpa": 422.7660966489319,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.003888888888888889,
+            "stress_readings_mpa": [
+              423.4884479945679,
+              421.58491782119046,
+              422.9595360335843,
+              423.0314847463852
+            ],
+            "uncertainty_allowance_mpa": 3.010875798012275
+          },
+          {
+            "absolute_deviation_mpa": 694.0917557445787,
+            "mean_stress_mpa": 425.6961906197432,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.005333333333333334,
+            "stress_readings_mpa": [
+              426.45855914132056,
+              425.16087068281064,
+              426.6489134298708,
+              424.5164192249707
+            ],
+            "uncertainty_allowance_mpa": 4.070570632818372
+          },
+          {
+            "absolute_deviation_mpa": 996.242555039074,
+            "mean_stress_mpa": 426.8212934655851,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.006777777777777778,
+            "stress_readings_mpa": [
+              427.5151717707696,
+              426.8516166027975,
+              427.1588588479611,
+              425.75952664081234
+            ],
+            "uncertainty_allowance_mpa": 4.935955061103831
+          },
+          {
+            "absolute_deviation_mpa": 1297.5494700224206,
+            "mean_stress_mpa": 428.7902806225757,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.008222222222222223,
+            "stress_readings_mpa": [
+              429.69751718963613,
+              427.7281893150639,
+              429.1378674790398,
+              428.59754850656304
+            ],
+            "uncertainty_allowance_mpa": 5.942839588313832
+          },
+          {
+            "absolute_deviation_mpa": 1597.8901769481852,
+            "mean_stress_mpa": 431.725475837148,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.009666666666666667,
+            "stress_readings_mpa": [
+              432.6036077756968,
+              431.1960948251825,
+              432.324527758906,
+              430.7776729888066
+            ],
+            "uncertainty_allowance_mpa": 6.954215845191198
+          },
+          {
+            "absolute_deviation_mpa": 1899.1357159800154,
+            "mean_stress_mpa": 433.75583894565546,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.011111111111111113,
+            "stress_readings_mpa": [
+              434.54746519357667,
+              432.28972160709395,
+              434.1371666750779,
+              434.04900230687326
+            ],
+            "uncertainty_allowance_mpa": 7.991358234766679
+          },
+          {
+            "absolute_deviation_mpa": 2200.616069024099,
+            "mean_stress_mpa": 435.55138804190847,
+            "rejected": true,
+            "status": "REFUTED",
+            "strain": 0.012555555555555556,
+            "stress_readings_mpa": [
+              434.9939414798663,
+              436.5538311853545,
+              435.1535989206497,
+              435.50418058176353
+            ],
+            "uncertainty_allowance_mpa": 8.950134439808659
+          }
+        ],
+        "probes": 10,
+        "reference_onset_covered_evaluator_only": true,
+        "strategy": "uniform",
+        "uncertain_probe_count": 0,
+        "uncertainty_aware_observed_interval": [
+          0.001,
+          0.0024444444444444444
+        ]
+      }
+    },
+    "initial_holdout_mae_mpa": 1064.1159925465554,
+    "mae_uncertainty_allowance_mpa": 1.385640646055102,
+    "revised_holdout_mae_mpa": 0.4078301071063974,
+    "threshold_kind": "DEMONSTRATION_THRESHOLD"
+  },
+  "numerical_sensitivity": {
+    "reproduce": "python -m falsifylab.benchmark --seeds 30",
+    "status": "NOT_RUN_IN_THIS_COMMAND"
+  },
+  "partition_manifest": {
+    "holdout_policy": "protocol-v3 predeclared final split; legacy v1 and development v2 splits are development data; no tuning on final data",
+    "model_freeze": {
+      "after_experiment": 31,
+      "fingerprint": "80e8e68149ef6952ea5796a1743e863f57fc52a7cd8bd60e8e8c66fdd8ca2982",
+      "models": {
+        "initial_modulus_mpa": 209960.23994331033,
+        "revisions": {
+          "active": {
+            "family": "continuous bilinear with nonnegative hardening <= elastic slope",
+            "fit_observations": 10,
+            "fit_rmse_mpa": 0.35178352713120686,
+            "hardening_modulus_mpa": 1436.1990224249514,
+            "status": "FITTED",
+            "yield_strain": 0.0020019918033424814
+          },
+          "random": {
+            "family": "continuous bilinear with nonnegative hardening <= elastic slope",
+            "fit_observations": 10,
+            "fit_rmse_mpa": 0.2960445997113783,
+            "hardening_modulus_mpa": 1501.9065263810635,
+            "status": "FITTED",
+            "yield_strain": 0.0020010263238526642
+          },
+          "uniform": {
+            "family": "continuous bilinear with nonnegative hardening <= elastic slope",
+            "fit_observations": 10,
+            "fit_rmse_mpa": 0.3514442160680271,
+            "hardening_modulus_mpa": 1478.5284243077099,
+            "status": "FITTED",
+            "yield_strain": 0.002000983177335561
+          }
+        }
+      }
+    },
+    "partitions": {
+      "discovery": [
+        "e0000"
+      ],
+      "holdout": [
+        "e0031"
+      ],
+      "probe_active": [
+        "e0001",
+        "e0002",
+        "e0003",
+        "e0004",
+        "e0005",
+        "e0006",
+        "e0007",
+        "e0008",
+        "e0009",
+        "e0010"
+      ],
+      "probe_random": [
+        "e0021",
+        "e0022",
+        "e0023",
+        "e0024",
+        "e0025",
+        "e0026",
+        "e0027",
+        "e0028",
+        "e0029",
+        "e0030"
+      ],
+      "probe_uniform": [
+        "e0011",
+        "e0012",
+        "e0013",
+        "e0014",
+        "e0015",
+        "e0016",
+        "e0017",
+        "e0018",
+        "e0019",
+        "e0020"
+      ]
+    }
+  },
+  "physical_system": {
+    "name": "synthetic_bilinear_material",
+    "version": "synthetic-material-v3"
+  },
+  "record_type": "reproducible_experiment_provenance_NOT_formal_proof",
+  "reproduce": "python -m falsifylab.run_materials --seeds 30 --out outputs/materials",
+  "resource_costs": {
+    "discovery": {
+      "measurements": 40,
+      "observation_points": 8,
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1
+    },
+    "holdout": {
+      "measurements": 249,
+      "observation_points": 83,
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 1
+    },
+    "probe_active": {
+      "measurements": 40,
+      "observation_points": 10,
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 10
+    },
+    "probe_random": {
+      "measurements": 40,
+      "observation_points": 10,
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 10
+    },
+    "probe_uniform": {
+      "measurements": 40,
+      "observation_points": 10,
+      "rhs_evaluations": 0,
+      "simulated_duration_s": 0.0,
+      "simulator_calls": 10
+    }
+  },
+  "revision": {
+    "family": "predeclared continuous bilinear",
+    "fit": {
+      "family": "continuous bilinear with nonnegative hardening <= elastic slope",
+      "fit_observations": 10,
+      "fit_rmse_mpa": 0.35178352713120686,
+      "hardening_modulus_mpa": 1436.1990224249514,
+      "status": "FITTED",
+      "yield_strain": 0.0020019918033424814
+    },
+    "fit_inputs": [
+      "e0001",
+      "e0002",
+      "e0003",
+      "e0004",
+      "e0005",
+      "e0006",
+      "e0007",
+      "e0008",
+      "e0009",
+      "e0010"
+    ],
+    "frozen_before_holdout": true,
+    "heldout_status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS"
+  },
+  "run_id": "455c914dd64a4a8d1c9261f1",
+  "schema_version": "1.0.0",
+  "seed": 2026,
+  "selection_policy": {
+    "assumptions": [
+      "Absolute deviation has one pass-to-fail transition over the strain domain; unchecked between observations"
+    ],
+    "name": "adaptive bisection; equal-budget uniform/random controls",
+    "query_budget_per_policy": 10,
+    "replicates_per_query": 4,
+    "rng_streams": "SeedSequence namespaces: 1729 observation, 4793 random selection; per-role independent"
+  },
+  "software": {
+    "dependencies": {
+      "jsonschema": "4.26.0",
+      "matplotlib": "3.10.8",
+      "numpy": "2.4.3",
+      "pytest": "9.0.3",
+      "scipy": "1.16.3"
+    },
+    "git_sha": "63c686c3d3ba67794da1cc566fef7986cfef72f4",
+    "git_worktree_dirty": true,
+    "python": "3.12.3",
+    "source_sha256": {
+      "falsifylab/__init__.py": "502f5e199048d4f6d288c913b8cf781206bce7321b5ba3a0e18a60260a525c9e",
+      "falsifylab/__main__.py": "005617d35548ee70857ff7aa840e4eb9e4782684edf95ec40e6a4027d2f90c10",
+      "falsifylab/artifacts.py": "a099b5e46d2d7268d882098429dbbca0c0072db8581e9e9bea31cc7bd2f96282",
+      "falsifylab/benchmark.py": "c587e0383f951f6e76113cc747633fc36fd27a17b45ff935636b6658f7d40a6e",
+      "falsifylab/certificates.py": "220cfbb3a707b54f2d9629caa85f4e5177ebb220fa6d52099d91a6fe84dd411b",
+      "falsifylab/decisions.py": "82f573edb75768de770b26a9282d0ede049a9445cfaca530926198c39cbd51f6",
+      "falsifylab/experiments.py": "696768d3874bfabf40ccb3c31f052969e1c8a077a2e00980742acbca5ee584e5",
+      "falsifylab/hypothesis.py": "8d02c6cb0c61ab4d8c768ca971ddcc8fef60dc3f421560a9532c6ffd9dd004b5",
+      "falsifylab/make_report.py": "173ac398f764bfa24fd9c5ab3b506dc22fe73464fb1737c84a221c623c171354",
+      "falsifylab/materials.py": "461c6a3724b239d90670dc4d0ae582435e82659d79a053d9d2941844c4dd2fa8",
+      "falsifylab/physics.py": "74ff0e7bb07436ff79d49d29bad68cbbcd6e5fbd860af790d8348ec890e24541",
+      "falsifylab/run_demo.py": "79400e60f209a124e7af7d0dd8376af1b19d7cf86b6eb1ab6cf335c28b72f14b",
+      "falsifylab/run_materials.py": "f2c75f3194c4c17c57a483a381b7ebc6d39c71394b90c0837a611fc5552f9c78",
+      "falsifylab/verify.py": "cbe2b15f1cf0d72bfc2886ae4d55c4854ff6b50a9b355743470df291b55a7e5a"
+    }
+  },
+  "status": "REFUTED",
+  "validity_domain": {
+    "boundary_status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+    "discovery_strain": [
+      0.0002,
+      0.0008
+    ],
+    "empirical_boundary": [
+      0.002015625,
+      0.00206640625
+    ],
+    "interpretation": "observed error-tolerance boundary, not physical yield or a confidence interval",
+    "operational_tolerance_mpa": 10.0,
+    "probed_strain": [
+      0.001,
+      0.014
+    ],
+    "uncertainty": [
+      0.002015625,
+      0.00206640625
+    ]
+  }
+}

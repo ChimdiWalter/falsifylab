@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FalsifyLab — Scientific Counterexamples & Evidence</title>
+<style>
+:root{color-scheme:dark;background:#091221;color:#e8f0f6;font-family:Inter,ui-sans-serif,system-ui,Arial,sans-serif}*{box-sizing:border-box}body{margin:0}main{max-width:1110px;margin:auto;padding:26px 25px 70px}
+header{padding:42px 0 32px;border-bottom:1px solid #324359}h1{font-size:clamp(39px,6vw,72px);line-height:1.02;letter-spacing:-.055em;margin:4px 0 18px}h2{font-size:27px;letter-spacing:-.025em}p{line-height:1.6;color:#bbcad8;max-width:860px}.lede{font-size:19px;color:#d7e9fb}.tag{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#7bc8e0}.meta{color:#a3b4c6;font-size:14px}
+section{margin-top:36px;border:1px solid #263a50;border-radius:14px;padding:24px;background:#111e30}.metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:13px;margin:20px 0 24px}.metric{padding:17px 15px;background:#182b40;border-radius:12px}.metric strong{display:block;font-size:29px;letter-spacing:-.04em;margin:6px 0}.metric small{color:#b7c5d1;line-height:1.4}img{width:100%;max-width:880px;border-radius:10px;background:#fff}a{color:#8bd6ec}.note{border-left:3px solid #80d3e7;padding-left:15px}.footer{font-size:13px;margin-top:28px}code{background:#21374b;padding:3px 6px;border-radius:4px}
+</style></head><body><main>
+<header><div class="tag">OSI Hackathon 2026 · Scientific-computing prototype</div><h1>FalsifyLab</h1>
+<p class="lede">A physical law can fit the observations and still fail outside the conditions where it was measured. FalsifyLab tests the boundary, searches for counterexamples, and audits whether a revised model generalizes.</p>
+<p class="meta">Reproducible synthetic physics and materials benchmarks · No paid API or GPU required · Results are not new physical discoveries</p></header>
+<section><div class="tag">Demonstration A · Materials characterization</div><h2>How far does Hooke’s law hold?</h2>
+<p>Fit a linear stress–strain hypothesis to small deformations, then actively narrow the strain at which its error exceeds a declared 10 MPa threshold. Compare equal-budget selection strategies over 30 independent synthetic noise seeds; fit a predeclared bilinear revision and test it on held-out observations.</p>
+<div class="metrics"><div class="metric"><small>Active median onset-bracket width</small><strong>0.000051</strong><small>dimensionless strain</small></div>
+<div class="metric"><small>Uniform baseline</small><strong>0.001444</strong><small>same 10-probe budget</small></div>
+<div class="metric"><small>Random baseline</small><strong>0.002139</strong><small>same 10-probe budget</small></div>
+<div class="metric"><small>Heldout linear → revised MAE</small><strong>1069.0 → 0.40</strong><small>MPa; synthetic predeclared bilinear family</small></div></div>
+<img src="materials/stress_strain_boundary.png" alt="Simulated stress strain curves with linear model, bilinear revision, and measured failure onset bracket">
+<p class="note">This is a <b>threshold-defined approximation breakdown</b>, not a statistical confidence interval or a general physical yield estimator. Binary search has a monotonicity advantage on this synthetic model. The modeling problem is constructed, not a discovery of a new material.</p><p><a href="certificates/materials.json">Open machine-readable materials evidence</a></p></section>
+<section><div class="tag">Demonstration B · Nonlinear mechanics</div><h2>A conserved quantity that was only apparently conserved</h2>
+<p>A quadratic candidate fits low-amplitude, short Duffing oscillator trajectories. A 15-condition fixed test grid reveals a counterexample. An extended quartic hypothesis then survives a separate held-out numerical trajectory. The same revision fails in a damped negative-control system.</p>
+<div class="metrics"><div class="metric"><small>Quadratic training drift</small><strong>0.592%</strong><small>short/low-amplitude observations</small></div>
+<div class="metric"><small>Quadratic heldout drift</small><strong>20.25%</strong><small>refuted by heldout trajectory</small></div>
+<div class="metric"><small>Revised heldout drift</small><strong>&lt; 0.00001%</strong><small>synthetic numerical trajectory</small></div></div>
+<img src="duffing_counterexample.png" alt="Heldout Duffing quadratic invariant drift compared with revised quartic invariant drift">
+<p class="note">The true Duffing invariant is already established physics; the learner searches only a constrained family. A 2% heuristic demonstration threshold is <b>not</b> a significance test, and zero drift under finite simulation is not proof of universal conservation.</p><p><a href="certificates/oscillator.json">Open machine-readable oscillator evidence</a></p></section>
+<section><div class="tag">What makes the workflow useful?</div><h2>A counterexample is part of the research record.</h2>
+<p>Hypothesis → experiment budget and condition → observed failure → restricted model revision → independent audit → serializable evidence. The output documents where a model failed and what remains untested instead of reporting just a fitting score.</p><p class="footer">Prior work includes SINDy, PySR, POPPER, and SciExplorer. FalsifyLab combines existing ideas into a small inspectable prototype. These JSON evidence records document provenance; they are not formal mathematical/statistical certificates.</p>
+<p class="footer">Run locally: <code>python -m pytest -q</code> · <code>python -m falsifylab.run_demo</code> · <code>python -m falsifylab.run_materials --seeds 30</code></p></section>
+</main></body></html>

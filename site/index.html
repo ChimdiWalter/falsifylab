@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FalsifyLab Workbench</title>
+<meta name="description" content="FalsifyLab tests candidate physical laws against counterexamples, revises them within a declared family, and audits them on independent measurements. Synthetic physics and materials benchmarks with hash-linked evidence.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0b0b'/%3E%3Cpath d='M7 23 L15 9' stroke='%23fcfcfb' stroke-width='3' stroke-linecap='round'/%3E%3Cpath d='M15 9 L25 11' stroke='%23eb6834' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="wordmark" href="#top" aria-label="FalsifyLab home">
+      <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="8" fill="var(--ink)"/><path d="M7 23 L15 9" stroke="var(--page)" stroke-width="3" stroke-linecap="round"/><path d="M15 9 L25 11" stroke="var(--initial)" stroke-width="3" stroke-linecap="round"/></svg>
+      <span>FalsifyLab</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#materials-lab">Materials lab</a>
+      <a href="#oscillator-lab">Oscillator lab</a>
+      <a href="#benchmark">Benchmark</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#limits">Limits</a>
+      <a href="#prior">Prior work</a>
+      <a href="#reproduce">Reproduce</a>
+    </nav>
+    <button class="iconbtn" id="theme-toggle" type="button" aria-label="Toggle light or dark theme" title="Toggle theme">◐</button>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="eyebrow">Open Scientific Intelligence Hackathon 2026 · synthetic physics and materials</div>
+  <h1>FalsifyLab — Where Scientific Laws <span>Meet Counterexamples.</span></h1>
+  <p class="lede">A law can fit every observation you have and still fail outside the conditions where it was measured.
+    FalsifyLab spends a counted experiment budget trying to break a candidate law, revises it only within a declared family,
+    freezes the revision, and lets independent measurements decide. Every reading is kept as evidence.</p>
+  <div class="pills">
+    <span class="pill">Synthetic simulators only</span>
+    <span class="pill">CPU, no API keys, no LLM judges physics</span>
+    <span class="pill">Not a new physical law</span>
+    <span class="pill">Every recorded number comes from committed evidence files</span>
+  </div>
+
+  <div class="hero-grid">
+    <div class="card">
+      <div class="section-head" style="margin-bottom:6px">
+        <div>
+          <div class="chart-title">Hooke's law meets its limit: synthetic material, seed 2026</div>
+          <div class="chart-sub">Stress in MPa vs engineering strain in %. Probes marked ✕ are counterexamples to the candidate law; on wide screens an inset zooms on the 10 MPa onset.</div>
+        </div>
+        <span class="badge recorded" title="Replay of a recorded run from the frozen v3 protocol">Recorded run</span>
+      </div>
+      <div id="hero-chart" class="chart tall" role="img" aria-label="Stress-strain chart: discovery readings, the linear Hooke fit, active probe means, the bilinear revision and independent audit means"></div>
+    </div>
+    <div class="stats" id="hero-stats"><div class="loading">Loading evidence…</div></div>
+  </div>
+
+  <div class="flow" id="workflow" aria-label="Workflow of the recorded materials run"></div>
+  <div class="flow-caption"><span class="tiny">Each stage shows the actual value from the recorded materials run. Select a stage to open its evidence.</span><span class="badge recorded">Recorded run · protocol v3</span></div>
+</section>
+
+<section class="block" id="materials-lab">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Interactive counterexample discovery · materials</div>
+      <h2>Try to break Hooke's law yourself.</h2>
+      <p>Choose a hidden material and an instrument noise level, then run the experiment. The search sees only noisy readings. It spends 10 probes of 4 readings each looking for where the law's error first exceeds 10 MPa, attempts a bilinear revision, freezes it, then audits it on 249 new readings.</p>
+    </div>
+    <span class="badge live" title="Computed in your browser by the parity-tested JavaScript mirror of the Python engine">Live: computed in your browser</span>
+  </div>
+
+  <div class="card controls" id="mat-controls">
+    <div class="control">
+      <label for="mat-preset">Hidden material</label>
+      <select id="mat-preset">
+        <option value="benchmark">Benchmark surrogate (E 210 GPa)</option>
+        <option value="alloy">Softer hypothetical alloy (E 70 GPa)</option>
+        <option value="dip">Hidden softening dip (breaks monotonicity)</option>
+        <option value="custom">Custom parameters…</option>
+      </select>
+    </div>
+    <div class="control">
+      <label for="mat-noise">Instrument noise SD <output id="mat-noise-out">0.8 MPa</output></label>
+      <input id="mat-noise" type="range" min="0" max="16" step="0.2" value="0.8">
+    </div>
+    <div class="control">
+      <span class="lbl" id="mat-policy-label">Show policy (all three run on equal budgets)</span>
+      <div class="seg" role="group" aria-labelledby="mat-policy-label" id="mat-policy">
+        <button type="button" data-v="active" aria-pressed="true">Adaptive bisection</button>
+        <button type="button" data-v="uniform" aria-pressed="false">Uniform grid</button>
+        <button type="button" data-v="random" aria-pressed="false">Random</button>
+      </div>
+    </div>
+    <div class="control">
+      <label for="mat-seed">Seed</label>
+      <input id="mat-seed" type="number" min="0" max="999999" step="1" value="7">
+    </div>
+    <div class="control">
+      <div class="btn-row">
+        <button class="btn" id="mat-run" type="button">Run experiment ▶</button>
+        <button class="btn secondary" id="mat-step" type="button">Step</button>
+        <button class="btn secondary" id="mat-reset" type="button">Reset</button>
+      </div>
+    </div>
+    <details class="custom" id="mat-custom">
+      <summary>Custom hidden material (the search never sees these)</summary>
+      <div class="row">
+        <div class="control"><label for="mat-E">Elastic modulus E <output id="mat-E-out"></output></label><input id="mat-E" type="range" min="50000" max="250000" step="5000" value="210000"></div>
+        <div class="control"><label for="mat-ey">Yield strain <output id="mat-ey-out"></output></label><input id="mat-ey" type="range" min="0.0005" max="0.012" step="0.0001" value="0.002"></div>
+        <div class="control"><label for="mat-H">Hardening modulus H <output id="mat-H-out"></output></label><input id="mat-H" type="range" min="0" max="20000" step="250" value="1500"></div>
+      </div>
+      <p class="tiny" style="margin-top:8px">Supported domain: 0 &lt; yield strain ≤ 0.03, 0 ≤ H ≤ E. If the onset falls outside the probed strain range [0.001, 0.014], the initial bracket check fails and the engine falls back to uniform probes and abstains, as the Python engine does.</p>
+    </details>
+  </div>
+
+  <div class="lab">
+    <div class="stack">
+      <div class="card">
+        <div class="pipeline" id="mat-pipeline" aria-live="polite"></div>
+        <div class="chart-title">Where does the candidate law fail?</div>
+        <div class="chart-sub">Absolute deviation of each probe's mean reading from the fitted Hooke law (MPa, log scale) vs strain (%). Probes above the 10 MPa line are counterexamples.</div>
+        <div id="mat-dev-chart" class="chart" role="img" aria-label="Deviation of probe means from the candidate law against strain, with the 10 MPa tolerance"></div>
+      </div>
+      <div class="card">
+        <div class="chart-title">Candidate law, revision and independent audit</div>
+        <div class="chart-sub">Stress (MPa) vs strain (%). Audit readings appear only after the revision is frozen.</div>
+        <div id="mat-ss-chart" class="chart" role="img" aria-label="Stress-strain chart of the live run"></div>
+        <label class="check" style="margin-top:8px"><input type="checkbox" id="mat-truth"> Reveal hidden simulator truth (evaluator only; never used by search or fitting)</label>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="verdicts" id="mat-verdicts"><div class="verdict"><div class="v muted small">Press <b>Run experiment</b> or <b>Step</b> to start.</div></div></div>
+      <div class="card" style="padding:14px">
+        <div class="chart-title">Experiment ledger</div>
+        <div class="chart-sub">Every acquisition is counted, including the shared setup and the audit.</div>
+        <div class="ledger table-wrap" id="mat-ledger"></div>
+      </div>
+      <div class="card" style="padding:14px">
+        <div class="chart-title">All three policies, same budget</div>
+        <div class="table-wrap" id="mat-policies"></div>
+      </div>
+    </div>
+  </div>
+  <p class="tiny" style="margin-top:12px" id="mat-note">The live engine is a JavaScript port of the Python engine. Replaying the recorded Python readings through it passes the parity test (<code>site/tests/engine_parity.mjs</code>). Its random numbers differ from NumPy's, so a live run never reproduces a recorded seed number for number. Live runs are exploratory and are not part of the frozen evaluation.</p>
+</section>
+
+<section class="block" id="oscillator-lab">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Interactive counterexample discovery · nonlinear dynamics</div>
+      <h2>An apparent conservation law meets a counterexample.</h2>
+      <p>Short, low-amplitude trajectories make a quadratic energy <code>Q = v² + a·x²</code> look conserved. A fixed 15-condition stress catalog tests it at larger amplitudes and longer horizons. If it is refuted, a quartic term is allowed, the model is frozen, and three new trajectories decide.</p>
+    </div>
+    <span class="badge live">Live: computed in your browser</span>
+  </div>
+  <div class="card controls">
+    <div class="control">
+      <span class="lbl" id="osc-sys-label">System</span>
+      <div class="seg" role="group" aria-labelledby="osc-sys-label" id="osc-system">
+        <button type="button" data-v="duffing_nonlinearity" aria-pressed="true">Duffing</button>
+        <button type="button" data-v="harmonic_undamped_control" aria-pressed="false">Harmonic control</button>
+        <button type="button" data-v="weakly_damped_negative_control" aria-pressed="false">Damped control</button>
+      </div>
+    </div>
+    <div class="control">
+      <span class="lbl" id="osc-noise-label">Instrument noise SD (x in m, v in m/s)</span>
+      <div class="seg" role="group" aria-labelledby="osc-noise-label" id="osc-noise">
+        <button type="button" data-v="0" aria-pressed="true">0</button>
+        <button type="button" data-v="0.001" aria-pressed="false">0.001</button>
+        <button type="button" data-v="0.01" aria-pressed="false">0.01</button>
+      </div>
+    </div>
+    <div class="control">
+      <label for="osc-seed">Seed</label>
+      <input id="osc-seed" type="number" min="0" max="999999" step="1" value="7">
+    </div>
+    <div class="control"><button class="btn" id="osc-run" type="button">Run experiment ▶</button></div>
+  </div>
+  <div class="lab">
+    <div class="stack">
+      <div class="grid-2">
+        <div class="card">
+          <div class="chart-title">Stress catalog: relative drift of the quadratic Q</div>
+          <div class="chart-sub">Peak-to-peak / mean |Q| per condition. Cells marked ✕ exceed the 2% demonstration threshold.</div>
+          <div id="osc-catalog" class="chart short" role="img" aria-label="Heatmap of quadratic invariant drift over amplitude and horizon"></div>
+        </div>
+        <div class="card">
+          <div class="chart-title">What discovery saw vs what the audit tests</div>
+          <div class="chart-sub">Phase portrait: velocity (m/s) vs position (m).</div>
+          <div id="osc-phase" class="chart short" role="img" aria-label="Phase portrait of discovery, counterexample and audit trajectories"></div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="chart-title">Independent audit trajectory 1: change in Q relative to Q(0)</div>
+        <div class="chart-sub">A conserved quantity stays on the zero line. Time in s (nominal).</div>
+        <div id="osc-audit" class="chart" role="img" aria-label="Relative change of each candidate invariant along the first audit trajectory"></div>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="verdicts" id="osc-verdicts"></div>
+      <div class="card small" style="padding:16px">
+        <h3 style="margin-bottom:8px">How to read the controls</h3>
+        <p class="muted"><b>Duffing</b> adds a cubic restoring force. Its true invariant is <code>v² + ω²x² + (α/2)x⁴</code>, so a quadratic is refuted at large amplitude.</p>
+        <p class="muted"><b>Harmonic control</b> has a truly quadratic invariant; the correct outcome is <i>not refuted</i> (or abstention under noise).</p>
+        <p class="muted" style="margin:0"><b>Damped control</b> loses energy at <code>dQ/dt = −2γv²</code>; no polynomial invariant exists, so the correct outcome is that the revision is also refuted.</p>
+      </div>
+    </div>
+  </div>
+  <div class="alert info small" style="margin-top:14px" id="osc-disclosure"></div>
+</section>
+
+<section class="block" id="benchmark">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Frozen evaluation · protocol v3 · seeds 2026–2055</div>
+      <h2>The recorded benchmark, including the weak points.</h2>
+      <p>These panels replay saved results; nothing here is recomputed in your browser. Post-hoc audit experiments are marked separately and were not part of the frozen protocol.</p>
+    </div>
+    <span class="badge recorded">Recorded results</span>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <div class="chart-title">Onset bracket width at equal budget (30 seeds)</div>
+      <div class="chart-sub">Dimensionless strain, log scale. Each dot is one seed; 10 probes × 4 readings per policy.</div>
+      <div id="bm-width" class="chart short" role="img" aria-label="Bracket width per seed by policy"></div>
+      <div class="table-wrap" id="bm-width-table"></div>
+    </div>
+    <div class="card">
+      <div class="chart-title">Independent audit error (30 seeds)</div>
+      <div class="chart-sub">Mean absolute error vs 249 held-out readings, MPa, log scale. Dashed line: error of a perfect model given the measurement noise.</div>
+      <div id="bm-mae" class="chart short" role="img" aria-label="Audit MAE per seed for initial and revised models"></div>
+      <p class="small muted" id="bm-mae-note"></p>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <div class="section-head" style="margin-bottom:4px">
+      <div>
+        <div class="chart-title">What happens as instrument noise grows (30 seeds per level)</div>
+        <div class="chart-sub">Left: share of brackets that contain the noiseless 10 MPa onset. Right: share flagged INCONCLUSIVE by the engine.</div>
+      </div>
+      <span class="badge posthoc" title="Independent audit; exploratory; not part of frozen protocol v3">Post-hoc audit</span>
+    </div>
+    <div class="grid-2">
+      <div id="bm-noise-cov" class="chart short" role="img" aria-label="Coverage of the noiseless onset against noise SD"></div>
+      <div id="bm-noise-inc" class="chart short" role="img" aria-label="Fraction of brackets flagged inconclusive against noise SD"></div>
+    </div>
+    <p class="small" id="bm-noise-note"></p>
+    <details class="raw"><summary>Frozen 3-seed robustness subset (protocol v3)</summary><div class="table-wrap" id="bm-frozen-noise"></div></details>
+  </div>
+  <div class="grid-2" style="margin-top:18px">
+    <div class="card">
+      <div class="chart-title">Oscillator controls and ablations</div>
+      <div class="chart-sub" id="bm-osc-sub"></div>
+      <div class="table-wrap" id="bm-osc"></div>
+    </div>
+    <div class="card">
+      <div class="section-head" style="margin-bottom:4px">
+        <div>
+          <div class="chart-title">Does counterexample selection matter under noise?</div>
+          <div class="chart-sub">Quartic revision audited on 3 new trajectories; 30 seeds per noise level. True quartic coefficient 0.5.</div>
+        </div>
+        <span class="badge posthoc">Post-hoc audit</span>
+      </div>
+      <div class="table-wrap" id="bm-excite"></div>
+    </div>
+  </div>
+  <div class="card" style="margin-top:18px">
+    <div class="chart-title">Integrator sensitivity (DOP853, seed 2026)</div>
+    <div class="table-wrap" id="bm-solver"></div>
+  </div>
+</section>
+
+<section class="block" id="evidence">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Evidence records</div>
+      <h2>Inspect what was actually recorded.</h2>
+      <p>Each run exports a JSON evidence record (schema 1.0.0) with partitions, the model-freeze fingerprint, every experiment and its cost, raw-data hashes and limitations. <code>python -m falsifylab.verify outputs</code> recomputes the metrics from the raw arrays. A record shows internal consistency and reproducibility. It is <b>not</b> a mathematical proof.</p>
+    </div>
+    <span class="badge recorded">Recorded evidence</span>
+  </div>
+  <div class="tabs" role="tablist" id="ev-tabs"></div>
+  <div class="card" id="ev-panel" role="tabpanel"></div>
+  <details class="raw" id="provenance"><summary>Provenance of this page (input files and SHA-256)</summary><div id="prov-body"></div></details>
+</section>
+
+<section class="block" id="limits">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Limitations and scientific trust</div>
+      <h2>What this does not show.</h2>
+    </div>
+  </div>
+  <div class="limits" id="limits-grid"></div>
+</section>
+
+<section class="block" id="prior">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Prior work</div>
+      <h2>Established ideas, assembled into one auditable record.</h2>
+      <p>Each component exists in prior work. The contribution is the integration: counted interventions, a validity boundary, a constrained revision, a frozen independent audit, negative controls and abstention, in one re-executable record. Full sourced table: <a href="../docs/CLAIM_NOVELTY_TABLE.md">docs/CLAIM_NOVELTY_TABLE.md</a>.</p>
+    </div>
+  </div>
+  <div class="card table-wrap">
+    <table>
+      <thead><tr><th>Already established</th><th>Representative work</th><th>What FalsifyLab implements</th></tr></thead>
+      <tbody>
+        <tr><td>Equation and invariant discovery</td><td><a href="https://doi.org/10.1073/pnas.1517384113">SINDy</a>, <a href="https://arxiv.org/abs/2305.01582">PySR</a>, <a href="https://doi.org/10.1126/sciadv.aay2631">AI Feynman</a>, <a href="https://doi.org/10.1103/PhysRevLett.126.180604">AI Poincaré</a></td><td>Fixed, declared families only. It discovers nothing new.</td></tr>
+        <tr><td>Falsification with error control</td><td><a href="https://proceedings.mlr.press/v267/huang25n.html">POPPER (ICML 2025)</a></td><td>Three-way verdict with heuristic abstention; no calibrated error control.</td></tr>
+        <tr><td>Agentic physics exploration</td><td><a href="https://journals.aps.org/prx/abstract/10.1103/xnqc-q6nt">SciExplorer (PRX 2026)</a></td><td>Deterministic local pipeline; no LLM judges a physical claim.</td></tr>
+        <tr><td>Counterexample-guided refinement</td><td><a href="https://doi.org/10.1145/1168857.1168907">CEGIS</a>, <a href="https://doi.org/10.1007/978-3-642-19835-9_21">S-TaLiRo</a></td><td>Fixed catalog scan and bisection, not optimizing search.</td></tr>
+        <tr><td>Threshold finding under noise</td><td><a href="https://www.ijcai.org/Abstract/13/202">Level-set estimation</a>, <a href="https://doi.org/10.1137/120861898">noisy bisection</a></td><td>Plain bisection under a disclosed monotonic prior, with abstention.</td></tr>
+        <tr><td>Constitutive-law discovery</td><td><a href="https://doi.org/10.1016/j.cma.2021.113852">EUCLID</a></td><td>Bilinear fit containing the ground truth.</td></tr>
+        <tr><td>Preregistration, provenance</td><td><a href="https://doi.org/10.1073/pnas.1708274114">Nosek et al. 2018</a></td><td>Model-freeze guard enforced in code, counted costs, hash-linked raw data, a verifier.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="block" id="reproduce">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Reproduce</div>
+      <h2>Run it, verify it, challenge it.</h2>
+    </div>
+  </div>
+  <div class="grid-2">
+    <div class="card">
+      <h3 style="margin-bottom:10px">Commands (Python 3.12, CPU)</h3>
+<div class="cmd">pip install -r requirements-lock.txt
+python -m pytest -q                       # test suite
+python -m falsifylab --seeds 2 --out /tmp/fl   # quick demo
+python -m falsifylab.benchmark --seeds 30 --out /tmp/bm
+python -m falsifylab.verify outputs       # recompute metrics from raw data
+PYTHONPATH=. python audit/independent_checks.py
+node site/tests/engine_parity.mjs         # browser engine vs Python
+pip install -r requirements-notebook.txt
+python -m marimo run notebooks/explore.py # interactive notebook</div>
+    </div>
+    <div class="card">
+      <h3 style="margin-bottom:10px">Independent checks behind this page</h3>
+      <div id="repro-checks"></div>
+      <p class="small" style="margin-top:12px">Reports: <a href="../docs/INDEPENDENT_AUDIT.md">independent audit</a> · <a href="../docs/EVALUATION.md">frozen evaluation</a> · <a href="../docs/PROTOCOL.md">protocol</a> · <a href="../outputs/benchmark/metrics.json">metrics.json</a> · <a href="https://github.com/ChimdiWalter/falsifylab">source repository</a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div>FalsifyLab · OSI Hackathon 2026 entry. Synthetic simulators; results validate a workflow, not new physics. <span id="footer-build"></span></div>
+</footer>
+<script src="assets/vendor/plotly-3.5.0.min.js"></script>
+<script src="data/evidence.js"></script>
+<script src="assets/engine.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>

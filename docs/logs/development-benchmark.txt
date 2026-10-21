@@ -1,0 +1,8 @@
+Synthetic material: 1 noise seeds; each policy 10 probes / 40 readings
+  active: median bracket=5.0781250000000045e-05; reference coverage=1.0; inconclusive boundary=0.0
+  uniform: median bracket=0.0014444444444444444; reference coverage=1.0; inconclusive boundary=0.0
+  random: median bracket=0.0013541324019770418; reference coverage=1.0; inconclusive boundary=0.0
+  Independent median MAE (MPa): linear=1064.946723; revised=0.40814254787214155
+Oscillator controls: 1/1 seeds
+Noise/horizon checks: 1/1 seeds
+Saved /tmp/falsifylab-dev/benchmark/metrics.json and metrics.csv; 3 primary oscillator trials

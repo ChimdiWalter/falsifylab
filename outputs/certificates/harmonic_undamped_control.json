@@ -1,0 +1,902 @@
+{
+  "artifacts": [
+    {
+      "bytes": 106637,
+      "kind": "results",
+      "path": "../results.json",
+      "sha256": "bfb85fed9ef15fd534ab4db6530ac539ad92999c6908f37cb68d5ac8275eb939"
+    },
+    {
+      "bytes": 168460,
+      "kind": "raw_measurements",
+      "path": "../harmonic_undamped_control_raw.npz",
+      "sha256": "ff0fdab59c347e0549b643812ba496e11c6b329acdfcc9a9e5c90051e757b073"
+    },
+    {
+      "bytes": 52569,
+      "kind": "benchmark_sensitivity",
+      "path": "../benchmark/metrics.json",
+      "sha256": "fb5d9f0ba578bee0a55181481e91da3db2d03bdb164a69d97c26c9e9bd9baf9c"
+    }
+  ],
+  "candidate": {
+    "coefficients": {
+      "quadratic": 3.9999999999808034,
+      "quartic": 0.0
+    },
+    "expression": "Q = v^2 + 4.000000 x^2",
+    "variable_units": {
+      "Q": "m^2/s^2",
+      "quadratic_coefficient": "s^-2",
+      "quartic_coefficient": "m^-2 s^-2",
+      "time": "s",
+      "v": "m/s",
+      "x": "m"
+    }
+  },
+  "counterexamples": [],
+  "created_at_utc": "2026-10-21T18:24:01.878311+00:00",
+  "experiment_queue": [
+    {
+      "id": "e0000",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 0.12,
+        "atol": 1e-13,
+        "horizon": 0.8,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 121
+      },
+      "measurements": 242,
+      "observation_points": 121,
+      "partition": "discovery",
+      "raw_keys": [
+        "e0000_time",
+        "e0000_x",
+        "e0000_v"
+      ],
+      "rhs_evaluations": 122,
+      "simulated_duration_s": 0.8,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0001",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 0.2,
+        "atol": 1e-13,
+        "horizon": 0.8,
+        "initial_velocity": 0.06,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 121
+      },
+      "measurements": 242,
+      "observation_points": 121,
+      "partition": "discovery",
+      "raw_keys": [
+        "e0001_time",
+        "e0001_x",
+        "e0001_v"
+      ],
+      "rhs_evaluations": 107,
+      "simulated_duration_s": 0.8,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0002",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 0.27,
+        "atol": 1e-13,
+        "horizon": 0.8,
+        "initial_velocity": -0.04,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 121
+      },
+      "measurements": 242,
+      "observation_points": 121,
+      "partition": "discovery",
+      "raw_keys": [
+        "e0002_time",
+        "e0002_x",
+        "e0002_v"
+      ],
+      "rhs_evaluations": 107,
+      "simulated_duration_s": 0.8,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0003",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 0.2,
+        "atol": 1e-13,
+        "horizon": 2.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0003_time",
+        "e0003_x",
+        "e0003_v"
+      ],
+      "rhs_evaluations": 257,
+      "simulated_duration_s": 2.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0004",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 0.2,
+        "atol": 1e-13,
+        "horizon": 6.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0004_time",
+        "e0004_x",
+        "e0004_v"
+      ],
+      "rhs_evaluations": 722,
+      "simulated_duration_s": 6.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0005",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 0.2,
+        "atol": 1e-13,
+        "horizon": 12.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0005_time",
+        "e0005_x",
+        "e0005_v"
+      ],
+      "rhs_evaluations": 1397,
+      "simulated_duration_s": 12.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0006",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 0.5,
+        "atol": 1e-13,
+        "horizon": 2.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0006_time",
+        "e0006_x",
+        "e0006_v"
+      ],
+      "rhs_evaluations": 257,
+      "simulated_duration_s": 2.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0007",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 0.5,
+        "atol": 1e-13,
+        "horizon": 6.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0007_time",
+        "e0007_x",
+        "e0007_v"
+      ],
+      "rhs_evaluations": 722,
+      "simulated_duration_s": 6.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0008",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 0.5,
+        "atol": 1e-13,
+        "horizon": 12.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0008_time",
+        "e0008_x",
+        "e0008_v"
+      ],
+      "rhs_evaluations": 1409,
+      "simulated_duration_s": 12.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0009",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 0.9,
+        "atol": 1e-13,
+        "horizon": 2.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0009_time",
+        "e0009_x",
+        "e0009_v"
+      ],
+      "rhs_evaluations": 272,
+      "simulated_duration_s": 2.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0010",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 0.9,
+        "atol": 1e-13,
+        "horizon": 6.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0010_time",
+        "e0010_x",
+        "e0010_v"
+      ],
+      "rhs_evaluations": 719,
+      "simulated_duration_s": 6.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0011",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 0.9,
+        "atol": 1e-13,
+        "horizon": 12.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0011_time",
+        "e0011_x",
+        "e0011_v"
+      ],
+      "rhs_evaluations": 1409,
+      "simulated_duration_s": 12.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0012",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 1.3,
+        "atol": 1e-13,
+        "horizon": 2.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0012_time",
+        "e0012_x",
+        "e0012_v"
+      ],
+      "rhs_evaluations": 272,
+      "simulated_duration_s": 2.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0013",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 1.3,
+        "atol": 1e-13,
+        "horizon": 6.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0013_time",
+        "e0013_x",
+        "e0013_v"
+      ],
+      "rhs_evaluations": 719,
+      "simulated_duration_s": 6.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0014",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 1.3,
+        "atol": 1e-13,
+        "horizon": 12.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0014_time",
+        "e0014_x",
+        "e0014_v"
+      ],
+      "rhs_evaluations": 1409,
+      "simulated_duration_s": 12.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0015",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 1.7,
+        "atol": 1e-13,
+        "horizon": 2.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0015_time",
+        "e0015_x",
+        "e0015_v"
+      ],
+      "rhs_evaluations": 272,
+      "simulated_duration_s": 2.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0016",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 1.7,
+        "atol": 1e-13,
+        "horizon": 6.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0016_time",
+        "e0016_x",
+        "e0016_v"
+      ],
+      "rhs_evaluations": 734,
+      "simulated_duration_s": 6.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0017",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 1.7,
+        "atol": 1e-13,
+        "horizon": 12.0,
+        "initial_velocity": 0.0,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 401
+      },
+      "measurements": 802,
+      "observation_points": 401,
+      "partition": "probe",
+      "raw_keys": [
+        "e0017_time",
+        "e0017_x",
+        "e0017_v"
+      ],
+      "rhs_evaluations": 1424,
+      "simulated_duration_s": 12.0,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0018",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 1.4581762557207927,
+        "atol": 1e-13,
+        "horizon": 9.73,
+        "initial_velocity": 0.239,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 641
+      },
+      "measurements": 1282,
+      "observation_points": 641,
+      "partition": "holdout",
+      "raw_keys": [
+        "e0018_time",
+        "e0018_x",
+        "e0018_v"
+      ],
+      "rhs_evaluations": 1127,
+      "simulated_duration_s": 9.73,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0019",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 1.603670065644078,
+        "atol": 1e-13,
+        "horizon": 11.57,
+        "initial_velocity": -0.173,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 733
+      },
+      "measurements": 1466,
+      "observation_points": 733,
+      "partition": "holdout",
+      "raw_keys": [
+        "e0019_time",
+        "e0019_x",
+        "e0019_v"
+      ],
+      "rhs_evaluations": 1352,
+      "simulated_duration_s": 11.57,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "e0020",
+      "kind": "oscillator",
+      "knobs": {
+        "amplitude": 1.228516054115155,
+        "atol": 1e-13,
+        "horizon": 8.13,
+        "initial_velocity": 0.359,
+        "noise_sd_v_m_s": 0.0,
+        "noise_sd_x_m": 0.0,
+        "rtol": 2e-11,
+        "steps": 569
+      },
+      "measurements": 1138,
+      "observation_points": 569,
+      "partition": "holdout",
+      "raw_keys": [
+        "e0020_time",
+        "e0020_x",
+        "e0020_v"
+      ],
+      "rhs_evaluations": 962,
+      "simulated_duration_s": 8.13,
+      "simulator_calls": 1,
+      "status": "COMPLETED"
+    }
+  ],
+  "final_holdout": {
+    "decisions": [
+      {
+        "experiment_id": "e0018",
+        "initial": {
+          "relative_drift": 1.2444263050600548e-10,
+          "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+          "threshold": 0.02,
+          "threshold_kind": "DEMONSTRATION_THRESHOLD",
+          "uncertainty_allowance": 0.0,
+          "uncertainty_kind": "uncalibrated conservative instrument-noise heuristic"
+        },
+        "no_search_quartic": {
+          "relative_drift": 3.241518216476298e-10,
+          "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+          "threshold": 0.02,
+          "threshold_kind": "DEMONSTRATION_THRESHOLD",
+          "uncertainty_allowance": 0.0,
+          "uncertainty_kind": "uncalibrated conservative instrument-noise heuristic"
+        },
+        "revised": null
+      },
+      {
+        "experiment_id": "e0019",
+        "initial": {
+          "relative_drift": 1.2759705192042839e-10,
+          "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+          "threshold": 0.02,
+          "threshold_kind": "DEMONSTRATION_THRESHOLD",
+          "uncertainty_allowance": 0.0,
+          "uncertainty_kind": "uncalibrated conservative instrument-noise heuristic"
+        },
+        "no_search_quartic": {
+          "relative_drift": 3.639205835988225e-10,
+          "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+          "threshold": 0.02,
+          "threshold_kind": "DEMONSTRATION_THRESHOLD",
+          "uncertainty_allowance": 0.0,
+          "uncertainty_kind": "uncalibrated conservative instrument-noise heuristic"
+        },
+        "revised": null
+      },
+      {
+        "experiment_id": "e0020",
+        "initial": {
+          "relative_drift": 1.2183592422627393e-10,
+          "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+          "threshold": 0.02,
+          "threshold_kind": "DEMONSTRATION_THRESHOLD",
+          "uncertainty_allowance": 0.0,
+          "uncertainty_kind": "uncalibrated conservative instrument-noise heuristic"
+        },
+        "no_search_quartic": {
+          "relative_drift": 2.471472734992527e-10,
+          "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+          "threshold": 0.02,
+          "threshold_kind": "DEMONSTRATION_THRESHOLD",
+          "uncertainty_allowance": 0.0,
+          "uncertainty_kind": "uncalibrated conservative instrument-noise heuristic"
+        },
+        "revised": null
+      }
+    ],
+    "protocol": "v3-fresh-final",
+    "raw_ids": [
+      "e0018",
+      "e0019",
+      "e0020"
+    ]
+  },
+  "limitations": [
+    "Synthetic textbook mechanics with nominal SI units",
+    "Hand-specified degree-2/4 family and exhaustive fixed search",
+    "Peak-to-peak drift depends on sample count, noise and horizon",
+    "2% threshold and uncertainty allowances have no statistical error guarantee",
+    "A discovery-only quartic fit can succeed without stress search in a noiseless correctly specified problem"
+  ],
+  "metrics": {
+    "ablations": {
+      "full_pre_audit_simulator_calls": 18,
+      "no_counterexample_search_quartic": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+      "no_revision": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+      "no_search_fit_uses_discovery_only": true,
+      "no_search_pre_audit_simulator_calls": 3
+    },
+    "initial_holdout_relative_drift": 1.2444263050600548e-10,
+    "revised_holdout_relative_drift": null,
+    "threshold": 0.02,
+    "threshold_kind": "DEMONSTRATION_THRESHOLD",
+    "training_drift": 1.2550844815665679e-10
+  },
+  "numerical_sensitivity": {
+    "records": [
+      {
+        "atol": 1e-13,
+        "initial_drift": 1.2444263050600548e-10,
+        "initial_status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "revised_drift": null,
+        "revised_status": null,
+        "rhs_evaluations": 15771,
+        "rtol": 2e-11,
+        "system": "harmonic_undamped_control"
+      },
+      {
+        "atol": 1e-13,
+        "initial_drift": 0.22142525131342197,
+        "initial_status": "REFUTED",
+        "revised_drift": 5.3706473298583903e-11,
+        "revised_status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "rhs_evaluations": 31244,
+        "rtol": 2e-11,
+        "system": "duffing_nonlinearity"
+      },
+      {
+        "atol": 1e-13,
+        "initial_drift": 0.07702141663944385,
+        "initial_status": "REFUTED",
+        "revised_drift": 0.10388152610181607,
+        "revised_status": "REFUTED",
+        "rhs_evaluations": 17120,
+        "rtol": 2e-11,
+        "system": "weakly_damped_negative_control"
+      },
+      {
+        "atol": 1e-09,
+        "initial_drift": 6.689323479279245e-07,
+        "initial_status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "revised_drift": null,
+        "revised_status": null,
+        "rhs_evaluations": 5916,
+        "rtol": 1e-07,
+        "system": "harmonic_undamped_control"
+      },
+      {
+        "atol": 1e-09,
+        "initial_drift": 0.22142547832808368,
+        "initial_status": "REFUTED",
+        "revised_drift": 2.977038324093659e-07,
+        "revised_status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+        "rhs_evaluations": 12266,
+        "rtol": 1e-07,
+        "system": "duffing_nonlinearity"
+      },
+      {
+        "atol": 1e-09,
+        "initial_drift": 0.07702152112565892,
+        "initial_status": "REFUTED",
+        "revised_drift": 0.10388170425383884,
+        "revised_status": "REFUTED",
+        "rhs_evaluations": 6428,
+        "rtol": 1e-07,
+        "system": "weakly_damped_negative_control"
+      }
+    ],
+    "status": "MEASURED"
+  },
+  "partition_manifest": {
+    "holdout_policy": "protocol-v3 predeclared final split; legacy v1 and development v2 splits are development data; no tuning on final data",
+    "model_freeze": {
+      "after_experiment": 18,
+      "fingerprint": "bdecb4def2ac7d0a292f0b62e3ef22d90186d94f23be3d6c920704c482237117",
+      "models": {
+        "initial": {
+          "quadratic": 3.9999999999808034,
+          "quartic": 0.0
+        },
+        "no_search_quartic": {
+          "quadratic": 4.000000000008171,
+          "quartic": -4.4024359532609937e-10
+        },
+        "revised": null
+      }
+    },
+    "partitions": {
+      "discovery": [
+        "e0000",
+        "e0001",
+        "e0002"
+      ],
+      "holdout": [
+        "e0018",
+        "e0019",
+        "e0020"
+      ],
+      "probe": [
+        "e0003",
+        "e0004",
+        "e0005",
+        "e0006",
+        "e0007",
+        "e0008",
+        "e0009",
+        "e0010",
+        "e0011",
+        "e0012",
+        "e0013",
+        "e0014",
+        "e0015",
+        "e0016",
+        "e0017"
+      ]
+    }
+  },
+  "physical_system": {
+    "name": "harmonic_undamped_control",
+    "version": "synthetic-oscillator-v3"
+  },
+  "record_type": "reproducible_experiment_provenance_NOT_formal_proof",
+  "reproduce": "python -m falsifylab.run_demo",
+  "resource_costs": {
+    "discovery": {
+      "measurements": 726,
+      "observation_points": 363,
+      "rhs_evaluations": 336,
+      "simulated_duration_s": 2.4000000000000004,
+      "simulator_calls": 3
+    },
+    "holdout": {
+      "measurements": 3886,
+      "observation_points": 1943,
+      "rhs_evaluations": 3441,
+      "simulated_duration_s": 29.43,
+      "simulator_calls": 3
+    },
+    "probe": {
+      "measurements": 12030,
+      "observation_points": 6015,
+      "rhs_evaluations": 11994,
+      "simulated_duration_s": 100.0,
+      "simulator_calls": 15
+    }
+  },
+  "revision": {
+    "coefficients": null,
+    "expression": null,
+    "failure": null,
+    "family": "v^2 + a*x^2 + b*x^4",
+    "fit": null,
+    "fit_inputs": [],
+    "frozen_before_holdout": true,
+    "heldout_status": "INCONCLUSIVE"
+  },
+  "run_id": "ef565c7681cf5c6702dc54c2",
+  "schema_version": "1.0.0",
+  "seed": 2026,
+  "selection_policy": {
+    "assumptions": [],
+    "name": "predeclared exhaustive 5-amplitude by 3-horizon catalog; select largest refuted drift",
+    "query_budget": 15
+  },
+  "software": {
+    "dependencies": {
+      "jsonschema": "4.26.0",
+      "matplotlib": "3.10.8",
+      "numpy": "2.4.3",
+      "pytest": "9.0.3",
+      "scipy": "1.16.3"
+    },
+    "git_sha": "63c686c3d3ba67794da1cc566fef7986cfef72f4",
+    "git_worktree_dirty": true,
+    "python": "3.12.3",
+    "source_sha256": {
+      "falsifylab/__init__.py": "502f5e199048d4f6d288c913b8cf781206bce7321b5ba3a0e18a60260a525c9e",
+      "falsifylab/__main__.py": "005617d35548ee70857ff7aa840e4eb9e4782684edf95ec40e6a4027d2f90c10",
+      "falsifylab/artifacts.py": "a099b5e46d2d7268d882098429dbbca0c0072db8581e9e9bea31cc7bd2f96282",
+      "falsifylab/benchmark.py": "c587e0383f951f6e76113cc747633fc36fd27a17b45ff935636b6658f7d40a6e",
+      "falsifylab/certificates.py": "220cfbb3a707b54f2d9629caa85f4e5177ebb220fa6d52099d91a6fe84dd411b",
+      "falsifylab/decisions.py": "82f573edb75768de770b26a9282d0ede049a9445cfaca530926198c39cbd51f6",
+      "falsifylab/experiments.py": "696768d3874bfabf40ccb3c31f052969e1c8a077a2e00980742acbca5ee584e5",
+      "falsifylab/hypothesis.py": "8d02c6cb0c61ab4d8c768ca971ddcc8fef60dc3f421560a9532c6ffd9dd004b5",
+      "falsifylab/make_report.py": "173ac398f764bfa24fd9c5ab3b506dc22fe73464fb1737c84a221c623c171354",
+      "falsifylab/materials.py": "461c6a3724b239d90670dc4d0ae582435e82659d79a053d9d2941844c4dd2fa8",
+      "falsifylab/physics.py": "74ff0e7bb07436ff79d49d29bad68cbbcd6e5fbd860af790d8348ec890e24541",
+      "falsifylab/run_demo.py": "79400e60f209a124e7af7d0dd8376af1b19d7cf86b6eb1ab6cf335c28b72f14b",
+      "falsifylab/run_materials.py": "f2c75f3194c4c17c57a483a381b7ebc6d39c71394b90c0837a611fc5552f9c78",
+      "falsifylab/verify.py": "cbe2b15f1cf0d72bfc2886ae4d55c4854ff6b50a9b355743470df291b55a7e5a"
+    }
+  },
+  "status": "NOT_REFUTED_UNDER_TESTED_CONDITIONS",
+  "validity_domain": {
+    "discovery_amplitudes_m": [
+      0.12,
+      0.2,
+      0.27
+    ],
+    "discovery_horizon_s": 0.8,
+    "sampled_grid": [
+      {
+        "first_observed_failure_m": null,
+        "horizon_s": 2.0,
+        "interpretation": "finite grid only; no guaranteed continuous validity region",
+        "last_observed_pass_m": 1.7,
+        "nonmonotone": false
+      },
+      {
+        "first_observed_failure_m": null,
+        "horizon_s": 6.0,
+        "interpretation": "finite grid only; no guaranteed continuous validity region",
+        "last_observed_pass_m": 1.7,
+        "nonmonotone": false
+      },
+      {
+        "first_observed_failure_m": null,
+        "horizon_s": 12.0,
+        "interpretation": "finite grid only; no guaranteed continuous validity region",
+        "last_observed_pass_m": 1.7,
+        "nonmonotone": false
+      }
+    ],
+    "uncertainty": {
+      "interpretation": "uncalibrated propagation allowance",
+      "noise_sd_x_m_and_v_m_s": 0.0
+    },
+    "warning": "finite grid cannot establish a continuous validity region"
+  }
+}

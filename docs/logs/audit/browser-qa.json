@@ -1,0 +1,248 @@
+{
+  "url": "http://127.0.0.1:35253/site/index.html",
+  "checks": [
+    {
+      "name": "desktop: page loads with hero chart",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: no horizontal page scroll",
+      "pass": true,
+      "detail": "scrollWidth=1440"
+    },
+    {
+      "name": "desktop: hero stats show recorded numbers",
+      "pass": true,
+      "detail": "Observed onset bracket, 10 probes | 5.1 \u00d7 10\u207b\u2075 strain | Design resolution of bisection (0.013 / 2\u2078), about 28\u00d7 finer than an equal-budget uniform grid. Contained th"
+    },
+    {
+      "name": "desktop: workflow has 8 stages",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: materials run reaches audit verdict",
+      "pass": true,
+      "detail": "CANDIDATE LAW | \u2715 REFUTED | \u03c3 = 209,999 MPa \u00b7 \u03b5 | Fitted on 40 discovery readings; slope SE 235 MPa. First resolved counterexa"
+    },
+    {
+      "name": "desktop: ledger counts 409 readings",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: truth reveal reports coverage",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: hidden dip shows silent miss",
+      "pass": true,
+      "detail": "t the hidden truth. A mean-error audit over 249 readings averages a local failure away. | Live run computed in 16 ms; the animation replays its acquisition order."
+    },
+    {
+      "name": "desktop: step mode shows first probe",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: policy switch completes run for uniform",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: custom material within bounds runs (E 50 GPa, H 20 GPa)",
+      "pass": true,
+      "detail": "CANDIDATE LAW | \u2715 REFUTED | \u03c3 = 49,999.5 MPa \u00b7 \u03b5 | Fitted on 40 discovery readings; slope SE 235 MPa. Firs"
+    },
+    {
+      "name": "desktop: onset below probed range (yield 0.05%) falls back and abstains",
+      "pass": true,
+      "detail": "CANDIDATE LAW | \u2715 REFUTED | \u03c3 = 169,084 MPa \u00b7 \u03b5 | Fitted on 40 discovery readings; slope SE 4,390 MPa. First resolved counterexample: probe 1 at 0.100%, error 54.17 \u00b1 13 MPa. | VALIDITY BOUNDARY \u00b7 UNIFORM GRI"
+    },
+    {
+      "name": "desktop: oscillator duffing_nonlinearity verdicts",
+      "pass": true,
+      "detail": "CANDIDATE LAW | \u2715 REFUTED | Q = v\u00b2 + 4.031008 x\u00b2 | Fitted on 3 short low-amplitude runs; worst training drift 0.592%. | STRESS CATALOG | \u2715 12/15 COUNT"
+    },
+    {
+      "name": "desktop: oscillator harmonic_undamped_control verdicts",
+      "pass": true,
+      "detail": "CANDIDATE LAW | \u2713 NOT REFUTED | Q = v\u00b2 + 4.000000 x\u00b2 | Fitted on 3 short low-amplitude runs; worst training drift 0.000%. | STRESS CATALOG | \u2713 NO COUN"
+    },
+    {
+      "name": "desktop: oscillator weakly_damped_negative_control verdicts",
+      "pass": true,
+      "detail": "CANDIDATE LAW | \u2715 REFUTED | Q = v\u00b2 + 3.978267 x\u00b2 | Fitted on 3 short low-amplitude runs; worst training drift 0.340%. | STRESS CATALOG | \u2715 10/15 COUNT"
+    },
+    {
+      "name": "desktop: oscillator noise disclosure cites post-hoc audit",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: benchmark charts rendered",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: evidence tab oscillator",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: evidence tab harmonic_undamped_control",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: evidence tab weakly_damped_negative_control",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: evidence tab materials",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop: in-browser SHA-256 of raw data matches",
+      "pass": true,
+      "detail": "\u2713 SHA-256 matches"
+    },
+    {
+      "name": "desktop: internal links resolve",
+      "pass": true,
+      "detail": "48 links checked"
+    },
+    {
+      "name": "mobile: page loads with hero chart",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: no horizontal page scroll",
+      "pass": true,
+      "detail": "scrollWidth=390"
+    },
+    {
+      "name": "mobile: hero stats show recorded numbers",
+      "pass": true,
+      "detail": "Observed onset bracket, 10 probes | 5.1 \u00d7 10\u207b\u2075 strain | Design resolution of bisection (0.013 / 2\u2078), about 28\u00d7 finer than an equal-budget uniform grid. Contained th"
+    },
+    {
+      "name": "mobile: workflow has 8 stages",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: materials run reaches audit verdict",
+      "pass": true,
+      "detail": "CANDIDATE LAW | \u2715 REFUTED | \u03c3 = 209,999 MPa \u00b7 \u03b5 | Fitted on 40 discovery readings; slope SE 235 MPa. First resolved counterexa"
+    },
+    {
+      "name": "mobile: ledger counts 409 readings",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: truth reveal reports coverage",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: hidden dip shows silent miss",
+      "pass": true,
+      "detail": "t the hidden truth. A mean-error audit over 249 readings averages a local failure away. | Live run computed in 16 ms; the animation replays its acquisition order."
+    },
+    {
+      "name": "mobile: step mode shows first probe",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: policy switch completes run for uniform",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: custom material within bounds runs (E 50 GPa, H 20 GPa)",
+      "pass": true,
+      "detail": "CANDIDATE LAW | \u2715 REFUTED | \u03c3 = 49,999.5 MPa \u00b7 \u03b5 | Fitted on 40 discovery readings; slope SE 235 MPa. Firs"
+    },
+    {
+      "name": "mobile: onset below probed range (yield 0.05%) falls back and abstains",
+      "pass": true,
+      "detail": "CANDIDATE LAW | \u2715 REFUTED | \u03c3 = 169,084 MPa \u00b7 \u03b5 | Fitted on 40 discovery readings; slope SE 4,390 MPa. First resolved counterexample: probe 1 at 0.100%, error 54.17 \u00b1 13 MPa. | VALIDITY BOUNDARY \u00b7 UNIFORM GRI"
+    },
+    {
+      "name": "mobile: oscillator duffing_nonlinearity verdicts",
+      "pass": true,
+      "detail": "CANDIDATE LAW | \u2715 REFUTED | Q = v\u00b2 + 4.031008 x\u00b2 | Fitted on 3 short low-amplitude runs; worst training drift 0.592%. | STRESS CATALOG | \u2715 12/15 COUNT"
+    },
+    {
+      "name": "mobile: oscillator harmonic_undamped_control verdicts",
+      "pass": true,
+      "detail": "CANDIDATE LAW | \u2713 NOT REFUTED | Q = v\u00b2 + 4.000000 x\u00b2 | Fitted on 3 short low-amplitude runs; worst training drift 0.000%. | STRESS CATALOG | \u2713 NO COUN"
+    },
+    {
+      "name": "mobile: oscillator weakly_damped_negative_control verdicts",
+      "pass": true,
+      "detail": "CANDIDATE LAW | \u2715 REFUTED | Q = v\u00b2 + 3.978267 x\u00b2 | Fitted on 3 short low-amplitude runs; worst training drift 0.340%. | STRESS CATALOG | \u2715 10/15 COUNT"
+    },
+    {
+      "name": "mobile: oscillator noise disclosure cites post-hoc audit",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: benchmark charts rendered",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: evidence tab oscillator",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: evidence tab harmonic_undamped_control",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: evidence tab weakly_damped_negative_control",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: evidence tab materials",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile: in-browser SHA-256 of raw data matches",
+      "pass": true,
+      "detail": "\u2713 SHA-256 matches"
+    },
+    {
+      "name": "no console errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "no page errors",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "name": "no failed requests",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "console_errors": [],
+  "page_errors": [],
+  "failed_requests": []
+}
