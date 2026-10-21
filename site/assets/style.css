@@ -169,6 +169,9 @@ details.custom { flex-basis: 100%; }
 details.custom summary { cursor: pointer; font-size: 13.5px; color: var(--ink-2); }
 details.custom .row { display: flex; flex-wrap: wrap; gap: 14px 22px; margin-top: 12px; }
 
+.run-status { margin: -4px 0 16px; font-size: 13.5px; color: var(--ink-2); padding: 9px 14px; border-radius: 10px; background: var(--surface-2); border: 1px solid var(--line); }
+.run-status b { color: var(--ink); }
+.run-status.flash { animation: flash 1.2s ease-out; }
 .pipeline { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
 .pipeline span { font-size: 12.5px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink-3); background: var(--surface); }
 .pipeline span.done { color: var(--ink); border-color: var(--line-strong); }

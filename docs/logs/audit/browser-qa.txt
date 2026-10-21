@@ -5,7 +5,7 @@ PASS desktop: workflow has 8 stages
 PASS desktop: materials run reaches audit verdict — CANDIDATE LAW | ✕ REFUTED | σ = 209,999 MPa · ε | Fitted on 40 discovery readings; slope SE 235 MPa. First resolved counterexa
 PASS desktop: ledger counts 409 readings
 PASS desktop: truth reveal reports coverage
-PASS desktop: hidden dip shows silent miss — t the hidden truth. A mean-error audit over 249 readings averages a local failure away. | Live run computed in 16 ms; the animation replays its acquisition order.
+PASS desktop: hidden dip shows silent miss — t the hidden truth. A mean-error audit over 249 readings averages a local failure away. | Live run computed in 15 ms; the animation replays its acquisition order.
 PASS desktop: step mode shows first probe
 PASS desktop: policy switch completes run for uniform
 PASS desktop: custom material within bounds runs (E 50 GPa, H 20 GPa) — CANDIDATE LAW | ✕ REFUTED | σ = 49,999.5 MPa · ε | Fitted on 40 discovery readings; slope SE 235 MPa. Firs
@@ -13,6 +13,8 @@ PASS desktop: onset below probed range (yield 0.05%) falls back and abstains —
 PASS desktop: oscillator duffing_nonlinearity verdicts — CANDIDATE LAW | ✕ REFUTED | Q = v² + 4.031008 x² | Fitted on 3 short low-amplitude runs; worst training drift 0.592%. | STRESS CATALOG | ✕ 12/15 COUNT
 PASS desktop: oscillator harmonic_undamped_control verdicts — CANDIDATE LAW | ✓ NOT REFUTED | Q = v² + 4.000000 x² | Fitted on 3 short low-amplitude runs; worst training drift 0.000%. | STRESS CATALOG | ✓ NO COUN
 PASS desktop: oscillator weakly_damped_negative_control verdicts — CANDIDATE LAW | ✕ REFUTED | Q = v² + 3.978267 x² | Fitted on 3 short low-amplitude runs; worst training drift 0.340%. | STRESS CATALOG | ✕ 10/15 COUNT
+PASS desktop: oscillator Run button reruns and reports it — Run 5 · Weakly damped (negative control) · noise 0 · seed 7 · computed in 13 ms at 5:26:56
+PASS desktop: New seed button runs a new seed
 PASS desktop: oscillator noise disclosure cites post-hoc audit
 PASS desktop: benchmark charts rendered
 PASS desktop: evidence tab oscillator
@@ -28,7 +30,7 @@ PASS mobile: workflow has 8 stages
 PASS mobile: materials run reaches audit verdict — CANDIDATE LAW | ✕ REFUTED | σ = 209,999 MPa · ε | Fitted on 40 discovery readings; slope SE 235 MPa. First resolved counterexa
 PASS mobile: ledger counts 409 readings
 PASS mobile: truth reveal reports coverage
-PASS mobile: hidden dip shows silent miss — t the hidden truth. A mean-error audit over 249 readings averages a local failure away. | Live run computed in 16 ms; the animation replays its acquisition order.
+PASS mobile: hidden dip shows silent miss — t the hidden truth. A mean-error audit over 249 readings averages a local failure away. | Live run computed in 12 ms; the animation replays its acquisition order.
 PASS mobile: step mode shows first probe
 PASS mobile: policy switch completes run for uniform
 PASS mobile: custom material within bounds runs (E 50 GPa, H 20 GPa) — CANDIDATE LAW | ✕ REFUTED | σ = 49,999.5 MPa · ε | Fitted on 40 discovery readings; slope SE 235 MPa. Firs
@@ -36,6 +38,8 @@ PASS mobile: onset below probed range (yield 0.05%) falls back and abstains — 
 PASS mobile: oscillator duffing_nonlinearity verdicts — CANDIDATE LAW | ✕ REFUTED | Q = v² + 4.031008 x² | Fitted on 3 short low-amplitude runs; worst training drift 0.592%. | STRESS CATALOG | ✕ 12/15 COUNT
 PASS mobile: oscillator harmonic_undamped_control verdicts — CANDIDATE LAW | ✓ NOT REFUTED | Q = v² + 4.000000 x² | Fitted on 3 short low-amplitude runs; worst training drift 0.000%. | STRESS CATALOG | ✓ NO COUN
 PASS mobile: oscillator weakly_damped_negative_control verdicts — CANDIDATE LAW | ✕ REFUTED | Q = v² + 3.978267 x² | Fitted on 3 short low-amplitude runs; worst training drift 0.340%. | STRESS CATALOG | ✕ 10/15 COUNT
+PASS mobile: oscillator Run button reruns and reports it — Run 5 · Weakly damped (negative control) · noise 0 · seed 7 · computed in 11 ms at 5:27:28
+PASS mobile: New seed button runs a new seed
 PASS mobile: oscillator noise disclosure cites post-hoc audit
 PASS mobile: benchmark charts rendered
 PASS mobile: evidence tab oscillator
@@ -47,4 +51,4 @@ PASS no console errors
 PASS no page errors
 PASS no failed requests
 
-browser QA: 48/48 checks pass; report docs/logs/audit/browser-qa.json
+browser QA: 52/52 checks pass; report docs/logs/audit/browser-qa.json

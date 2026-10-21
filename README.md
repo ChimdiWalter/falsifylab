@@ -1,60 +1,115 @@
 # FalsifyLab
 
-Find a plausible law. Challenge it. Attempt a limited repair. Keep the evidence.
+**Where scientific laws meet counterexamples.** A law can fit every observation you have
+and still fail outside the conditions where it was measured. FalsifyLab spends a counted
+experiment budget trying to break a candidate physical law, revises it only within a
+declared family, freezes the revision, and lets independent measurements decide. Every
+reading is kept as hash-linked evidence.
 
-FalsifyLab is a local **synthetic scientific-computing prototype** for auditing
-physical relationships. It records where a model fails and whether a constrained
-revision survives new observations. The output is an executable evidence trace,
-not a formal mathematical/statistical proof or a new physical discovery.
+It runs on two synthetic laboratories: a bilinear stress–strain material and a set of
+oscillators (harmonic, Duffing, damped). It is a scientific-computing prototype. It does
+not discover new physics, and its evidence records show reproducibility, not proof.
 
-![Synthetic materials experiment](outputs/materials/stress_strain_boundary.png)
+![Synthetic material: ten probes find where Hooke's law fails; a frozen revision is audited](submission/figures/fig1_materials_counterexample.png)
 
-## Run locally
+**Key results (synthetic, see [`docs/INDEPENDENT_AUDIT.md`](docs/INDEPENDENT_AUDIT.md)):**
 
-Use Python 3.12 (tested with 3.12.3) and a CPU. No API key, GPU or private data is
-needed. Installation downloads dependencies; all experiments then run locally.
+- **Bracket.** Ten adaptive probes bracket where Hooke's law first errs by 10 MPa, to
+  5.1 × 10⁻⁵ strain. That is the design resolution of bisection; the bracket covered the
+  true onset in 30/30 seeds at nominal noise.
+- **Revision.** A frozen bilinear revision cuts independent audit error from 1,064.8 to
+  0.40 MPa, the measurement floor. Simpler sampling policies reach the same value.
+- **Oscillator.** A quadratic energy is refuted on a Duffing oscillator, and the quartic
+  revision recovers the true invariant. The damped control is refused a conservation law.
+- **Failures, all reproducible:**
+  - Under heavy noise the engine abstains, bluntly.
+  - At the highest noise, the valid harmonic law is falsely refuted in 4/30 runs.
+  - A hidden softening dip fools both bisection and the mean-error audit.
+
+## Quick start
+
+You need **Python 3.12** (3.11 or newer should work; tested on 3.12.3). A CPU is enough:
+no GPU, API key or account is needed. Node.js 18 or newer is optional, for one browser
+test.
 
 ```bash
-# In the author's existing environment:
-source ~/.venvs/lesegenv/bin/activate
-# Or create your own:
-# python3.12 -m venv .venv
-# source .venv/bin/activate
-pip install -r requirements.txt
-python -m falsifylab
-python -m pytest -q
+git clone https://github.com/ChimdiWalter/falsifylab.git
+cd falsifylab
+python3 -m venv .venv
+source .venv/bin/activate            # Windows: .venv\Scripts\activate
+pip install -r requirements-lock.txt # exact tested versions (or: requirements.txt)
+
+python -m pytest -q                  # 38 tests, about 30 s
+python -m falsifylab.verify outputs  # recompute every saved metric from the raw data
 ```
 
-The one-command demo runs three oscillator controls, 30 material noise seeds,
-exports four validated certificates, verifies raw-data metrics, and produces
-[`outputs/demo.html`](outputs/demo.html). Open that file locally in a browser.
-For a smaller smoke run: `python -m falsifylab --seeds 2 --out /tmp/falsifylab-demo`.
-For exact tested dependency versions: `pip install -r requirements-lock.txt`.
-The full 22-package lock was installed and exercised in an isolated environment.
+The last command should print
+`VERIFIED 4 certificates, all saved holdout metrics, raw-data checksums and frozen models`.
 
-## Reproduce the full evaluation
+**Open the interactive workbench** (charts, live experiments and the evidence viewer):
+
+```bash
+python -m http.server 8000           # from the repository root
+```
+
+Then open <http://localhost:8000/site/index.html>. If port 8000 is busy, use any other
+number, for example `python -m http.server 8765` and `http://localhost:8765/site/index.html`.
+Opening the HTML file directly also works, but the in-browser hash check needs a server.
+
+**Open the marimo notebook**, which reruns the real Python engine interactively:
+
+```bash
+pip install -r requirements-notebook.txt
+python -m marimo run notebooks/explore.py
+```
+
+**Run experiments yourself**, writing to a new folder so the committed evidence is left
+untouched:
+
+```bash
+python -m falsifylab --seeds 2 --out runs/demo        # quick demo, about 10 s
+python -m falsifylab.verify runs/demo
+python -m falsifylab.benchmark --seeds 30 --out runs/benchmark   # full benchmark, 2 min or more
+```
+
+`runs/demo/demo.html` is an offline report. The full benchmark reproduces the committed
+`outputs/benchmark` files; only provenance fields such as timestamps differ.
+
+## Repository map
+
+| Path | What it is |
+|---|---|
+| `falsifylab/` | The engine: simulators, fits, decisions, counted experiment ledger, evidence records, verifier |
+| `outputs/` | Committed evidence: raw arrays (`.npz`), results, four evidence records, benchmark metrics |
+| `site/` | Static browser workbench and its tests (`site/tests/`) |
+| `notebooks/` | Reactive marimo notebook and its helpers |
+| `audit/` | Independent checks and post-hoc experiments with their JSON results |
+| `docs/` | Protocol, frozen evaluation, independent audit, judge Q&A, logs and screenshots |
+| `submission/` | One-page write-up and figures generated from the evidence |
+| `tests/` | Test suite |
+| `baseline/` | The original prototype and its results, preserved for comparison |
+
+## Reproduce the full evaluation in place
+
+These commands regenerate the committed evidence inside `outputs/`, changing only
+timestamps and provenance:
 
 ```bash
 python -m falsifylab.benchmark --seeds 30 --out outputs/benchmark
 python -m falsifylab.make_report
 python -m falsifylab.verify outputs
-python -m falsifylab.submission
+PYTHONPATH=. python audit/independent_checks.py
+python site/build.py          # rebuild the workbench data bundle
+node site/tests/engine_parity.mjs   # optional: browser engine vs Python (Node 18+)
 ```
 
-Or run all experiments and reporting with `python -m falsifylab --benchmark`.
-Individual benchmark CLIs remain available:
-
-```bash
-python -m falsifylab.run_demo
-python -m falsifylab.run_materials --seeds 30 --out outputs/materials
-python -m falsifylab.certificates outputs/certificates/oscillator.json outputs/certificates/materials.json
-```
-
-Final aggregate numbers, quartiles, budgets, controls, ablations, solver sensitivity
-and observed failures are generated in [`docs/EVALUATION.md`](docs/EVALUATION.md).
-Machine-readable records are in [`metrics.json`](outputs/benchmark/metrics.json)
-and [`metrics.csv`](outputs/benchmark/metrics.csv). All seeds and robustness
-settings are predeclared in [`docs/PROTOCOL.md`](docs/PROTOCOL.md).
+Individual workflows remain available: `python -m falsifylab.run_demo`,
+`python -m falsifylab.run_materials --seeds 30 --out outputs/materials`.
+Final aggregate numbers, quartiles, budgets, controls, ablations, solver sensitivity and
+observed failures are in [`docs/EVALUATION.md`](docs/EVALUATION.md). Machine-readable
+records are in [`metrics.json`](outputs/benchmark/metrics.json) and
+[`metrics.csv`](outputs/benchmark/metrics.csv). All seeds and robustness settings are
+predeclared in [`docs/PROTOCOL.md`](docs/PROTOCOL.md).
 
 ## Scientific workbench (browser)
 
@@ -181,8 +236,7 @@ The original ten tests and both supplied benchmarks reproduced exactly. Original
 outputs are preserved in [`baseline/`](baseline/). V1 and development V2 holdouts
 are development data; V3 uses a newly frozen final split and independent streams.
 Changed final numbers reflect those declared changes, not a silent rewrite of
-historical results. Loose files originally supplied at the repository root remain
-historical; `outputs/demo.html` and `submission/*FINAL*` are the current artifacts.
+historical results.
 
 There is no real-material validation, unrestricted equation discovery, trained AI
 agent, calibrated hypothesis test, state-of-the-art comparison, or demonstrated
@@ -197,7 +251,7 @@ SciExplorer. Independent review: [`docs/INDEPENDENT_AUDIT.md`](docs/INDEPENDENT_
 - Independent audit: [`docs/INDEPENDENT_AUDIT.md`](docs/INDEPENDENT_AUDIT.md)
 - Frozen evaluation: [`docs/EVALUATION.md`](docs/EVALUATION.md)
 - Answers to judging questions: [`docs/JUDGE_QA.md`](docs/JUDGE_QA.md)
-- Submission write-up, video script, post and figures: [`submission/`](submission/README.md)
+- Submission write-up and figures: [`submission/`](submission/README.md)
 
 `python -m falsifylab.submission` regenerates an automatic draft (`submission/MOMENT_WRITEUP_GENERATED.md`, not tracked);
 `python submission/make_figures.py` regenerates the figures from the evidence files.
@@ -205,7 +259,7 @@ No publication or competition submission is performed by this software.
 
 Released under the [MIT License](LICENSE).
 
-## Optional marimo scientific notebook
+## The marimo notebook
 
 ```bash
 pip install -r requirements-notebook.txt
@@ -231,3 +285,14 @@ a browser and checks that controls rerun the engine (log in
 Create a portable local bundle with `python -m falsifylab.package`. It verifies
 evidence first, writes `dist/FalsifyLab_bundle.zip`, and includes a per-file
 checksum manifest and Git checkpoint. No hosting or publication occurs.
+
+## Troubleshooting
+
+- **`Address already in use`** when starting the web server: another program uses that
+  port. Pick another number (`python -m http.server 8765`) and use it in the address.
+- **Remote machine, for example over VS Code Remote-SSH:** forward the port in the VS Code
+  *Ports* tab (*Add Port*), then open the same `localhost` address on your own computer.
+- **`ModuleNotFoundError: falsifylab`:** run commands from the repository root, with the
+  virtual environment active.
+- **Python version errors when installing:** use Python 3.12. The lock file pins
+  NumPy 2.4 and SciPy 1.16, which need Python 3.11 or newer.

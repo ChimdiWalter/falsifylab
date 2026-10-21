@@ -176,8 +176,9 @@
       <label for="osc-seed">Seed</label>
       <input id="osc-seed" type="number" min="0" max="999999" step="1" value="7">
     </div>
-    <div class="control"><button class="btn" id="osc-run" type="button">Run experiment ▶</button></div>
+    <div class="control"><div class="btn-row"><button class="btn" id="osc-run" type="button">Run experiment ▶</button><button class="btn secondary" id="osc-newseed" type="button">New seed ↻</button></div></div>
   </div>
+  <div class="run-status" id="osc-status" aria-live="polite"></div>
   <div class="lab">
     <div class="stack">
       <div class="grid-2">

@@ -1,5 +1,5 @@
 {
-  "url": "http://127.0.0.1:35253/site/index.html",
+  "url": "http://127.0.0.1:33517/site/index.html",
   "checks": [
     {
       "name": "desktop: page loads with hero chart",
@@ -39,7 +39,7 @@
     {
       "name": "desktop: hidden dip shows silent miss",
       "pass": true,
-      "detail": "t the hidden truth. A mean-error audit over 249 readings averages a local failure away. | Live run computed in 16 ms; the animation replays its acquisition order."
+      "detail": "t the hidden truth. A mean-error audit over 249 readings averages a local failure away. | Live run computed in 15 ms; the animation replays its acquisition order."
     },
     {
       "name": "desktop: step mode shows first probe",
@@ -75,6 +75,16 @@
       "name": "desktop: oscillator weakly_damped_negative_control verdicts",
       "pass": true,
       "detail": "CANDIDATE LAW | \u2715 REFUTED | Q = v\u00b2 + 3.978267 x\u00b2 | Fitted on 3 short low-amplitude runs; worst training drift 0.340%. | STRESS CATALOG | \u2715 10/15 COUNT"
+    },
+    {
+      "name": "desktop: oscillator Run button reruns and reports it",
+      "pass": true,
+      "detail": "Run 5 \u00b7 Weakly damped (negative control) \u00b7 noise 0 \u00b7 seed 7 \u00b7 computed in 13 ms at 5:26:56"
+    },
+    {
+      "name": "desktop: New seed button runs a new seed",
+      "pass": true,
+      "detail": ""
     },
     {
       "name": "desktop: oscillator noise disclosure cites post-hoc audit",
@@ -154,7 +164,7 @@
     {
       "name": "mobile: hidden dip shows silent miss",
       "pass": true,
-      "detail": "t the hidden truth. A mean-error audit over 249 readings averages a local failure away. | Live run computed in 16 ms; the animation replays its acquisition order."
+      "detail": "t the hidden truth. A mean-error audit over 249 readings averages a local failure away. | Live run computed in 12 ms; the animation replays its acquisition order."
     },
     {
       "name": "mobile: step mode shows first probe",
@@ -190,6 +200,16 @@
       "name": "mobile: oscillator weakly_damped_negative_control verdicts",
       "pass": true,
       "detail": "CANDIDATE LAW | \u2715 REFUTED | Q = v\u00b2 + 3.978267 x\u00b2 | Fitted on 3 short low-amplitude runs; worst training drift 0.340%. | STRESS CATALOG | \u2715 10/15 COUNT"
+    },
+    {
+      "name": "mobile: oscillator Run button reruns and reports it",
+      "pass": true,
+      "detail": "Run 5 \u00b7 Weakly damped (negative control) \u00b7 noise 0 \u00b7 seed 7 \u00b7 computed in 11 ms at 5:27:28"
+    },
+    {
+      "name": "mobile: New seed button runs a new seed",
+      "pass": true,
+      "detail": ""
     },
     {
       "name": "mobile: oscillator noise disclosure cites post-hoc audit",

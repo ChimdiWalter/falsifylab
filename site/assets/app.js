@@ -388,11 +388,33 @@
   // ======================= OSCILLATOR LAB (LIVE) =======================
   const osc = { system: 'duffing_nonlinearity', noise: 0, result: null };
   function oscRun() {
-    const seed = Math.max(0, Math.floor(+$('#osc-seed').value || 0));
-    const t0 = performance.now();
-    osc.result = FE.runOscillator({ system: osc.system, seed, noiseSd: osc.noise });
-    osc.ms = performance.now() - t0;
-    renderOsc();
+    const btn = $('#osc-run'), status = $('#osc-status');
+    btn.disabled = true;
+    btn.textContent = 'Running…';
+    status.textContent = 'Running the experiment…';
+    // Let the browser paint the busy state before the synchronous computation.
+    setTimeout(() => {
+      try {
+        const seed = Math.max(0, Math.floor(+$('#osc-seed').value || 0));
+        const t0 = performance.now();
+        osc.result = FE.runOscillator({ system: osc.system, seed, noiseSd: osc.noise });
+        osc.ms = performance.now() - t0;
+        osc.runs = (osc.runs || 0) + 1;
+        renderOsc();
+        const name = FE.SYSTEMS[osc.system].label;
+        const note = osc.noise === 0
+          ? ' Noise-free runs are deterministic: rerunning with the same seed gives the same result, and a new seed only shifts the three audit amplitudes. Add noise or press New seed to see variation.'
+          : ' With noise, each seed draws new instrument errors, so verdicts can change between seeds.';
+        status.innerHTML = `<b>Run ${osc.runs}</b> · ${esc(name)} · noise ${osc.noise} · seed ${seed} · computed in ${osc.ms.toFixed(0)} ms at ${new Date().toLocaleTimeString()}.${note}`;
+        status.classList.remove('flash'); void status.offsetWidth; status.classList.add('flash');
+      } catch (err) {
+        console.error(err);
+        status.innerHTML = `<span class="chip refuted">✕ Error</span> ${esc(err.message)}`;
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Run experiment ▶';
+      }
+    }, 30);
   }
   function decimateIdx(n, m = 700) { const step = Math.max(1, Math.ceil(n / m)); const out = []; for (let i = 0; i < n; i += step) out.push(i); if (out.at(-1) !== n - 1) out.push(n - 1); return out; }
   function renderOsc() {
@@ -463,6 +485,7 @@
     seg('#osc-system', 'system', v => v);
     seg('#osc-noise', 'noise', v => +v);
     $('#osc-run').addEventListener('click', oscRun);
+    $('#osc-newseed').addEventListener('click', () => { $('#osc-seed').value = Math.floor(Math.random() * 1e6); oscRun(); });
     $('#osc-seed').addEventListener('change', oscRun);
   }
 
@@ -657,7 +680,7 @@
     wireLab();
     panel('mat-verdicts', renderLab);
     wireOsc();
-    panel('osc-verdicts', oscRun);
+    panel('osc-verdicts', () => (osc.result ? renderOsc() : oscRun()));
     panel('bm-width', renderBenchmark);
     panel('ev-panel', renderEvidenceTabs);
     panel('prov-body', renderProvenance);

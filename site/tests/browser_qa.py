@@ -112,6 +112,13 @@ def main():
                 expect = {'duffing_nonlinearity': ('Refuted', 'Quartic revision'), 'harmonic_undamped_control': ('Not refuted', 'Not attempted'),
                           'weakly_damped_negative_control': ('Refuted', 'Quartic revision')}[system]
                 check(f'{label}: oscillator {system} verdicts', all(e.lower() in v.lower() for e in expect), v[:140].replace('\n', ' | '))
+            before = page.evaluate('window.FalsifyLabUI.osc.runs')
+            page.click('#osc-run')
+            page.wait_for_function(f'window.FalsifyLabUI.osc.runs > {before}')
+            check(f'{label}: oscillator Run button reruns and reports it', f'Run {before + 1}' in page.inner_text('#osc-status'), page.inner_text('#osc-status')[:90])
+            page.click('#osc-newseed')
+            page.wait_for_function(f'window.FalsifyLabUI.osc.runs > {before + 1}')
+            check(f'{label}: New seed button runs a new seed', page.evaluate('window.FalsifyLabUI.osc.result.seed') == int(page.input_value('#osc-seed')))
             page.click('#osc-system button[data-v="duffing_nonlinearity"]')
             page.click('#osc-noise button[data-v="0.01"]')
             page.wait_for_function('window.FalsifyLabUI.osc.result.noiseSd === 0.01')
